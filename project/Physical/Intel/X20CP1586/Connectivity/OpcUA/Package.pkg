@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package xmlns="http://br-automation.co.at/AS/Package" SubType="OpcUA" PackageType="OpcUA">
+  <Objects>
+    <Object Type="File" Reference="true">\Physical\ARM\X20CP0484_1\Connectivity\OpcUA\OpcUaMap.uad</Object>
+  </Objects>
+</Package>

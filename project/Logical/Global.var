@@ -1,0 +1,8 @@
+
+VAR
+	gVisionCtrl : gVisionCtrl_type;
+END_VAR
+
+VAR CONSTANT
+
+END_VAR

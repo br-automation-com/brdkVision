@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?AutomationStudio FileVersion="4.9"?>
+<BR.AS.HardwareTopology>
+  <TimeStamps>
+    <TimeStamp LogicalPath="Intel.Hardware.hw" LastWriteTime="02/15/2022 10:57:31" />
+  </TimeStamps>
+  <Modules>
+    <Module Name="VSS112Q22.041P-000" Type="VSS112Q22.041P-000" X="300" Y="100" />
+    <Module Name="X20CP1586" Type="X20CP1586" X="85" Y="85" />
+    <Module Name="VSLB11Q00.54DP-000" Type="VSLB11Q00.54DP-000" X="448.5" Y="111" />
+  </Modules>
+  <Links>
+    <Link From="VSS112Q22.041P-000" To="X20CP1586" FromPort="PLK1" ToPort="IF3" IsRoutedByUser="False">
+      <Point X="318" Y="218" />
+      <Point X="318" Y="218" />
+      <Point X="318" Y="223" />
+      <Point X="318" Y="235" />
+      <Point X="141" Y="235" />
+      <Point X="141" Y="185" />
+      <Point X="141" Y="172" />
+      <Point X="141" Y="172" />
+    </Link>
+    <Link From="VSS112Q22.041P-000" To="VSLB11Q00.54DP-000" FromPort="PLK2" ToPort="PLK1" IsRoutedByUser="False">
+      <Point X="363" Y="218" />
+      <Point X="363" Y="218" />
+      <Point X="363" Y="223" />
+      <Point X="363" Y="245" />
+      <Point X="466.5" Y="245" />
+      <Point X="466.5" Y="234" />
+      <Point X="466.5" Y="229" />
+      <Point X="466.5" Y="229" />
+    </Link>
+  </Links>
+  <InfoElements />
+</BR.AS.HardwareTopology>

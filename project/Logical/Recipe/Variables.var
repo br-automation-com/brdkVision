@@ -1,0 +1,13 @@
+VAR
+	save : BOOL;
+	load : BOOL;
+	recipe : recipe_typ;
+	mpRecipe : MpRecipeCsv;
+	error : STRING[200];
+	mpRecipeUIStruct : MpRecipeUIConnectType;
+	mpRecipeUI : MpRecipeUI;
+	viBaseLoadVa : ViBaseLoadApplication;
+	mpRecipeRegPar : MpRecipeRegParSync;
+	oldLoadedRecipe : STRING[255];
+	viLoadVA : USINT;
+END_VAR

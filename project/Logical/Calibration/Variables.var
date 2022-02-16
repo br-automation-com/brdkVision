@@ -1,0 +1,8 @@
+VAR
+	j : USINT;
+	hw : cam_typ;
+	state : USINT;
+	hmi : hmi_typ;
+	i : USINT;
+	this : local_typ;
+END_VAR
