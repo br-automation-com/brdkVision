@@ -30,7 +30,7 @@
       <Parameter ID="InternetAddress" Value="192.168.200.240" />
       <Parameter ID="SubnetMask" Value="255.255.255.0" />
     </Connector>
-    <Parameter ID="ConfigurationID" Value="BilwincoHMI" />
+    <Parameter ID="ConfigurationID" Value="brdkVision" />
     <Parameter ID="UserPartitionSize" Value="50" />
     <Parameter ID="ApplicationStorageType" Value="NORMAL" />
     <Parameter ID="Cyclic1Duration" Value="2000" />

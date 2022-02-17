@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BindingsSet id="Image_binding" xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Bindings>
+		
+<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::Calibratio:hmi.out.svg" attribute="value" samplingRate="slow" />
+<Target xsi:type="brease" contentRefId="Image" widgetRefId="VisionImage1" attribute="svgImage" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Calibratio:hmi.out.overlay" attribute="value" samplingRate="slow" />
+<Target xsi:type="brease" contentRefId="Image" widgetRefId="VisionImage1" attribute="svgOverlay" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="brease" contentRefId="Image" widgetRefId="VisionImage1" attribute="viewRotateAngle" />
+<Target xsi:type="brease" contentRefId="Image" widgetRefId="NumericInput1" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="brease" contentRefId="Image" widgetRefId="VisionImage1" attribute="viewRotateAngle" />
+<Target xsi:type="brease" contentRefId="Image" widgetRefId="BasicSlider1" attribute="value" />
+		</Binding>
+
+	</Bindings>
+</BindingsSet>
