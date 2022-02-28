@@ -1,6 +1,6 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
-/* brdkViImg 1.00.0 */
+/* brdkViImg 1.00.1 */
 
 #ifndef _BRDKVIIMG_
 #define _BRDKVIIMG_
@@ -9,7 +9,7 @@ extern "C"
 {
 #endif
 #ifndef _brdkViImg_VERSION
-#define _brdkViImg_VERSION 1.00.0
+#define _brdkViImg_VERSION 1.00.1
 #endif
 
 #include <bur/plctypes.h>
@@ -18,18 +18,21 @@ extern "C"
 #define _BUR_PUBLIC
 #endif
 #ifdef _SG3
+		#include "FileIO.h"
 		#include "AsHttp.h"
 		#include "standard.h"
 		#include "BRSE_RTK.h"
 		#include "brdkViBase.h"
 #endif
 #ifdef _SG4
+		#include "FileIO.h"
 		#include "AsHttp.h"
 		#include "standard.h"
 		#include "BRSE_RTK.h"
 		#include "brdkViBase.h"
 #endif
 #ifdef _SGC
+		#include "FileIO.h"
 		#include "AsHttp.h"
 		#include "standard.h"
 		#include "BRSE_RTK.h"
@@ -55,6 +58,17 @@ typedef enum BRDKVIIMG_IMG_TYPE
 	BRDKVIIMG_IMG_TYPE_JPEG
 } BRDKVIIMG_IMG_TYPE;
 
+typedef struct brdkViImg_getImageSimulate_typ
+{	unsigned long pFile;
+	unsigned long pDevice;
+	plcbit activate;
+	plcbit autoIncrementNumber;
+	plcbit useRandomNumbers;
+	plcbit appendNumber;
+	unsigned long maxNumber;
+	unsigned long minNumber;
+} brdkViImg_getImageSimulate_typ;
+
 typedef struct brdkViImg_getImageMemInfo_typ
 {	unsigned long uploadAdr;
 	unsigned long uploadSize;
@@ -68,6 +82,11 @@ typedef struct brdkViImg_getImageInternal_typ
 	struct httpRequestHeader_t requestHeader;
 	struct httpClient httpClient_0;
 	struct TON TON_ReloadTimeout;
+	struct FileClose fileClose_0;
+	struct FileRead fileRead_0;
+	struct FileOpen fileOpen_0;
+	plcstring fileName[256];
+	unsigned long fileNumber;
 } brdkViImg_getImageInternal_typ;
 
 typedef struct brdkViImg_getImage
@@ -75,6 +94,7 @@ typedef struct brdkViImg_getImage
 	/* VAR_INPUT (analog) */
 	plcstring cameraIp[17];
 	enum BRDKVIIMG_IMG_TYPE imageFormat;
+	struct brdkViImg_getImageSimulate_typ simulateConfig;
 	unsigned char jpegQuality;
 	plctime timeout;
 	/* VAR_OUTPUT (analog) */
@@ -163,6 +183,7 @@ typedef struct brdkViImg_bmpHeader_typ
 typedef struct brdkViImg_mappView
 {
 	/* VAR_INPUT (analog) */
+	struct brdkViImg_getImageSimulate_typ simulateConfig;
 	enum BRDKVIIMG_IMG_TYPE imageFormat;
 	unsigned char jpegQuality;
 	plcstring cameraIp[17];

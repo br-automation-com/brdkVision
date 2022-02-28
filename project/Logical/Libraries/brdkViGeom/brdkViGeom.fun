@@ -66,6 +66,17 @@ FUNCTION brdkViGeom_checkShapeIntersect : BOOL (*Function to check if two shapes
 	END_VAR
 END_FUNCTION
 
+FUNCTION brdkViGeom_drawSvgEllipse : BOOL (*Function to create a svg string with ellipse defined by a center point and radius.*) (*$GROUP=User,$CAT=User,$GROUPICON=User.png,$CATICON=User.png*)
+	VAR_INPUT
+		center : brdkViBase_2d_typ; (*Center point of the ellipse *)
+		rx : LREAL; (*Radius of the ellipse x direction*)
+		ry : LREAL; (*Radius of the ellipse y direction*)
+		angle : LREAL; (*Rotation angle in degrees around the center point*)
+		pStr : UDINT; (*Pointer to the string where the Svg element is appended*)
+		pArgs : UDINT; (*Pointer to a string with addition arguments for the Svg element*)
+	END_VAR
+END_FUNCTION
+
 FUNCTION brdkViGeom_drawSvgCircle : BOOL (*Function to create a svg string with circle defined by a center point and radius.*) (*$GROUP=User,$CAT=User,$GROUPICON=User.png,$CATICON=User.png*)
 	VAR_INPUT
 		center : brdkViBase_2d_typ; (*Center point of the circle*)
@@ -79,6 +90,28 @@ FUNCTION brdkViGeom_drawSvgLine : BOOL (*Function to create a svg string with li
 	VAR_INPUT
 		p1 : brdkViBase_2d_typ; (*First point of the line*)
 		p2 : brdkViBase_2d_typ; (*Second point of the line*)
+		pStr : UDINT; (*Pointer to the string where the Svg element is appended*)
+		pArgs : UDINT; (*Pointer to a string with addition arguments for the Svg element*)
+	END_VAR
+END_FUNCTION
+
+FUNCTION brdkViGeom_drawSvgImage : BOOL (*Function to create a svg string with and image from an url or base 64 string *) (*$GROUP=User,$CAT=User,$GROUPICON=User.png,$CATICON=User.png*)
+	VAR_INPUT
+		pUrl : UDINT; (*pointer to a string with the image URL or base 64 string *)
+		position : brdkViBase_2d_typ; (*Pointer to a 2D position coordinate*)
+		pUnit : UDINT; (*Pointer to a string with the unit for the widht and height values. i.e. '%'*)
+		height : LREAL; (*Image height*)
+		width : LREAL; (*Image width*)
+		pStr : UDINT; (*Pointer to the string where the Svg element is appended*)
+		pArgs : UDINT; (*Pointer to a string with addition arguments for the Svg element*)
+	END_VAR
+END_FUNCTION
+
+FUNCTION brdkViGeom_drawSvgText : BOOL (*Function to create a svg string with a muli line text element*) (*$GROUP=User,$CAT=User,$GROUPICON=User.png,$CATICON=User.png*)
+	VAR_INPUT
+		pText : UDINT; (*pointer to a string with the text that should be included in the SVG (for new line use $N)*)
+		position : brdkViBase_2d_typ; (*Pointer to a 2D position coordinate*)
+		linespacing : REAL; (*Line spacing 1.0 = charecter height*)
 		pStr : UDINT; (*Pointer to the string where the Svg element is appended*)
 		pArgs : UDINT; (*Pointer to a string with addition arguments for the Svg element*)
 	END_VAR
@@ -140,7 +173,7 @@ FUNCTION brdkViGeom_drawCalibration : BOOL (*Function to create the svg string w
 	VAR_INPUT
 		P : ARRAY[0..2,0..3] OF LREAL; (*3x4 projection matrix (comes form the camera calibration)*)
 		axsisLength : LREAL; (*Axis lengths in real units (fx. mm)*)
-		holePos : brdkViBase_3d_typ; (*Array of hole positions in real coordinates (fx. mm)*)
+		holePos : brdkViBase_3d_typ; (*First index of an array of hole positions in real coordinates (fx. mm) i.e holes[0]*)
 		numHoles : USINT; (*Number of holes (only 4 is supported currently)*)
 		pStr : UDINT; (*Pointer to the string where the Svg element is appended*)
 		pArgsHole : UDINT; (*Pointer to a string with addition arguments for the Svg hole circle elements (fx 'style="stroke-color: red;"')*)

@@ -23,6 +23,6 @@ VAR_CONFIG
 	::Calibratio:hw.out.expTime AT %QD."VSLB11Q00.54DP-000".ExposureTime01;
 	::Calibratio:hw.out.ledColor AT %QB."VSLB11Q00.54DP-000".FlashColor01;
 	::Calibratio:hw.out.trigger AT %QX."VSLB11Q00.54DP-000".FlashTrigger;
-	::Calibratio:hw.in.nettime AT %ID."X20CP0484_1".I"#¤%F3.NettimeSoC;
 	::Calibratio:hw.out.useRegionFeat AT %QX."VSS112Q22.041P-000".VF1RegionFeatures;
+	::Calibratio:hw.in.nettime  AT %ID."X20CP0484_1".IF3.NettimeSoC;
 END_VAR

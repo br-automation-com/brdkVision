@@ -1,5 +1,15 @@
 
 TYPE
+	brdkViImg_getImageSimulate_typ : 	STRUCT  (*MappView simulation configuration structure*)
+		pFile : UDINT; (*pointer to string with the file name*)
+		pDevice : UDINT; (*pointer to string with file device name*)
+		activate : BOOL := FALSE; (*Active simulation if true*)
+		autoIncrementNumber : BOOL := FALSE; (*Increment number with one (between min and max number) after image update*)
+		useRandomNumbers : BOOL := FALSE; (*Use random numbers between min and max number*)
+		appendNumber : BOOL := FALSE; (*Append number after filename*)
+		maxNumber : UDINT := 0; (*Maximum file number*)
+		minNumber : UDINT := 0; (*Minimum file number*)
+	END_STRUCT;
 	brdkViImg_mappViewInternal_typ : 	STRUCT 
 		heartbeat_ton : TON;
 		taskIdent : UDINT;
@@ -45,6 +55,11 @@ TYPE
 		requestHeader : httpRequestHeader_t;
 		httpClient_0 : httpClient;
 		TON_ReloadTimeout : TON;
+		fileClose_0 : FileClose;
+		fileRead_0 : FileRead;
+		fileOpen_0 : FileOpen;
+		fileName : STRING[255];
+		fileNumber : UDINT;
 	END_STRUCT;
 	brdkViImg_bmpInfoHeader_typ : 	STRUCT  (*BMP information header.*)
 		size : UDINT := 0; (*Size of this header (in bytes)*)

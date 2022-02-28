@@ -33,10 +33,14 @@
     <Parameter ID="ConfigurationID" Value="brdkVision" />
     <Parameter ID="UserPartitionSize" Value="50" />
     <Parameter ID="ApplicationStorageType" Value="NORMAL" />
+    <Parameter ID="Simulation" Value="1" />
     <Parameter ID="Cyclic1Duration" Value="2000" />
     <Group ID="FileDevice1" />
     <Parameter ID="FileDeviceName1" Value="RECIPE" />
     <Parameter ID="FileDevicePath1" Value="D:\" />
+    <Group ID="FileDevice2" />
+    <Parameter ID="FileDeviceName2" Value="SIM" />
+    <Parameter ID="FileDevicePath2" Value="C:\simPlc\brdkVision" />
     <Group ID="FtpUser1" />
     <Parameter ID="FtpUsername1" Value="admin" />
     <Parameter ID="FtpUserPassword1" Value="+uX37b/Iy9gDw18lRrZX7EcbwYFwQWpAJkuUgOjAEQo=" Description="admin" />

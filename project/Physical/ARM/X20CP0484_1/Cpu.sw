@@ -55,8 +55,6 @@
     <LibraryObject Name="asieccon" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="brdkViMapp" Source="Libraries.brdkViMapp.lby" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="brdkViBase" Source="Libraries.brdkViBase.lby" Memory="UserROM" Language="Binary" Debugging="true" />
-    <LibraryObject Name="brdkViGeom" Source="Libraries.brdkViGeom.lby" Memory="UserROM" Language="Binary" Debugging="true" />
-    <LibraryObject Name="brdkViImg" Source="Libraries.brdkViImg.lby" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="brdkViVF" Source="Libraries.brdkViVF.lby" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="BRSE_RTK" Source="Libraries.BRSE_RTK.lby" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="brdkViCal" Source="Libraries.brdkViCal.lby" Memory="UserROM" Language="Binary" Debugging="true" />

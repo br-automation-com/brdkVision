@@ -62,6 +62,9 @@
     <Group ID="FileDevice1" />
     <Parameter ID="FileDeviceName1" Value="RECIPE" />
     <Parameter ID="FileDevicePath1" Value="F:\" />
+    <Group ID="FileDevice2" />
+    <Parameter ID="FileDeviceName2" Value="SIM" />
+    <Parameter ID="FileDevicePath2" Value="C:\simPlc\brdkVision" />
     <Group ID="FtpUser1" />
     <Parameter ID="FtpUsername1" Value="admin" />
     <Parameter ID="FtpUserPassword1" Value="4WFXWDK5TMVpfeai37B+7WhwHoefN0SDX+8eS6SXEy0=" />

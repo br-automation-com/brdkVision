@@ -1,6 +1,6 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
-/* brdkViGeom 1.00.0 */
+/* brdkViGeom 1.00.1 */
 
 #ifndef _BRDKVIGEOM_
 #define _BRDKVIGEOM_
@@ -9,7 +9,7 @@ extern "C"
 {
 #endif
 #ifndef _brdkViGeom_VERSION
-#define _brdkViGeom_VERSION 1.00.0
+#define _brdkViGeom_VERSION 1.00.1
 #endif
 
 #include <bur/plctypes.h>
@@ -70,8 +70,11 @@ _BUR_PUBLIC plcbit brdkViGeom_checkPointInRect(struct brdkViBase_2d_typ* pointA,
 _BUR_PUBLIC plcbit brdkViGeom_checkPointInTrigon(struct brdkViBase_2d_typ* pointA, struct brdkViBase_2d_typ* pointB, struct brdkViBase_2d_typ* pointC, struct brdkViBase_2d_typ* checkPoint);
 _BUR_PUBLIC plcbit brdkViGeom_rectIntersection(struct brdkViBase_2d_typ Rect1[4], struct brdkViBase_2d_typ* center1, double length1, double width1, struct brdkViBase_2d_typ Rect2[4], struct brdkViBase_2d_typ* center2, double length2, double width2);
 _BUR_PUBLIC plcbit brdkViGeom_checkShapeIntersect(struct brdkViGeom_shape_typ* shape1, struct brdkViBase_2d_typ* shape1Center, struct brdkViBase_2d_typ* shape1Points, struct brdkViGeom_shape_typ* shape2, struct brdkViBase_2d_typ* shape2Center, struct brdkViBase_2d_typ* shape2Points);
+_BUR_PUBLIC plcbit brdkViGeom_drawSvgEllipse(struct brdkViBase_2d_typ* center, double rx, double ry, double angle, unsigned long pStr, unsigned long pArgs);
 _BUR_PUBLIC plcbit brdkViGeom_drawSvgCircle(struct brdkViBase_2d_typ* center, double r, unsigned long pStr, unsigned long pArgs);
 _BUR_PUBLIC plcbit brdkViGeom_drawSvgLine(struct brdkViBase_2d_typ* p1, struct brdkViBase_2d_typ* p2, unsigned long pStr, unsigned long pArgs);
+_BUR_PUBLIC plcbit brdkViGeom_drawSvgImage(unsigned long pUrl, struct brdkViBase_2d_typ* position, unsigned long pUnit, double height, double width, unsigned long pStr, unsigned long pArgs);
+_BUR_PUBLIC plcbit brdkViGeom_drawSvgText(unsigned long pText, struct brdkViBase_2d_typ* position, float linespacing, unsigned long pStr, unsigned long pArgs);
 _BUR_PUBLIC plcbit brdkViGeom_drawSvgPoly(struct brdkViBase_2d_typ* points, unsigned char numPoints, unsigned long pStr, unsigned long pArgs);
 _BUR_PUBLIC plcbit brdkViGeom_drawSvgRect(struct brdkViBase_2d_typ* pointA, struct brdkViBase_2d_typ* pointB, struct brdkViBase_2d_typ* pointC, struct brdkViBase_2d_typ* pointD, unsigned long pStr, unsigned long pArgs);
 _BUR_PUBLIC plcbit brdkViGeom_drawSvgTriFromCP(struct brdkViBase_2d_typ* center, double height, double width, double orientation, unsigned long pStr, unsigned long pArgs);

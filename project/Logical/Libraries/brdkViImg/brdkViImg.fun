@@ -88,6 +88,7 @@ END_FUNCTION
 	VAR_INPUT
 		cameraIp : {REDUND_UNREPLICABLE} STRING[16]; (*IP of the camera*)
 		imageFormat : {REDUND_UNREPLICABLE} BRDKVIIMG_IMG_TYPE; (*Image format (BRDKVIIMG_IMG_TYPE_BMP or BRDKVIIMG_IMG_TYPE_JPG)*)
+		simulateConfig : {REDUND_UNREPLICABLE} brdkViImg_getImageSimulate_typ; (*If true the image is decoded to an 2D array*)
 		jpegQuality : {REDUND_UNREPLICABLE} USINT; (*Quality of the image (only JPEG)*)
 		getImage : {REDUND_UNREPLICABLE} BOOL; (*Trigger download of image*)
 		enable : {REDUND_UNREPLICABLE} BOOL; (*Enable the function block.*)
@@ -110,6 +111,7 @@ END_FUNCTION_BLOCK
 	VAR_INPUT
 		enable : {REDUND_UNREPLICABLE} BOOL; (*Enable function block (will allocate/free memory)*)
 		updateImage : {REDUND_UNREPLICABLE} BOOL; (*Trigger an update of the image*)
+		simulateConfig : {REDUND_UNREPLICABLE} brdkViImg_getImageSimulate_typ; (*If true the image is decoded to an 2D array*)
 		getImageArray : {REDUND_UNREPLICABLE} BOOL; (*If true the image is decoded to an 2D array*)
 		imageFormat : {REDUND_UNREPLICABLE} BRDKVIIMG_IMG_TYPE; (*Image format (BRDKVIIMG_IMG_TYPE_BMP or BRDKVIIMG_IMG_TYPE_JPG)*)
 		jpegQuality : {REDUND_UNREPLICABLE} USINT; (*Jpeg quality*)

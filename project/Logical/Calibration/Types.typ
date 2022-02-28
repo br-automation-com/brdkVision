@@ -95,6 +95,10 @@ TYPE
 		shapesPx : recipe_shapes_typ;
 		getPicks : BOOL;
 		mpRecipeRegPar : MpRecipeRegParSync;
+		simFileDevice : STRING[10] := 'SIM';
+		simFilename : STRING[100] := 'test';
+		text : STRING[200] := 'this is a great test$NWith both new lines$N       and many white spaces';
+		url : STRING[200] := 'http://localhost:81/FileDevice:SIM/crossAir.png ';
 	END_STRUCT;
 	pnp_vision_results_shapeP_typ : 	STRUCT 
 		reference : ARRAY[0..MAX_SHAPE_POINTS]OF brdkViBase_2d_typ;

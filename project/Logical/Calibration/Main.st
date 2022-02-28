@@ -10,6 +10,12 @@ PROGRAM _INIT
 	this.mappView.cameraIp 		:= '192.168.200.1';
 	this.mappView.getImageArray := FALSE;
 	this.mappView.timeout 		:= 3000;
+	this.mappView.simulateConfig.appendNumber := TRUE;
+	this.mappView.simulateConfig.minNumber := 1;
+	this.mappView.simulateConfig.maxNumber := 3;
+	this.mappView.simulateConfig.autoIncrementNumber := TRUE;
+	this.mappView.simulateConfig.pDevice := ADR(this.simFileDevice);
+	this.mappView.simulateConfig.pFile := ADR(this.simFilename);
 	
 	this.mpRecipeRegPar.MpLink := ADR(gRecipeCsv);
 	this.mpRecipeRegPar.PVName := ADR('::Calibratio:hmi.in.par');
@@ -28,7 +34,7 @@ PROGRAM _CYCLIC
 
 	CASE state OF 
 		0:
-			IF NOT hw.out.trigger  AND hw.in.ready THEN
+			IF NOT hw.out.trigger  AND (hw.in.ready OR DiagCpuIsSimulated()) THEN
 				IF hmi.in.cmd.calibrate THEN
 					// for calibration we only look for 4 round Blobs
 					hw.out.numMax := 4;
@@ -54,7 +60,7 @@ PROGRAM _CYCLIC
 		
 		20:
 			// check if a new image is done
-			IF hw.in.imgTime <> this.oldTime THEN
+			IF hw.in.imgTime <> this.oldTime OR DiagCpuIsSimulated() THEN
 				this.oldTime := hw.in.imgTime;
 				this.mappView.updateImage := TRUE;
 				
@@ -206,9 +212,27 @@ PROGRAM _CYCLIC
 		
 		// get invers projection matix (only need to be done one time as the projection matrix only changes if a new calibration is done
 		brdkViCal_InvP(hmi.in.par.P,this.invP);
-		
+
 		// from image to real coordinates
 		brdkViCal_2dTo3d(this.tmp2D,this.invP,hmi.out.realPos);
+
+
+		hmi.out.overlay := '';
+		this.tmp2D.x := this.tmp2D.x -50;
+		this.tmp2D.y := this.tmp2D.y -50;
+		
+		brdkViGeom_drawSvgImage(ADR(this.url),this.tmp2D,ADR(''),100,100,ADR(hmi.out.overlay),ADR(''));
+		this.tmp2D.x := this.tmp2D.x +100;
+		this.tmp2D.y := this.tmp2D.y +100;
+		
+		
+		brdkViGeom_drawSvgText(ADR(this.text),this.tmp2D,1,ADR(hmi.out.overlay),ADR('style="font: italic 40px serif; fill: red;"'));
+	
+		
+		this.tmp2D.x := 500;
+		this.tmp2D.y := 500;
+		brdkViGeom_drawSvgEllipse(this.tmp2D,50,100,45,ADR(hmi.out.overlay),ADR('style="fill:none;stroke:purple;stroke-width:2"'));
+	
 	END_IF
 	
 		
@@ -217,6 +241,7 @@ PROGRAM _CYCLIC
 	this.mappView.jpegQuality 	:= hmi.in.par.imgQuality;
 	this.mappView.pSvgImage 	:= ADR(hmi.out.svg);
 	this.mappView.pImageArray 	:= ADR(this.imgArr);
+	this.mappView.simulateConfig.activate := DiagCpuIsSimulated(); // true if PLC is simulated
 	this.mappView();
 	
 	// recipe
