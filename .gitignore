@@ -52,7 +52,6 @@ Thumbs.db
 Temp/
 Binaries/
 Diagnosis/
-export/
 *.set
 *.orig
 *.isopen
