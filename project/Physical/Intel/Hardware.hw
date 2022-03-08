@@ -1,13 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<?AutomationStudio Version=4.9.4.92 FileVersion="4.9"?>
+<?AutomationStudio Version=4.9.2.46 FileVersion="4.9"?>
 <Hardware xmlns="http://br-automation.co.at/AS/Hardware">
-  <Module Name="VSLB11Q00.54DP-000" Type="VSLB11Q00.54DP-000" Version="1.1.0.323">
-    <Connection Connector="PLK1" TargetModule="VSS112Q22.041P-000" TargetConnector="PLK2" NodeNumber="2">
-      <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
-    </Connection>
-    <Parameter ID="VisionConfig" Value="gBlobCamera" />
-  </Module>
-  <Module Name="VSS112Q22.041P-000" Type="VSS112Q22.041P-000" Version="1.5.0.489">
+  <Module Name="VSC122A25.051P-000" Type="VSC122A25.051P-000" Version="1.6.0.560">
     <Connection Connector="PLK1" TargetModule="X20CP1586" TargetConnector="IF3" NodeNumber="1">
       <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
     </Connection>
@@ -16,6 +10,32 @@
     </Connection>
     <Parameter ID="Supervision" Value="off" />
     <Parameter ID="VisionConfig" Value="gBlobCamera" />
+  </Module>
+  <Module Name="VSLB11Q00.54DP-000" Type="VSLB11Q00.54DP-000" Version="1.1.0.323">
+    <Connection Connector="PLK1" TargetModule="VSC122A25.051P-000" TargetConnector="PLK2" NodeNumber="2">
+      <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
+    </Connection>
+    <Connection Connector="PLK2" TargetModule="VSLL11R30.67AP-000" TargetConnector="PLK1" NodeNumber="2">
+      <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
+    </Connection>
+    <Parameter ID="VisionConfig" Value="gBlobCamera" />
+  </Module>
+  <Module Name="VSLL11R30.67AP-000" Type="VSLL11R30.67AP-000" Version="1.1.0.494">
+    <Connection Connector="PLK1" TargetModule="VSLB11Q00.54DP-000" TargetConnector="PLK2" NodeNumber="3">
+      <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
+    </Connection>
+    <Connection Connector="PLK2" TargetModule="VSLL11R30.67AP-000a" TargetConnector="PLK1" NodeNumber="3">
+      <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
+    </Connection>
+    <Parameter ID="Supervision" Value="off" />
+    <Parameter ID="VisionConfig" Value="" />
+  </Module>
+  <Module Name="VSLL11R30.67AP-000a" Type="VSLL11R30.67AP-000" Version="1.1.0.494">
+    <Connection Connector="PLK1" TargetModule="VSLL11R30.67AP-000" TargetConnector="PLK2" NodeNumber="4">
+      <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
+    </Connection>
+    <Parameter ID="Supervision" Value="off" />
+    <Parameter ID="VisionConfig" Value="" />
   </Module>
   <Module Name="X20CP1586" Type="X20CP1586" Version="1.8.1.0">
     <Connector Name="IF2">

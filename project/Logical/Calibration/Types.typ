@@ -1,5 +1,14 @@
 
 TYPE
+	VIS_FUNC : 
+		(
+		VIS_FUNC_OCR := 5,
+		VIS_FUNC_MATCH := 4,
+		VIS_FUNC_MEASURE := 3,
+		VIS_FUNC_COL := 2,
+		VIS_FUNC_CAL := 1,
+		VIS_FUNC_LIGHT := 0
+		);
 	match_res_typ : 	STRUCT 
 		score : USINT;
 		angle : INT;
@@ -20,10 +29,11 @@ TYPE
 	END_STRUCT;
 	cam_in_typ : 	STRUCT 
 		imgTime : DINT;
-		ready : BOOL;
+		ready : ARRAY[0..3]OF BOOL;
 		va : va_res_typ;
 		nettime : DINT;
 		VA_match : cam_in_match_typ;
+		status : ARRAY[0..3]OF UDINT;
 	END_STRUCT;
 	cam_out_match_typ : 	STRUCT 
 		maxNum : USINT;
@@ -33,9 +43,9 @@ TYPE
 		minScore : USINT;
 	END_STRUCT;
 	cam_out_typ : 	STRUCT 
-		expTime : UDINT := 400;
+		expTime : ARRAY[0..3]OF UDINT := [4(400)];
 		ledSegment : USINT := 15;
-		ledColor : USINT := 100;
+		ledColor : ARRAY[0..3]OF USINT := [4(100)];
 		focus : UINT := 150;
 		enable : BOOL := TRUE;
 		enableEnhanced : BOOL := TRUE;
@@ -45,6 +55,7 @@ TYPE
 		delayNettime : DINT;
 		useRegionFeat : BOOL;
 		VA_match : cam_out_match_typ;
+		angle : ARRAY[0..1]OF UINT;
 	END_STRUCT;
 	cam_typ : 	STRUCT 
 		out : cam_out_typ;
@@ -57,21 +68,30 @@ TYPE
 		y : REAL;
 		x : REAL;
 		click : BOOL;
+		visFunc : VIS_FUNC := VIS_FUNC_LIGHT;
 	END_STRUCT;
 	hmi_in_typ : 	STRUCT 
 		cmd : hmi_in_cmd_typ;
 		par : recipe_typ;
 	END_STRUCT;
 	hmi_out_typ : 	STRUCT 
-		overlay : STRING[20000];
-		svg : STRING[6000000];
+		overlay2 : STRING[20000];
+		overlay3 : STRING[20000];
+		overlay4 : STRING[20000];
+		overlay1 : STRING[20000];
+		svg2 : STRING[6000000];
+		svg3 : STRING[6000000];
+		svg4 : STRING[6000000];
+		svg1 : STRING[6000000];
 		realPos : brdkViBase_3d_typ;
+		text2 : STRING[300];
+		text3 : STRING[300];
+		text4 : STRING[300];
+		text1 : STRING[300];
 	END_STRUCT;
 	hmi_typ : 	STRUCT 
 		in : hmi_in_typ;
 		out : hmi_out_typ;
-	END_STRUCT;
-	hw_typ : 	STRUCT 
 	END_STRUCT;
 	local_typ : 	STRUCT 
 		realPos : ARRAY[0..3]OF brdkViBase_3d_typ;
@@ -99,6 +119,8 @@ TYPE
 		simFilename : STRING[100] := 'test';
 		text : STRING[200] := 'this is a great test$NWith both new lines$N       and many white spaces';
 		url : STRING[200] := 'http://localhost:81/FileDevice:SIM/crossAir.png ';
+		oldVisFunc : VIS_FUNC;
+		TON_delay : TON := (PT:=T#200ms);
 	END_STRUCT;
 	pnp_vision_results_shapeP_typ : 	STRUCT 
 		reference : ARRAY[0..MAX_SHAPE_POINTS]OF brdkViBase_2d_typ;
@@ -120,13 +142,14 @@ TYPE
 	recipe_typ : 	STRUCT 
 		LEDsegment : USINT;
 		focus : UINT; (*250*)
-		expTime : DINT; (*50*)
-		LED : USINT; (*1*)
+		expTime : ARRAY[0..3]OF DINT; (*50*)
+		LED : ARRAY[0..3]OF USINT; (*1*)
 		offset : brdkViBase_3d_typ;
 		shapes : USINT;
 		P : ARRAY[0..2,0..3]OF LREAL;
 		imgQuality : USINT := 30;
 		imgFormat : BRDKVIIMG_IMG_TYPE := BRDKVIIMG_IMG_TYPE_JPEG;
+		angle : REAL;
 	END_STRUCT;
 	va_res_typ : 	STRUCT 
 		numRes : USINT;

@@ -24,7 +24,24 @@
         </Variable>
       </GlobalVariables>
       <Task Name="Calibratio">
-        <Variable Name="hmi" AutomaticEnable="True" />
+        <Variable Name="hmi" AutomaticEnable="True">
+          <Variable Name="in">
+            <Variable Name="par">
+              <Variable Name="expTime" EnableArrayElements="True" />
+              <Variable Name="LED" EnableArrayElements="True" />
+            </Variable>
+          </Variable>
+          <Variable Name="out">
+            <Variable Name="overlay2" MinimumSamplingInterval="Timer7" />
+            <Variable Name="overlay3" MinimumSamplingInterval="Timer7" />
+            <Variable Name="overlay4" MinimumSamplingInterval="Timer7" />
+            <Variable Name="overlay1" MinimumSamplingInterval="Timer7" />
+            <Variable Name="svg2" MinimumSamplingInterval="Timer7" />
+            <Variable Name="svg3" MinimumSamplingInterval="Timer7" />
+            <Variable Name="svg4" MinimumSamplingInterval="Timer7" />
+            <Variable Name="svg1" MinimumSamplingInterval="Timer7" />
+          </Variable>
+        </Variable>
       </Task>
       <Task Name="Recipe">
         <Variable Name="mpRecipeUIStruct" AutomaticEnable="True" />

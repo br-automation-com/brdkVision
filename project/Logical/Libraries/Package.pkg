@@ -23,11 +23,11 @@
     <Object Type="Library" Language="Binary">BRSE_RTK</Object>
     <Object Type="Library" Language="Binary" Description="This mechatronics library contains linear algebra functions.">MTLinAlg</Object>
     <Object Type="Library" Language="Binary">brdkViCal</Object>
-    <Object Type="Library" Language="binary" Description="[mapp Vision] Base library">ViBase</Object>
-    <Object Type="Library" Language="Binary" Description="Recipe management">MpRecipe</Object>
-    <Object Type="Library" Language="Binary" Description="Core library for mapp components">MpBase</Object>
     <Object Type="Library" Language="binary" Description="The AsIODiag library provides functions for creating and evaluating I/O module information.">AsIODiag</Object>
     <Object Type="Library" Language="Binary">brdkViImg</Object>
     <Object Type="Library" Language="Binary">brdkViGeom</Object>
+    <Object Type="Library" Language="binary" Description="[mapp Vision] Base library">ViBase</Object>
+    <Object Type="Library" Language="Binary" Description="Recipe management">MpRecipe</Object>
+    <Object Type="Library" Language="Binary" Description="Core library for mapp components">MpBase</Object>
   </Objects>
 </Package>

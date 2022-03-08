@@ -1,15 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BindingsSet id="Image_binding" xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Bindings>
-		
-<Binding mode="twoWay">
-			<Source xsi:type="opcUa" refId="::Calibratio:hmi.out.svg" attribute="value" samplingRate="slow" />
-<Target xsi:type="brease" contentRefId="Image" widgetRefId="VisionImage1" attribute="svgImage" />
-</Binding>
-<Binding mode="oneWay">
-<Source xsi:type="opcUa" refId="::Calibratio:hmi.out.overlay" attribute="value" samplingRate="slow" />
-<Target xsi:type="brease" contentRefId="Image" widgetRefId="VisionImage1" attribute="svgOverlay" />
-</Binding>
+
 <Binding mode="twoWay">
 <Source xsi:type="brease" contentRefId="Image" widgetRefId="VisionImage1" attribute="viewRotateAngle" />
 <Target xsi:type="brease" contentRefId="Image" widgetRefId="NumericInput1" attribute="value" />
@@ -19,5 +11,82 @@
 <Target xsi:type="brease" contentRefId="Image" widgetRefId="BasicSlider1" attribute="value" />
 		</Binding>
 
-	</Bindings>
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Calibratio:hmi.out.svg1" attribute="value" samplingRate="slow" />
+<Target xsi:type="brease" contentRefId="FourImgContent" widgetRefId="VisionImage1" attribute="svgImage" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Calibratio:hmi.out.svg2" attribute="value" samplingRate="slow" />
+<Target xsi:type="brease" contentRefId="FourImgContent" widgetRefId="VisionImage2" attribute="svgImage" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Calibratio:hmi.out.svg3" attribute="value" samplingRate="slow" />
+<Target xsi:type="brease" contentRefId="FourImgContent" widgetRefId="VisionImage3" attribute="svgImage" />
+</Binding>
+<Binding mode="twoWay"> 
+<Source xsi:type="opcUa" refId="::Calibratio:hmi.out.svg4" attribute="value" samplingRate="slow" />
+<Target xsi:type="brease" contentRefId="FourImgContent" widgetRefId="VisionImage4" attribute="svgImage" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Calibratio:hmi.out.overlay4" attribute="value" samplingRate="slow" />
+<Target xsi:type="brease" contentRefId="FourImgContent" widgetRefId="VisionImage4" attribute="svgOverlay" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Calibratio:hmi.out.overlay3" attribute="value" samplingRate="slow" />
+<Target xsi:type="brease" contentRefId="FourImgContent" widgetRefId="VisionImage3" attribute="svgOverlay" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Calibratio:hmi.out.overlay2" attribute="value" samplingRate="slow" />
+<Target xsi:type="brease" contentRefId="FourImgContent" widgetRefId="VisionImage2" attribute="svgOverlay" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Calibratio:hmi.out.overlay1" attribute="value" />
+<Target xsi:type="brease" contentRefId="FourImgContent" widgetRefId="VisionImage1" attribute="svgOverlay" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Calibratio:hmi.out.text4" attribute="value" />
+<Target xsi:type="brease" contentRefId="FourImgContent" widgetRefId="TextOutput4" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Calibratio:hmi.out.text3" attribute="value" />
+<Target xsi:type="brease" contentRefId="FourImgContent" widgetRefId="TextOutput3" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Calibratio:hmi.out.text2" attribute="value" />
+<Target xsi:type="brease" contentRefId="FourImgContent" widgetRefId="TextOutput2" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Calibratio:hmi.out.text1" attribute="value" />
+<Target xsi:type="brease" contentRefId="FourImgContent" widgetRefId="TextOutput1" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Calibratio:hmi.in.par.expTime[1]" attribute="value" />
+<Target xsi:type="brease" contentRefId="LightParams" widgetRefId="NumericInput7" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Calibratio:hmi.in.par.expTime[2]" attribute="value" />
+<Target xsi:type="brease" contentRefId="LightParams" widgetRefId="NumericInput3" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Calibratio:hmi.in.par.expTime[0]" attribute="value" />
+<Target xsi:type="brease" contentRefId="LightParams" widgetRefId="NumericInput1" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Calibratio:hmi.in.par.LED[1]" attribute="value" />
+<Target xsi:type="brease" contentRefId="LightParams" widgetRefId="DropDownBox3" attribute="selectedIndex" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Calibratio:hmi.in.par.LED[2]" attribute="value" />
+<Target xsi:type="brease" contentRefId="LightParams" widgetRefId="DropDownBox1" attribute="selectedIndex" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Calibratio:hmi.in.par.LED[0]" attribute="value" />
+<Target xsi:type="brease" contentRefId="LightParams" widgetRefId="DropDownBox2" attribute="selectedIndex" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Calibratio:hmi.in.par.angle" attribute="value" />
+<Target xsi:type="brease" contentRefId="LightParams" widgetRefId="NumericInput5" attribute="value" />
+</Binding>
+</Bindings>
 </BindingsSet>

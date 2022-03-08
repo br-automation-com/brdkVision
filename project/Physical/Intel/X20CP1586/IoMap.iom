@@ -1,28 +1,50 @@
-VAR_CONFIG
-	::Calibratio:hw.out.focus AT %QW."VSS112Q22.041P-000".SetFocus;
-	::Calibratio:hw.out.expTime AT %QD."VSS112Q22.041P-000".ExposureTime01;
-	::Calibratio:hw.out.delayNettime AT %QD."VSS112Q22.041P-000".DelayNettime01;
-	::Calibratio:hw.out.ledColor AT %QB."VSS112Q22.041P-000".FlashColor01;
-	::Calibratio:hw.out.ledSegment AT %QB."VSS112Q22.041P-000".FlashSegment01;
-	::Calibratio:hw.in.ready AT %IX."VSS112Q22.041P-000".ImageAcquisitionReady;
-	::Calibratio:hw.out.trigger AT %QX."VSS112Q22.041P-000".ImageAcquisition;
-	::Calibratio:hw.out.irFilter AT %QX."VSS112Q22.041P-000".IRFilter;
-	::Calibratio:hw.out.enable AT %QX."VSS112Q22.041P-000".VF1Enable;
-	::Calibratio:hw.out.numMax AT %QB."VSS112Q22.041P-000".VF1NumSearchMax;
-	::Calibratio:hw.in.imgTime AT %ID."VSS112Q22.041P-000".ImageNettime;
-	::Calibratio:hw.in.va.numRes AT %IB."VSS112Q22.041P-000".NumResults;
-	::Calibratio:hw.in.va.res[0].posX AT %ID."VSS112Q22.041P-000".PositionX01;
-	::Calibratio:hw.in.va.res[1].posX AT %ID."VSS112Q22.041P-000".PositionX02;
-	::Calibratio:hw.in.va.res[2].posX AT %ID."VSS112Q22.041P-000".PositionX03;
-	::Calibratio:hw.in.va.res[3].posX AT %ID."VSS112Q22.041P-000".PositionX04;
-	::Calibratio:hw.in.va.res[0].posY AT %ID."VSS112Q22.041P-000".PositionY01;
-	::Calibratio:hw.in.va.res[1].posY AT %ID."VSS112Q22.041P-000".PositionY02;
-	::Calibratio:hw.in.va.res[2].posY AT %ID."VSS112Q22.041P-000".PositionY03;
-	::Calibratio:hw.in.va.res[3].posY AT %ID."VSS112Q22.041P-000".PositionY04;
-	::Calibratio:hw.out.delayNettime AT %QD."VSLB11Q00.54DP-000".Nettime01;
-	::Calibratio:hw.out.expTime AT %QD."VSLB11Q00.54DP-000".ExposureTime01;
-	::Calibratio:hw.out.ledColor AT %QB."VSLB11Q00.54DP-000".FlashColor01;
-	::Calibratio:hw.out.trigger AT %QX."VSLB11Q00.54DP-000".FlashTrigger;
-	::Calibratio:hw.in.nettime AT %ID."X20CP1586".IF3.NettimeSoC;
-	::Calibratio:hw.out.useRegionFeat AT %QX."VSS112Q22.041P-000".VF1RegionFeatures;
+
+	
+	VAR_CONFIG
+		::Calibratio:hw.in.nettime AT %ID."X20CP1586".IF3.NettimeSoC;
+		::Calibratio:hw.out.focus AT %QW."VSC122A25.051P-000".SetFocus;
+		::Calibratio:hw.out.expTime[0] AT %QD."VSC122A25.051P-000".ExposureTime01;
+		::Calibratio:hw.out.delayNettime AT %QD."VSC122A25.051P-000".DelayNettime01;
+		::Calibratio:hw.out.ledColor[0] AT %QB."VSC122A25.051P-000".FlashColor01;
+		::Calibratio:hw.out.ledSegment AT %QB."VSC122A25.051P-000".FlashSegment01;
+		::Calibratio:hw.in.ready[0] AT %IX."VSC122A25.051P-000".ImageAcquisitionReady;
+		::Calibratio:hw.out.trigger AT %QX."VSC122A25.051P-000".ImageAcquisition;
+		::Calibratio:hw.out.irFilter AT %QX."VSC122A25.051P-000".IRFilter;
+		::Calibratio:hw.out.enable AT %QX."VSC122A25.051P-000".VF1Enable;
+		::Calibratio:hw.out.numMax AT %QB."VSC122A25.051P-000".VF1NumSearchMax;
+		::Calibratio:hw.in.imgTime AT %ID."VSC122A25.051P-000".ImageNettime;
+		::Calibratio:hw.in.va.numRes AT %IB."VSC122A25.051P-000".NumResults;
+		::Calibratio:hw.in.va.res[0].posX AT %ID."VSC122A25.051P-000".PositionX01;
+		::Calibratio:hw.in.va.res[1].posX AT %ID."VSC122A25.051P-000".PositionX02;
+		::Calibratio:hw.in.va.res[2].posX AT %ID."VSC122A25.051P-000".PositionX03;
+		::Calibratio:hw.in.va.res[3].posX AT %ID."VSC122A25.051P-000".PositionX04;
+		::Calibratio:hw.in.va.res[0].posY AT %ID."VSC122A25.051P-000".PositionY01;
+		::Calibratio:hw.in.va.res[1].posY AT %ID."VSC122A25.051P-000".PositionY02;
+		::Calibratio:hw.in.va.res[2].posY AT %ID."VSC122A25.051P-000".PositionY03;
+		::Calibratio:hw.in.va.res[3].posY AT %ID."VSC122A25.051P-000".PositionY04;
+		::Calibratio:hw.out.delayNettime AT %QD."VSLB11Q00.54DP-000".Nettime01;
+		::Calibratio:hw.out.expTime[1] AT %QD."VSLB11Q00.54DP-000".ExposureTime01;
+		::Calibratio:hw.out.ledColor[1] AT %QB."VSLB11Q00.54DP-000".FlashColor01;
+		::Calibratio:hw.out.trigger AT %QX."VSLB11Q00.54DP-000".FlashTrigger;
+		::Calibratio:hw.out.useRegionFeat AT %QX."VSC122A25.051P-000".VF1RegionFeatures;
+	
+		::Calibratio:hw.in.ready[2] AT %IX."VSLL11R30.67AP-000".Ready;
+		::Calibratio:hw.in.status[2] AT %ID."VSLL11R30.67AP-000".Status;
+		::Calibratio:hw.out.trigger AT %QX."VSLL11R30.67AP-000".FlashTrigger;
+		::Calibratio:hw.out.expTime[2] AT %QD."VSLL11R30.67AP-000".ExposureTime01;
+		::Calibratio:hw.out.ledColor[2] AT %QB."VSLL11R30.67AP-000".FlashColor01;
+		::Calibratio:hw.out.angle[0] AT %QW."VSLL11R30.67AP-000".SetAngleTotal;
+		::Calibratio:hw.in.ready[3] AT %IX."VSLL11R30.67AP-000a".Ready;
+		::Calibratio:hw.in.status[3] AT %ID."VSLL11R30.67AP-000a".Status;
+		::Calibratio:hw.out.trigger AT %QX."VSLL11R30.67AP-000a".FlashTrigger;
+		::Calibratio:hw.out.expTime[3] AT %QD."VSLL11R30.67AP-000a".ExposureTime01;
+		::Calibratio:hw.out.ledColor[3] AT %QB."VSLL11R30.67AP-000a".FlashColor01;
+		::Calibratio:hw.out.angle[1] AT %QW."VSLL11R30.67AP-000a".SetAngleTotal;
+		::Calibratio:hw.in.ready[1] AT %IX."VSLB11Q00.54DP-000".Ready;
+		::Calibratio:hw.in.status[1] AT %ID."VSLB11Q00.54DP-000".Status;
+		::Calibratio:hw.out.delayNettime AT %QD."VSLL11R30.67AP-000".Nettime01;
+		::Calibratio:hw.out.delayNettime AT %QD."VSLL11R30.67AP-000a".Nettime01;
+		::Calibratio:hw.in.status[0] AT %ID."VSC122A25.051P-000".CameraStatus;
 END_VAR
+
+

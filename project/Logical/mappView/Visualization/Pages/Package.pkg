@@ -5,5 +5,7 @@
     <Object Type="Package" Description="AreaContents">AreaContents</Object>
     <Object Type="Package">Image</Object>
     <Object Type="Package">Recipe</Object>
+    <Object Type="Package">Light</Object>
+    <Object Type="Package">LandingPage</Object>
   </Objects>
 </Package>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="FourImgContent" height="600" width="820" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+    <Widget xsi:type="widgets.brdk.VisionImage" id="VisionImage1" top="40" left="60" width="360" height="240" zIndex="0" />
+    <Widget xsi:type="widgets.brdk.VisionImage" id="VisionImage2" top="40" left="440" width="360" height="240" zIndex="1" />
+    <Widget xsi:type="widgets.brdk.VisionImage" id="VisionImage3" top="340" left="60" width="360" height="240" zIndex="2" />
+    <Widget xsi:type="widgets.brdk.VisionImage" id="VisionImage4" top="340" left="440" width="360" height="240" zIndex="3" />
+    <Widget xsi:type="widgets.brease.Button" id="ButtonZoomIn" top="128" left="5" width="40" height="35" zIndex="4" image="Media/SymbolLib/Edit/ZoomIn.svg" />
+    <Widget xsi:type="widgets.brease.Button" id="ButtonZoomOut" top="168" left="5" width="40" height="35" zIndex="5" image="Media/SymbolLib/Edit/ZoomOut.svg" imageAlign="right" />
+    <Widget xsi:type="widgets.brease.Button" id="ButtonPanRight" top="258" left="5" width="40" height="40" zIndex="6" image="Media/SymbolLib/Arrow/ArrowRight.svg" />
+    <Widget xsi:type="widgets.brease.Button" id="ButtonPanLeft" top="208" left="5" width="40" height="45" zIndex="7" image="Media/SymbolLib/Arrow/ArrowLeft.svg" />
+    <Widget xsi:type="widgets.brease.Button" id="ButtonPanDown" top="348" left="5" width="40" height="35" zIndex="8" image="Media/SymbolLib/Arrow/ArrowDown.svg" />
+    <Widget xsi:type="widgets.brease.Button" id="ButtonPanUp" top="303" left="5" width="40" height="40" zIndex="9" image="Media/SymbolLib/Arrow/ArrowUp.svg" />
+    <Widget xsi:type="widgets.brease.Button" id="ButtonReset" top="83" left="5" width="40" height="40" zIndex="10" image="Media/SymbolLib/Edit/Maximize.svg" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton1" top="473" left="5" width="40" height="45" zIndex="11" image="Media/SymbolLib/Symbols/Hide.svg" mouseDownImage="Media/SymbolLib/Symbols/UnHide.svg" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButtonFlipVertical" top="388" left="5" width="40" height="40" zIndex="12" image="Media/flipVertical.svg" mouseDownImage="Media/flipVertical.svg" imageHeight="20" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButtonFlipHorisontal" top="431" left="7" width="35" height="39" zIndex="13" image="Media/flipVertical.svg" mouseDownImage="Media/flipVertical.svg" imageHeight="20" rotation="270deg" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput1" top="0" left="60" width="360" zIndex="14" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput2" top="0" left="440" width="360" zIndex="15" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput3" top="300" left="60" width="360" zIndex="16" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput4" top="300" left="440" width="360" zIndex="17" />
+  </Widgets>
+</Content>

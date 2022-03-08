@@ -9,5 +9,6 @@
     <Object Type="File" Reference="true">\Physical\ARM\X20CP0484_1\mappView\EventBinding.eventbinding</Object>
     <Object Type="File" Reference="true">\Physical\ARM\X20CP0484_1\mappView\Image.eventbinding</Object>
     <Object Type="File" Reference="true">\Physical\ARM\X20CP0484_1\mappView\Bottom.binding</Object>
+    <Object Type="File" Reference="true">\Physical\ARM\X20CP0484_1\mappView\Header.binding</Object>
   </Objects>
 </Package>

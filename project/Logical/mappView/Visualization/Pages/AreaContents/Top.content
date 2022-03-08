@@ -1,9 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Content id="Top" height="150" width="1280" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Content id="Top" height="100" width="1280" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Widgets>
-    <Widget xsi:type="widgets.brease.PieChart" id="PieChart1" top="20" left="980" width="120" height="120" zIndex="0">
+    <Widget xsi:type="widgets.brease.PieChart" id="PieChart1" top="10" left="980" width="80" height="80" zIndex="0">
       <Widgets />
     </Widget>
-    <Widget xsi:type="widgets.brease.Image" id="Image1" top="20" left="20" width="200" height="120" zIndex="1" image="Media/BuR_Logo.jpg" />
+    <Widget xsi:type="widgets.brease.Image" id="Image1" top="10" left="10" width="140" height="80" zIndex="1" image="Media/BuR_Logo.jpg" />
+    <Widget xsi:type="widgets.brease.PushButton" id="PushButton2" top="15" left="1120" width="140" height="70" zIndex="2" text="Trigger Image" fontSize="15px" bold="true" />
   </Widgets>
 </Content>

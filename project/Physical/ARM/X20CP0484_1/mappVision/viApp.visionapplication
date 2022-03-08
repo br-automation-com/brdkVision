@@ -54,6 +54,90 @@
       <Group ID="Input[16]">
         <Property ID="ChannelID" Value="pnpValMaxNum" />
       </Group>
+      <Group ID="Input[17]">
+        <Property ID="ChannelID" Value="VF2Enable" />
+      </Group>
+      <Group ID="Input[18]">
+        <Property ID="ChannelID" Value="VF2NumSearchMax" />
+      </Group>
+      <Group ID="Input[19]">
+        <Property ID="ChannelID" Value="VF2OffsetROIX" />
+      </Group>
+      <Group ID="Input[20]">
+        <Property ID="ChannelID" Value="VF2OffsetROIY" />
+      </Group>
+      <Group ID="Input[21]">
+        <Property ID="ChannelID" Value="VF2OffsetROIOrientation" />
+      </Group>
+      <Group ID="Input[22]">
+        <Property ID="ChannelID" Value="VF2OffsetROIRotCenterX" />
+      </Group>
+      <Group ID="Input[23]">
+        <Property ID="ChannelID" Value="VF2OffsetROIRotCenterY" />
+      </Group>
+      <Group ID="Input[24]">
+        <Property ID="ChannelID" Value="VF3Enable" />
+      </Group>
+      <Group ID="Input[25]">
+        <Property ID="ChannelID" Value="VF3NumSearchMax" />
+      </Group>
+      <Group ID="Input[26]">
+        <Property ID="ChannelID" Value="VF3Timeout" />
+      </Group>
+      <Group ID="Input[27]">
+        <Property ID="ChannelID" Value="VF3Alignment" />
+      </Group>
+      <Group ID="Input[28]">
+        <Property ID="ChannelID" Value="VF3MinScore" />
+      </Group>
+      <Group ID="Input[29]">
+        <Property ID="ChannelID" Value="VF3MaxOverlap" />
+      </Group>
+      <Group ID="Input[30]">
+        <Property ID="ChannelID" Value="VF3OffsetROIX" />
+      </Group>
+      <Group ID="Input[31]">
+        <Property ID="ChannelID" Value="VF3OffsetROIY" />
+      </Group>
+      <Group ID="Input[32]">
+        <Property ID="ChannelID" Value="VF3OffsetROIOrientation" />
+      </Group>
+      <Group ID="Input[33]">
+        <Property ID="ChannelID" Value="VF3OffsetROIRotCenterX" />
+      </Group>
+      <Group ID="Input[34]">
+        <Property ID="ChannelID" Value="VF3OffsetROIRotCenterY" />
+      </Group>
+      <Group ID="Input[35]">
+        <Property ID="ChannelID" Value="VF4Enable" />
+      </Group>
+      <Group ID="Input[36]">
+        <Property ID="ChannelID" Value="VF4NumSearchMax" />
+      </Group>
+      <Group ID="Input[37]">
+        <Property ID="ChannelID" Value="VF4ParameterMode" />
+      </Group>
+      <Group ID="Input[38]">
+        <Property ID="ChannelID" Value="VF4Timeout" />
+      </Group>
+      <Group ID="Input[39]">
+        <Property ID="ChannelID" Value="VF4Grading" />
+      </Group>
+      <Group ID="Input[40]">
+        <Property ID="ChannelID" Value="VF4OffsetROIX" />
+      </Group>
+      <Group ID="Input[41]">
+        <Property ID="ChannelID" Value="VF4OffsetROIY" />
+      </Group>
+      <Group ID="Input[42]">
+        <Property ID="ChannelID" Value="VF4OffsetROIOrientation" />
+      </Group>
+      <Group ID="Input[43]">
+        <Property ID="ChannelID" Value="VF4OffsetROIRotCenterX" />
+      </Group>
+      <Group ID="Input[44]">
+        <Property ID="ChannelID" Value="VF4OffsetROIRotCenterY" />
+      </Group>
     </Group>
     <Group ID="ImgProcessingVariables" />
     <Group ID="ImageAcquisition">
@@ -64,6 +148,10 @@
       </Group>
       <Group ID="BaseSettings">
         <Property ID="FocusScale" Value="1" />
+      </Group>
+      <Group ID="ImageSettings">
+        <Property ID="ImageWidth" Value="2580" />
+        <Property ID="ImageHeight" Value="2048" />
       </Group>
     </Group>
     <Group ID="VisionFunctionSet">
@@ -135,6 +223,197 @@
             <Group ID="OffsetROIRotCenterY">
               <Selector ID="SourceType" Value="Input">
                 <Property ID="IoParameter" Value="VF1OffsetROIRotCenterY" />
+              </Selector>
+            </Group>
+          </Group>
+        </Selector>
+        <Group ID="Position">
+          <Property ID="X" Value="1" />
+          <Property ID="Y" Value="0" />
+        </Group>
+      </Group>
+      <Group ID="VfInstance[2]">
+        <Property ID="VfName" Value="vfMeasure" />
+        <Property ID="VfExecutionNr" Value="2" />
+        <Selector ID="VfType" Value="vf-measurement">
+          <Group ID="VfWirings">
+            <Group ID="Image">
+              <Selector ID="SourceType" Value="ImageAcquisition">
+                <Property ID="IaParameter" Value="Image01" />
+              </Selector>
+            </Group>
+            <Group ID="Enable">
+              <Selector ID="SourceType" Value="Input">
+                <Property ID="IoParameter" Value="VF2Enable" />
+              </Selector>
+            </Group>
+            <Group ID="NumSearchMax">
+              <Selector ID="SourceType" Value="Input">
+                <Property ID="IoParameter" Value="VF2NumSearchMax" />
+              </Selector>
+            </Group>
+            <Group ID="OffsetROIX">
+              <Selector ID="SourceType" Value="Input">
+                <Property ID="IoParameter" Value="VF2OffsetROIX" />
+              </Selector>
+            </Group>
+            <Group ID="OffsetROIY">
+              <Selector ID="SourceType" Value="Input">
+                <Property ID="IoParameter" Value="VF2OffsetROIY" />
+              </Selector>
+            </Group>
+            <Group ID="OffsetROIOrientation">
+              <Selector ID="SourceType" Value="Input">
+                <Property ID="IoParameter" Value="VF2OffsetROIOrientation" />
+              </Selector>
+            </Group>
+            <Group ID="OffsetROIRotCenterX">
+              <Selector ID="SourceType" Value="Input">
+                <Property ID="IoParameter" Value="VF2OffsetROIRotCenterX" />
+              </Selector>
+            </Group>
+            <Group ID="OffsetROIRotCenterY">
+              <Selector ID="SourceType" Value="Input">
+                <Property ID="IoParameter" Value="VF2OffsetROIRotCenterY" />
+              </Selector>
+            </Group>
+          </Group>
+        </Selector>
+        <Group ID="Position">
+          <Property ID="X" Value="1" />
+          <Property ID="Y" Value="0" />
+        </Group>
+      </Group>
+      <Group ID="VfInstance[3]">
+        <Property ID="VfName" Value="vfMatching" />
+        <Property ID="VfExecutionNr" Value="3" />
+        <Selector ID="VfType" Value="vf-matching">
+          <Group ID="VfWirings">
+            <Group ID="Image">
+              <Selector ID="SourceType" Value="ImageAcquisition">
+                <Property ID="IaParameter" Value="Image01" />
+              </Selector>
+            </Group>
+            <Group ID="Enable">
+              <Selector ID="SourceType" Value="Input">
+                <Property ID="IoParameter" Value="VF3Enable" />
+              </Selector>
+            </Group>
+            <Group ID="NumSearchMax">
+              <Selector ID="SourceType" Value="Input">
+                <Property ID="IoParameter" Value="VF3NumSearchMax" />
+              </Selector>
+            </Group>
+            <Group ID="Timeout">
+              <Selector ID="SourceType" Value="Input">
+                <Property ID="IoParameter" Value="VF3Timeout" />
+              </Selector>
+            </Group>
+            <Group ID="Alignment">
+              <Selector ID="SourceType" Value="Input">
+                <Property ID="IoParameter" Value="VF3Alignment" />
+              </Selector>
+            </Group>
+            <Group ID="MinScore">
+              <Selector ID="SourceType" Value="Input">
+                <Property ID="IoParameter" Value="VF3MinScore" />
+              </Selector>
+            </Group>
+            <Group ID="MaxOverlap">
+              <Selector ID="SourceType" Value="Input">
+                <Property ID="IoParameter" Value="VF3MaxOverlap" />
+              </Selector>
+            </Group>
+            <Group ID="OffsetROIX">
+              <Selector ID="SourceType" Value="Input">
+                <Property ID="IoParameter" Value="VF3OffsetROIX" />
+              </Selector>
+            </Group>
+            <Group ID="OffsetROIY">
+              <Selector ID="SourceType" Value="Input">
+                <Property ID="IoParameter" Value="VF3OffsetROIY" />
+              </Selector>
+            </Group>
+            <Group ID="OffsetROIOrientation">
+              <Selector ID="SourceType" Value="Input">
+                <Property ID="IoParameter" Value="VF3OffsetROIRotCenterY" />
+              </Selector>
+            </Group>
+            <Group ID="OffsetROIRotCenterX">
+              <Selector ID="SourceType" Value="Input">
+                <Property ID="IoParameter" Value="VF3OffsetROIOrientation" />
+              </Selector>
+            </Group>
+            <Group ID="OffsetROIRotCenterY">
+              <Selector ID="SourceType" Value="Input">
+                <Property ID="IoParameter" Value="VF3OffsetROIRotCenterX" />
+              </Selector>
+            </Group>
+          </Group>
+        </Selector>
+        <Group ID="Position">
+          <Property ID="X" Value="1" />
+          <Property ID="Y" Value="0" />
+        </Group>
+      </Group>
+      <Group ID="VfInstance[4]">
+        <Property ID="VfName" Value="vfOCR" />
+        <Property ID="VfExecutionNr" Value="4" />
+        <Selector ID="VfType" Value="vf-ocr">
+          <Group ID="VfWirings">
+            <Group ID="Image">
+              <Selector ID="SourceType" Value="ImageAcquisition">
+                <Property ID="IaParameter" Value="Image01" />
+              </Selector>
+            </Group>
+            <Group ID="Enable">
+              <Selector ID="SourceType" Value="Input">
+                <Property ID="IoParameter" Value="VF4Enable" />
+              </Selector>
+            </Group>
+            <Group ID="NumSearchMax">
+              <Selector ID="SourceType" Value="Input">
+                <Property ID="IoParameter" Value="VF4NumSearchMax" />
+              </Selector>
+            </Group>
+            <Group ID="ParameterMode">
+              <Selector ID="SourceType" Value="Input">
+                <Property ID="IoParameter" Value="VF4ParameterMode" />
+              </Selector>
+            </Group>
+            <Group ID="Timeout">
+              <Selector ID="SourceType" Value="Input">
+                <Property ID="IoParameter" Value="VF4Timeout" />
+              </Selector>
+            </Group>
+            <Group ID="Grading">
+              <Selector ID="SourceType" Value="Input">
+                <Property ID="IoParameter" Value="VF4Grading" />
+              </Selector>
+            </Group>
+            <Group ID="OffsetROIX">
+              <Selector ID="SourceType" Value="Input">
+                <Property ID="IoParameter" Value="VF4OffsetROIX" />
+              </Selector>
+            </Group>
+            <Group ID="OffsetROIY">
+              <Selector ID="SourceType" Value="Input">
+                <Property ID="IoParameter" Value="VF4OffsetROIY" />
+              </Selector>
+            </Group>
+            <Group ID="OffsetROIOrientation">
+              <Selector ID="SourceType" Value="Input">
+                <Property ID="IoParameter" Value="VF4OffsetROIOrientation" />
+              </Selector>
+            </Group>
+            <Group ID="OffsetROIRotCenterX">
+              <Selector ID="SourceType" Value="Input">
+                <Property ID="IoParameter" Value="VF4OffsetROIRotCenterX" />
+              </Selector>
+            </Group>
+            <Group ID="OffsetROIRotCenterY">
+              <Selector ID="SourceType" Value="Input">
+                <Property ID="IoParameter" Value="VF4OffsetROIRotCenterY" />
               </Selector>
             </Group>
           </Group>

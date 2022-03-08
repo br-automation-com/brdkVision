@@ -9,5 +9,6 @@
     <Object Type="File">EventBinding.eventbinding</Object>
     <Object Type="File">Image.eventbinding</Object>
     <Object Type="File">Bottom.binding</Object>
+    <Object Type="File">Header.binding</Object>
   </Objects>
 </Package>
