@@ -23,6 +23,12 @@ Each of the brdkVi libraries have a have a help file with some documentation for
 
 The libraris can be found in the export folder
 
+##brdkServices 
+The project also contains a folder called brdkServices this is **not** need but it contains a Python script to create referenced configurations of an exsisting configuration in your project.
+
+![image](https://user-images.githubusercontent.com/36692577/176138493-00d7701b-e772-4cdd-9349-9c26ae1d949a.png)
+
+
 
 
 
