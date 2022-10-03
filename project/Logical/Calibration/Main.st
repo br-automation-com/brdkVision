@@ -7,7 +7,7 @@ PROGRAM _INIT
 	
 	
 	this.mappView.enable 		:= TRUE;
-	this.mappView.cameraIp 		:= '192.168.200.1';
+	this.mappView.pMappLink 		:= ADR(gBlobCamera);
 	this.mappView.getImageArray := FALSE;
 	this.mappView.timeout 		:= 3000;
 	this.mappView.simulateConfig.appendNumber := TRUE;

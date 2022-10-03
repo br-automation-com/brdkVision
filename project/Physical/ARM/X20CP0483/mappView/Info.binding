@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BindingsSet id="Info_binding" xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Bindings>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::Calibratio:hmi.in.cmd.trigger" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Info" widgetRefId="TriggerImage" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::Calibratio:hmi.in.cmd.calibrate" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Info" widgetRefId="TriggerCalibrate" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::Calibratio:hmi.in.cmd.x" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Info" widgetRefId="NumericOutputImgPosX" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::Calibratio:hmi.in.cmd.y" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Info" widgetRefId="NumericOutputImgPosY" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::Calibratio:hmi.out.realPos.x" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Info" widgetRefId="NumericOutputRealPosX" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::Calibratio:hmi.out.realPos.y" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Info" widgetRefId="NumericOutputRealPosY" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::Calibratio:hmi.in.cmd.elemId" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Info" widgetRefId="TextOutput1" attribute="value" />
+		</Binding>
+	<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Calibratio:hmi.in.par.expTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="Info" widgetRefId="NumericInputExpTime" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Calibratio:hmi.in.par.LED" attribute="value" />
+<Target xsi:type="brease" contentRefId="Info" widgetRefId="NumericInputLEDColor" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Calibratio:hmi.in.par.LEDsegment" attribute="value" />
+<Target xsi:type="brease" contentRefId="Info" widgetRefId="NumericLEDSegment" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Calibratio:hmi.in.par.focus" attribute="value" />
+<Target xsi:type="brease" contentRefId="Info" widgetRefId="NumericInputFocus" attribute="value" />
+</Binding>
+
+</Bindings>
+</BindingsSet>

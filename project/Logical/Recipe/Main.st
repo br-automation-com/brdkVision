@@ -29,7 +29,7 @@ PROGRAM _CYCLIC
 	// wait for Mapp Recipe save notification
 	IF mpRecipeRegPar.SaveNotification THEN
 		// Get VF information from AR config system
-		brdkViMapp_getVfDataSet('BLOBCam',1,ADR(recipe.VF.params),ADR(recipe.VF.ROI),ADR(recipe.VF.widgetModels),SIZEOF(recipe.VF.ROI),ADR(error));
+		brdkViMapp_getVfDataSet('BLOBCam',1,ADR(recipe.VF.params),ADR(recipe.VF.ROI),ADR(recipe.VF.widgetModels),SIZEOF(recipe.VF.ROI),0,ADR(error));
 		// Allow MpRecipe to save recipe to file
 		mpRecipeRegPar.ConfirmSave := TRUE;
 	END_IF
@@ -37,7 +37,7 @@ PROGRAM _CYCLIC
 	// wait for Mapp Recipe update notification
 	IF mpRecipeRegPar.UpdateNotification THEN
 		// Set VF info into AR config system
-		brdkViMapp_setVfDataSet('BLOBCam',1,ADR(recipe.VF.params),ADR(recipe.VF.ROI),ADR(recipe.VF.widgetModels),ADR(error));
+		brdkViMapp_setVfDataSet('BLOBCam',1,ADR(recipe.VF.params),ADR(recipe.VF.ROI),ADR(recipe.VF.widgetModels),0,ADR(error));
 		//Trigger a Load of the VA from AS config system down to the camera		
 		viBaseLoadVa.Execute := TRUE;
 		viBaseLoadVa.MpLink := ADR(gBlobCamera);

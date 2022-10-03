@@ -12,5 +12,6 @@
     <Dependency ObjectName="brdkViBase" />
     <Dependency ObjectName="BRSE_RTK" />
     <Dependency ObjectName="FileIO" />
+    <Dependency ObjectName="ViBase" />
   </Dependencies>
 </Library>

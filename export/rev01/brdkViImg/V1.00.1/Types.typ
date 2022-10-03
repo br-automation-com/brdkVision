@@ -51,15 +51,13 @@ TYPE
 	END_STRUCT;
 	brdkViImg_getImageInternal_typ : 	STRUCT 
 		memInfo : brdkViImg_getImageMemInfo_typ;
-		uri : STRING[80];
-		requestHeader : httpRequestHeader_t;
-		httpClient_0 : httpClient;
 		TON_ReloadTimeout : TON;
 		fileClose_0 : FileClose;
 		fileRead_0 : FileRead;
 		fileOpen_0 : FileOpen;
 		fileName : STRING[255];
 		fileNumber : UDINT;
+		viBaseGetImage_0 : ViBaseGetImage;
 	END_STRUCT;
 	brdkViImg_bmpInfoHeader_typ : 	STRUCT  (*BMP information header.*)
 		size : UDINT := 0; (*Size of this header (in bytes)*)

@@ -23,6 +23,7 @@ extern "C"
 		#include "standard.h"
 		#include "BRSE_RTK.h"
 		#include "brdkViBase.h"
+		#include "ViBase.h"
 #endif
 #ifdef _SG4
 		#include "FileIO.h"
@@ -30,6 +31,7 @@ extern "C"
 		#include "standard.h"
 		#include "BRSE_RTK.h"
 		#include "brdkViBase.h"
+		#include "ViBase.h"
 #endif
 #ifdef _SGC
 		#include "FileIO.h"
@@ -37,6 +39,7 @@ extern "C"
 		#include "standard.h"
 		#include "BRSE_RTK.h"
 		#include "brdkViBase.h"
+		#include "ViBase.h"
 #endif
 
 
@@ -78,21 +81,19 @@ typedef struct brdkViImg_getImageMemInfo_typ
 
 typedef struct brdkViImg_getImageInternal_typ
 {	struct brdkViImg_getImageMemInfo_typ memInfo;
-	plcstring uri[81];
-	struct httpRequestHeader_t requestHeader;
-	struct httpClient httpClient_0;
 	struct TON TON_ReloadTimeout;
 	struct FileClose fileClose_0;
 	struct FileRead fileRead_0;
 	struct FileOpen fileOpen_0;
 	plcstring fileName[256];
 	unsigned long fileNumber;
+	struct ViBaseGetImage viBaseGetImage_0;
 } brdkViImg_getImageInternal_typ;
 
 typedef struct brdkViImg_getImage
 {
 	/* VAR_INPUT (analog) */
-	plcstring cameraIp[17];
+	unsigned long pMappLink;
 	enum BRDKVIIMG_IMG_TYPE imageFormat;
 	struct brdkViImg_getImageSimulate_typ simulateConfig;
 	unsigned char jpegQuality;
@@ -186,7 +187,7 @@ typedef struct brdkViImg_mappView
 	struct brdkViImg_getImageSimulate_typ simulateConfig;
 	enum BRDKVIIMG_IMG_TYPE imageFormat;
 	unsigned char jpegQuality;
-	plcstring cameraIp[17];
+	unsigned long pMappLink;
 	unsigned long pSvgImage;
 	unsigned long maxSvgImageLength;
 	struct brdkVIImg_imageArray_typ* pImageArray;

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Library Version="1.04.0" SubType="Binary" xmlns="http://br-automation.co.at/AS/Library" Description="">
+  <Objects>
+    <Object Type="File" Description="Exported data types">BRSE_RTK.typ</Object>
+    <Object Type="File" Description="Exported constants">BRSE_RTK.var</Object>
+    <Object Type="File" Description="Exported functions and function blocks">BRSE_RTK.fun</Object>
+  </Objects>
+</Library>

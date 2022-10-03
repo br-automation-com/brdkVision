@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Configuration>
+  <Element ID="UserUnit" Type="Units">
+    <Property ID="Namespace" Value="http://www.br-automation.com/units" />
+    <Property ID="UnitID" Value="5265457" />
+    <Property ID="CommonCode" Value="PX1" />
+    <Property ID="TextSystemNamespace" Value="Localization/Units/User" />
+    <Group ID="Classification[1]">
+      <Property ID="Group[1]" Value="Mechanics" />
+    </Group>
+  </Element>
+</Configuration>
