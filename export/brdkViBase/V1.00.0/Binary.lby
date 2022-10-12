@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Library Version="1.00.0" SubType="ANSIC" xmlns="http://br-automation.co.at/AS/Library">
+  <Files>
+    <File Description="Exported functions and function blocks">brdkViBase.fun</File>
+    <File Description="Exported data types">Types.typ</File>
+    <File Description="Exported constants">Constants.var</File>
+    <File Description="Function to genereate a random number">brdkViBase_random.c</File>
+    <File Description="Function to initializer the random number generator">brdkViBase_initRand.c</File>
+    <File Description="Function to convert degees to radians">brdkViBase_deg2rad.c</File>
+    <File Description="Function to convert radians to degrees">brdkViBase_rad2deg.c</File>
+    <File Description="Function to calculate distance betweent two 2D points">brdkViBase_distance.c</File>
+    <File Description="brdkViBase change log file">CHANGELOG</File>
+    <File>brdkViBase_imgTrigger.c</File>
+  </Files>
+  <Dependencies>
+    <Dependency ObjectName="astime" />
+  </Dependencies>
+</Library>

@@ -2,12 +2,11 @@
 <?AutomationStudio FileVersion="4.9"?>
 <Package xmlns="http://br-automation.co.at/AS/Package">
   <Objects>
-    <Object Type="Library" Language="ANSIC">BRSE_RTK</Object>
-    <Object Type="Library" Language="ANSIC" Description="This library contains functions for drawing and checking geometries">brdkViGeom</Object>
-    <Object Type="Library" Language="ANSIC" Description="This library contains functions for decoding and encoding image data to and from different types">brdkViImg</Object>
-    <Object Type="Library" Language="ANSIC" Description="This library contains functions for shaping BLOBs used in vision functions">brdkViVF</Object>
-    <Object Type="Library" Language="ANSIC" Description="This library contains base functions to be used in vision applications">brdkViBase</Object>
-    <Object Type="Library" Language="ANSIC" Description="This library contains functions to get and set vision function data">brdkViMapp</Object>
-    <Object Type="Library" Language="ANSIC" Description="This library contains functions to calibrate camera and calculate projection matrices">brdkViCal</Object>
+    <Object Type="Library" Language="Binary" Description="This library contains functions for drawing and checking geometries">brdkViGeom</Object>
+    <Object Type="Library" Language="Binary" Description="This library contains functions for decoding and encoding image data to and from different types">brdkViImg</Object>
+    <Object Type="Library" Language="Binary" Description="This library contains functions for shaping BLOBs used in vision functions">brdkViVF</Object>
+    <Object Type="Library" Language="Binary" Description="This library contains base functions to be used in vision applications">brdkViBase</Object>
+    <Object Type="Library" Language="Binary" Description="This library contains functions to get and set vision function data">brdkViMapp</Object>
+    <Object Type="Library" Language="Binary" Description="This library contains functions to calibrate camera and calculate projection matrices">brdkViCal</Object>
   </Objects>
 </Package>

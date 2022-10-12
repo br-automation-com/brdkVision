@@ -54,7 +54,6 @@
     <LibraryObject Name="MTLinAlg" Source="Libraries.MTLinAlg.lby" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="asieccon" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="AsBrStr" Source="Libraries.AsBrStr.lby" Memory="UserROM" Language="binary" Debugging="true" />
-    <LibraryObject Name="BRSE_RTK" Source="Libraries.BRDK.BRSE_RTK.lby" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="brdkViBase" Source="Libraries.BRDK.brdkViBase.lby" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="brdkViCal" Source="Libraries.BRDK.brdkViCal.lby" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="brdkViImg" Source="Libraries.BRDK.brdkViImg.lby" Memory="UserROM" Language="Binary" Debugging="true" />

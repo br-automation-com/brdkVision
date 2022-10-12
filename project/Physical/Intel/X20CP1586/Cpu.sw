@@ -18,6 +18,7 @@
     <BinaryObject Name="TCData" Source="" Memory="SystemROM" Language="Binary" />
     <BinaryObject Name="FWRules" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="TCLang" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="visionUnit" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="ashwac" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="Settings" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="User" Source="" Memory="UserROM" Language="Binary" />
@@ -50,8 +51,15 @@
     <LibraryObject Name="sys_lib" Source="Libraries.sys_lib.lby" Memory="UserROM" Language="binary" Debugging="true" />
     <LibraryObject Name="AsHttp" Source="Libraries.AsHttp.lby" Memory="UserROM" Language="binary" Debugging="true" />
     <LibraryObject Name="standard" Source="Libraries.standard.lby" Memory="UserROM" Language="binary" Debugging="true" />
-    <LibraryObject Name="arssl" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="AsIODiag" Source="Libraries.AsIODiag.lby" Memory="UserROM" Language="binary" Debugging="true" />
     <LibraryObject Name="AsBrStr" Source="Libraries.AsBrStr.lby" Memory="UserROM" Language="binary" Debugging="true" />
+    <LibraryObject Name="asieccon" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="brdkViGeom" Source="Libraries.BRDK.brdkViGeom.lby" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="brdkViImg" Source="Libraries.BRDK.brdkViImg.lby" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="brdkViVF" Source="Libraries.BRDK.brdkViVF.lby" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="brdkViBase" Source="Libraries.BRDK.brdkViBase.lby" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="brdkViMapp" Source="Libraries.BRDK.brdkViMapp.lby" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="brdkViCal" Source="Libraries.BRDK.brdkViCal.lby" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="arssl" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
   </Libraries>
 </SwConfiguration>

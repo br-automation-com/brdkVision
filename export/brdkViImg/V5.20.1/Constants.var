@@ -1,0 +1,4 @@
+VAR CONSTANT
+	BRDKVIS_BASE64_BUSY : UINT := 64001; (*Error occuring when base64 is busy.*)
+	ERR_NO_IMAGE : UINT := 64000; (*Error occuring when no image is available*)
+END_VAR
