@@ -21,7 +21,8 @@ Each of the brdkVi libraries have a have a help file with some documentation for
 * **brdkViCal** - This library contains functions to calibrate camera and calculate projection matrices (Depends on brdkViBase)
 * **BRSE_RTK** - This library gives you access to fundamental system functionality 
 
-The libraris can be found in the export folder
+The libraris can be found in the export folder, all previous versions are also inside this folder. 
+Version 1.x.x can be used with all versions of Mapp where fx. version 5.20.0 only can be used with Mapp 5.20 or higher
 
 ## brdkServices 
 The project also contains a folder called brdkServices this is **not** need but it contains a Python script to create referenced configurations of an exsisting configuration in your project.
