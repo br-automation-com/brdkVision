@@ -18,22 +18,22 @@ extern "C"
 #define _BUR_PUBLIC
 #endif
 #ifdef _SG3
-		#include "brdkViGeom.h"
-		#include "brdkViImg.h"
 		#include "brdkViBase.h"
 		#include "brdkViCal.h"
+		#include "brdkViGeom.h"
+		#include "brdkViImg.h"
 #endif
 #ifdef _SG4
-		#include "brdkViGeom.h"
-		#include "brdkViImg.h"
 		#include "brdkViBase.h"
 		#include "brdkViCal.h"
+		#include "brdkViGeom.h"
+		#include "brdkViImg.h"
 #endif
 #ifdef _SGC
-		#include "brdkViGeom.h"
-		#include "brdkViImg.h"
 		#include "brdkViBase.h"
 		#include "brdkViCal.h"
+		#include "brdkViGeom.h"
+		#include "brdkViImg.h"
 #endif
 
 

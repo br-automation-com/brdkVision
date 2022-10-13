@@ -20,20 +20,20 @@ extern "C"
 #ifdef _SG3
 		#include "FileIO.h"
 		#include "standard.h"
-		#include "brdkViBase.h"
 		#include "ViBase.h"
+		#include "brdkViBase.h"
 #endif
 #ifdef _SG4
 		#include "FileIO.h"
 		#include "standard.h"
-		#include "brdkViBase.h"
 		#include "ViBase.h"
+		#include "brdkViBase.h"
 #endif
 #ifdef _SGC
 		#include "FileIO.h"
 		#include "standard.h"
-		#include "brdkViBase.h"
 		#include "ViBase.h"
+		#include "brdkViBase.h"
 #endif
 
 

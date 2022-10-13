@@ -18,16 +18,16 @@ extern "C"
 #define _BUR_PUBLIC
 #endif
 #ifdef _SG3
-		#include "brdkViBase.h"
 		#include "MTLinAlg.h"
+		#include "brdkViBase.h"
 #endif
 #ifdef _SG4
-		#include "brdkViBase.h"
 		#include "MTLinAlg.h"
+		#include "brdkViBase.h"
 #endif
 #ifdef _SGC
-		#include "brdkViBase.h"
 		#include "MTLinAlg.h"
+		#include "brdkViBase.h"
 #endif
 
 
