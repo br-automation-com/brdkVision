@@ -14,42 +14,6 @@ TYPE
 		posY : DINT;
 		posX : DINT;
 	END_STRUCT;
-	cam_in_match_typ : 	STRUCT 
-		numRes : USINT;
-		res : ARRAY[0..19]OF match_res_typ;
-	END_STRUCT;
-	cam_in_typ : 	STRUCT 
-		imgTime : DINT;
-		ready : BOOL;
-		va : va_res_typ;
-		nettime : DINT;
-		VA_match : cam_in_match_typ;
-	END_STRUCT;
-	cam_out_match_typ : 	STRUCT 
-		maxNum : USINT;
-		enable : BOOL;
-		timeout : UINT;
-		maxOverlap : USINT;
-		minScore : USINT;
-	END_STRUCT;
-	cam_out_typ : 	STRUCT 
-		expTime : UDINT := 400;
-		ledSegment : USINT := 15;
-		ledColor : USINT := 100;
-		focus : UINT := 150;
-		enable : BOOL := TRUE;
-		enableEnhanced : BOOL := TRUE;
-		numMax : USINT := 4;
-		trigger : BOOL;
-		irFilter : BOOL;
-		delayNettime : DINT;
-		useRegionFeat : BOOL;
-		VA_match : cam_out_match_typ;
-	END_STRUCT;
-	cam_typ : 	STRUCT 
-		out : cam_out_typ;
-		in : cam_in_typ;
-	END_STRUCT;
 	hmi_in_cmd_typ : 	STRUCT 
 		trigger : BOOL;
 		calibrate : BOOL;
@@ -66,12 +30,23 @@ TYPE
 		overlay : STRING[20000];
 		svg : STRING[6000000];
 		realPos : brdkViBase_3d_typ;
+		calWarn : BOOL;
 	END_STRUCT;
 	hmi_typ : 	STRUCT 
 		in : hmi_in_typ;
 		out : hmi_out_typ;
 	END_STRUCT;
+	hw_io_input_typ : 	STRUCT 
+		nettime : DINT;
+	END_STRUCT;
+	hw_io_typ : 	STRUCT 
+		input : hw_io_input_typ;
+	END_STRUCT;
 	hw_typ : 	STRUCT 
+		io : hw_io_typ;
+		cam : brdkViBase_cam_hw_typ;
+		backLight : ARRAY[0..0]OF brdkViBase_light_hw_typ;
+		blob : brdkViBase_hw_blob_50_typ;
 	END_STRUCT;
 	local_typ : 	STRUCT 
 		realPos : ARRAY[0..3]OF brdkViBase_3d_typ;
@@ -98,7 +73,9 @@ TYPE
 		simFileDevice : STRING[10] := 'SIM';
 		simFilename : STRING[100] := 'test';
 		text : STRING[200] := 'this is a great test$NWith both new lines$N       and many white spaces';
-		url : STRING[200] := 'http://localhost:81/FileDevice:SIM/crossAir.png ';
+		url : STRING[200] := 'Media/crossAir.png ';
+		imgTrig : brdkViBase_imgTrigger;
+		isCalibration : BOOL;
 	END_STRUCT;
 	pnp_vision_results_shapeP_typ : 	STRUCT 
 		reference : ARRAY[0..MAX_SHAPE_POINTS]OF brdkViBase_2d_typ;

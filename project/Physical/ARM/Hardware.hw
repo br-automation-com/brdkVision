@@ -1,18 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<?AutomationStudio Version=4.12.2.93 FileVersion="4.9"?>
+<?AutomationStudio Version=4.9.4.92 FileVersion="4.9"?>
 <Hardware xmlns="http://br-automation.co.at/AS/Hardware">
-  <Module Name="VSLB11Q00.54DP-000" Type="VSLB11Q00.54DP-000" Version="1.1.0.323">
-    <Connection Connector="PLK1" TargetModule="X20CP0484_1" TargetConnector="IF3" NodeNumber="2">
-      <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
-    </Connection>
-    <Connection Connector="PLK2" TargetModule="VSS112Q22.041P-000" TargetConnector="PLK1" NodeNumber="2">
+  <Module Name="VSC122R35.062P-000" Type="VSC122R35.062P-000" Version="0.0.1.535">
+    <Connection Connector="PLK1" TargetModule="VSLB11R00.54DP-000" TargetConnector="PLK2" NodeNumber="1">
       <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
     </Connection>
     <Parameter ID="Supervision" Value="off" />
     <Parameter ID="VisionConfig" Value="gBlobCamera" />
   </Module>
-  <Module Name="VSS112Q22.041P-000" Type="VSS112Q22.041P-000" Version="1.6.0.543">
-    <Connection Connector="PLK1" TargetModule="VSLB11Q00.54DP-000" TargetConnector="PLK2" NodeNumber="1">
+  <Module Name="VSLB11R00.54DP-000" Type="VSLB11R00.54DP-000" Version="1.1.0.323">
+    <Connection Connector="PLK1" TargetModule="X20CP0484_1" TargetConnector="IF3" NodeNumber="2">
+      <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
+    </Connection>
+    <Connection Connector="PLK2" TargetModule="VSC122R35.062P-000" TargetConnector="PLK1" NodeNumber="2">
       <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
     </Connection>
     <Parameter ID="Supervision" Value="off" />
@@ -23,7 +23,7 @@
       <Parameter ID="CycleTime" Value="2000" />
     </Connector>
   </Module>
-  <Module Name="X20CP0484_1" Type="X20CP0484-1" Version="1.7.0.0">
+  <Module Name="X20CP0484_1" Type="X20CP0484-1" Version="1.2.2.0">
     <Connection Connector="SL" TargetModule="X20BB52" TargetConnector="SL1" />
     <Connector Name="IF2">
       <Parameter ID="ActivateDevice" Value="1" />

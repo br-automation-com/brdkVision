@@ -4,5 +4,6 @@
   <Objects>
     <Object Type="Package">SymbolLib</Object>
     <Object Type="File">flipVertical.svg</Object>
+    <Object Type="File">crossAir.png</Object>
   </Objects>
 </Package>

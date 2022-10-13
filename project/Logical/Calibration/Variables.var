@@ -1,6 +1,6 @@
 VAR
 	j : USINT;
-	hw : cam_typ;
+	hw : hw_typ;
 	state : USINT;
 	hmi : hmi_typ;
 	i : USINT;

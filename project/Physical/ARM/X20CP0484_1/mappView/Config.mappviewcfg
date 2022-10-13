@@ -13,7 +13,9 @@
         <Selector ID="InsecureMode" Value="1" />
       </Group>
       <Group ID="DiagnosticPageConf">
-        <Selector ID="DiagnosticPageSelection" Value="1" />
+        <Selector ID="DiagnosticPageSelection" Value="2">
+          <Property ID="DiagnosticPageRole[1]" Value="Everyone" />
+        </Selector>
       </Group>
       <Selector ID="Deployment" Value="DeploymentPLC" />
     </Group>
@@ -35,6 +37,7 @@
       <Property ID="defaultVisu" Value="DemoVisu" />
       <Group ID="Widget">
         <Selector ID="renderingPolicy" Value="1" />
+        <Selector ID="securityPolicy" Value="1" />
       </Group>
     </Group>
   </Element>

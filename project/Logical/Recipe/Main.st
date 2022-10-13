@@ -1,9 +1,8 @@
-
 PROGRAM _INIT
 	(* Insert code here *)
 	mpRecipe.Enable := TRUE;
 	mpRecipe.DeviceName := ADR('RECIPE');
-	mpRecipe.FileName := ADR('reicpe.csv');
+	mpRecipe.FileName := ADR('reicpe');
 	mpRecipe.MpLink := ADR(gRecipeCsv);
 	mpRecipe();
 	
@@ -14,7 +13,7 @@ PROGRAM _INIT
 	
 	mpRecipeRegPar.Enable := TRUE;
 	mpRecipeRegPar.MpLink := ADR(gRecipeCsv);
-	mpRecipeRegPar.PVName := ADR('::Recipe:recipe');
+	mpRecipeRegPar.PVName := ADR('Recipe::recipe');
 	mpRecipeRegPar();
 	
 END_PROGRAM
@@ -37,31 +36,68 @@ PROGRAM _CYCLIC
 	// wait for Mapp Recipe update notification
 	IF mpRecipeRegPar.UpdateNotification THEN
 		// Set VF info into AR config system
-		brdkViMapp_setVfDataSet('BLOBCam',1,ADR(recipe.VF.params),ADR(recipe.VF.ROI),ADR(recipe.VF.widgetModels),0,ADR(error));
-		//Trigger a Load of the VA from AS config system down to the camera		
-		viBaseLoadVa.Execute := TRUE;
-		viBaseLoadVa.MpLink := ADR(gBlobCamera);
-		viBaseLoadVa.Name := ADR('BLOBCam');
+		brdkViMapp_setVfDataSet('BLOBCam',1,ADR(recipe.VF.params),ADR(recipe.VF.ROI),ADR(recipe.VF.widgetModels),0, ADR(error));
+		//Trigger a Load of the VA from AS config system down to the camera
+		viLoadVA := 1;
 	END_IF
 	
-	// Check if load of VA to camera is done
-	IF viBaseLoadVa.Done OR viBaseLoadVa.Error THEN
-		viBaseLoadVa.Execute := FALSE;
+	IF TEST THEN
+		brdkViMapp_getCompilerOption('BLOBCam', ADR(this.compilerOptions), ADR(error));
+		brdkViMapp_getTriggerMode('BLOBCam', ADR(this.triggerMode), ADR(error));
+		brdkViMapp_getFlipImgHorizontal('BLOBCam', ADR(this.flipHorizontal), ADR(error));
+		brdkViMapp_getFlipImgVertical('BLOBCam', ADR(this.flipVertical), ADR(error));
+	
+	
+		IF recipe.compilerOptions <> this.compilerOptions THEN
+			brdkViMapp_setCompilerOption('BLOBCam', recipe.compilerOptions, ADR(error));
+			viLoadVA := 1;
+		END_IF
+	
+		IF recipe.triggerMode <> this.triggerMode THEN
+			brdkViMapp_setTriggerMode('BLOBCam', recipe.triggerMode, ADR(error));
+			viLoadVA := 1;
+		END_IF
+	
+		IF recipe.flipHorizontal <> this.flipHorizontal THEN
+			brdkViMapp_setFlipImgHorizontal('BLOBCam', recipe.flipHorizontal, ADR(error));
+			viLoadVA := 1;
+		END_IF
+	
+		IF recipe.flipVertical <> this.flipVertical THEN
+			brdkViMapp_setFlipImgVertical('BLOBCam', recipe.flipVertical, ADR(error));
+			viLoadVA := 1;
+		END_IF
+		TEST := FALSE;
+	END_IF
+	
+	
+
+	
+	IF viLoadVA = 1 THEN
+		loadVA.MpLink := ADR(gBlobCamera);
+		loadVA.Execute := TRUE;
+		loadVA.Name := ADR('BLOBCam');
+		viLoadVA := FALSE;
+	END_IF
+	loadVA();
+	
+	IF loadVA.Done THEN
+		loadVA.Execute := FALSE;
 	END_IF
 	
 	// FB calls
 	mpRecipe();
 	mpRecipeUI();
 	mpRecipeRegPar();
-	viBaseLoadVa();	
-END_PROGRAM
+		
+		END_PROGRAM
 
 PROGRAM _EXIT
-	(* Insert code here *)
+		(* Insert code here *)
 	mpRecipe(Enable := FALSE);
 	mpRecipeUI(Enable := FALSE);
 	mpRecipeRegPar(Enable := FALSE);
 	
 	
-END_PROGRAM
+		END_PROGRAM
 

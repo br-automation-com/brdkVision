@@ -5,6 +5,12 @@ PROGRAM _INIT
 	hmi.in.par.focus := 411;
 	hmi.in.par.LED := 1;
 	
+	this.imgTrig.pCameraHw := ADR(hw.cam);
+	this.imgTrig.pLightHw := ADR(hw.backLight);
+	this.imgTrig.numLights := 1;
+	this.imgTrig.useCamColorForLight := TRUE;
+	this.imgTrig.useCamExpTimeForLight := TRUE;
+	
 	
 	this.mappView.enable 		:= TRUE;
 	this.mappView.pMappLink 		:= ADR(gBlobCamera);
@@ -24,70 +30,84 @@ END_PROGRAM
 
 PROGRAM _CYCLIC
 	(* Insert code here *)
-	 
+	this.imgTrig.pCameraHw := ADR(hw.cam);
+	this.imgTrig.pLightHw := ADR(hw.backLight);
+	
 	// trigger image
-	hw.out.ledColor 	:= hmi.in.par.LED;
-	hw.out.ledSegment 	:= hmi.in.par.LEDsegment;
-	hw.out.expTime 		:= hmi.in.par.expTime;
-	hw.out.focus 		:= hmi.in.par.focus;
-	hw.out.irFilter 	:= hw.out.ledColor = 100;
+	hw.cam.out.par.flashColor 	:= hmi.in.par.LED;
+	hw.cam.out.par.flashSegment	:= hmi.in.par.LEDsegment;
+	hw.cam.out.par.exposureTime	:= hmi.in.par.expTime;
+	hw.cam.out.par.focus 		:= hmi.in.par.focus;
+	hw.cam.out.par.IRFilter 	:= hw.cam.out.par.flashColor = BRDKVIBASE_CAM_LED_IR;
 
-	CASE state OF 
-		0:
-			IF NOT hw.out.trigger  AND (hw.in.ready OR DiagCpuIsSimulated()) THEN
-				IF hmi.in.cmd.calibrate THEN
-					// for calibration we only look for 4 round Blobs
-					hw.out.numMax := 4;
-					hw.out.enable := TRUE;
-					hw.out.useRegionFeat := TRUE;
-					
-					state := 10;
-				ELSIF hmi.in.cmd.trigger THEN
-					hw.out.enable := FALSE;
-					hw.out.useRegionFeat := FALSE;
-					state := 10;
-				END_IF
+	IF hmi.in.cmd.calibrate THEN
+		// for calibration we only look for 4 round Blobs
+		hw.blob.out.common.numSearchMax := 4;
+		hw.blob.out.common.enable := TRUE;
+		hw.blob.out.regionFeatures := TRUE;			
+	ELSIF hmi.in.cmd.trigger THEN
+		hw.blob.out.common.enable := FALSE;
+		hw.blob.out.regionFeatures := FALSE;		
+	END_IF
+	
+	
+	// handles triggering af images 
+	this.imgTrig();
+	
+	CASE state OF
+		0: 
+			
+			IF (this.imgTrig.ready OR DiagCpuIsSimulated()) AND (hmi.in.cmd.calibrate OR hmi.in.cmd.trigger) THEN
+				this.imgTrig.trigger := TRUE;
+				this.imgTrig.delayNettime := hw.io.input.nettime + 50000; // add 50ms
+				hmi.out.calWarn := FALSE;
+				state := 10;
 			END_IF
 			
-		10:
-			// trigger image with nettime
-			hw.out.trigger := TRUE;
-			hw.out.delayNettime := hw.in.nettime+ 20000;
-			this.timeoutTrigger.PT := T#2000ms;
-			this.timeoutTrigger.IN := TRUE;
+				
 			
-			state := 20;
-		
-		20:
-			// check if a new image is done
-			IF hw.in.imgTime <> this.oldTime OR DiagCpuIsSimulated() THEN
-				this.oldTime := hw.in.imgTime;
+		10:
+			
+			// Check for new image result
+			IF this.imgTrig.newImage OR ((hmi.in.cmd.trigger OR hmi.in.cmd.calibrate) AND DiagCpuIsSimulated()) THEN
 				this.mappView.updateImage := TRUE;
+				IF DiagCpuIsSimulated() THEN
+					// Random error
+					IF brdkViBase_random(0,7) > 4 THEN
+						hw.blob.in.common.numResults := 3;
+					ELSE
+						hw.blob.in.common.numResults := 4;
+					END_IF	
+				
+					hw.blob.in.results[0].positionX := 31118;
+					hw.blob.in.results[0].positionY := 15084;
+					hw.blob.in.results[1].positionX := 74896;
+					hw.blob.in.results[1].positionY := 15408;
+					hw.blob.in.results[2].positionX := 31487;
+					hw.blob.in.results[2].positionY := 58665;
+					hw.blob.in.results[3].positionX := 74391;
+					hw.blob.in.results[3].positionY := 58582;
+				END_IF
 				
 				// check if its a calibration or its a pick result image
 				IF hmi.in.cmd.calibrate THEN
-					IF hw.in.va.numRes = 4  THEN
+					this.mappView.simulateConfig.maxNumber := 1; // select only first image
+					
+					IF hw.blob.in.common.numResults = 4 THEN
 						this.calcCalibrate := TRUE;
+					ELSE
+						hmi.out.calWarn := TRUE;
 					END_IF
 				ELSE
 					this.getPicks := TRUE;
+					this.mappView.simulateConfig.maxNumber := 3;
 				END_IF
-				
 				hmi.in.cmd.trigger := hmi.in.cmd.calibrate := FALSE;
-				hw.out.trigger := FALSE;
-				
-				state := 0;
-			ELSIF this.timeoutTrigger.Q THEN
-				state := 0;
-				this.timeoutTrigger.IN := hw.out.trigger := FALSE;
-				hmi.in.cmd.trigger := hmi.in.cmd.calibrate := FALSE;
-				hw.out.trigger := FALSE;
-			END_IF
 			
-	END_CASE
-	this.timeoutTrigger();
-	
-	
+				state := 0;
+			END_IF
+
+	END_CASE	
 	// Process the picks
 	IF this.getPicks THEN
 		this.getPicks := FALSE;
@@ -97,12 +117,12 @@ PROGRAM _CYCLIC
 		hmi.out.overlay := '';
 		
 		// Process each result from the VF
-		FOR i:= 0 TO hw.in.VA_match.numRes BY 1 DO
+		FOR i:= 0 TO hw.blob.in.common.numResults BY 1 DO
 			
 			// convert to decimal numbers (and offset andge)
-			this.matchRes[i].imgPos.x := DINT_TO_REAL(hw.in.VA_match.res[i].posX) / 100.0;
-			this.matchRes[i].imgPos.y := DINT_TO_REAL(hw.in.VA_match.res[i].posX) / 100.0;
-			this.matchRes[i].angle := DINT_TO_REAL(hw.in.VA_match.res[i].angle) / 100.0 + hmi.in.par.offset.z;
+			this.matchRes[i].imgPos.x := DINT_TO_REAL(hw.blob.in.results[i].positionX) / 100.0;
+			this.matchRes[i].imgPos.y := DINT_TO_REAL(hw.blob.in.results[i].positionY) / 100.0;
+			this.matchRes[i].angle := DINT_TO_REAL(hw.blob.in.results[i].orientation) / 100.0 + hmi.in.par.offset.z;
 			
 			// find rotation point (will be used to add offset to x and y axis relative to object orientation)
 			this.rotPoint.x := COS(this.matchRes[i].angle*0.0174532925199444);
@@ -172,14 +192,20 @@ PROGRAM _CYCLIC
 	0,imgHeiht	imgWidht,imgHeight
 	*)
 	
+	
 	// check that we only have 4 results
 	IF this.calcCalibrate THEN
 		this.calcCalibrate := FALSE;
 		// Transfer VA results to 2 image points
 		FOR i:=0 TO 3 BY 1 DO
-			this.imgPos[i].x := DINT_TO_LREAL(hw.in.va.res[i].posX) /100.0; // px
-			this.imgPos[i].y := DINT_TO_LREAL(hw.in.va.res[i].posY) /100.0; // px
+			// if simulation then fill in four points
+		
 			
+			// scale to px decimal value	
+			this.imgPos[i].x := DINT_TO_REAL(hw.blob.in.results[i].positionX) / 100.0;
+			this.imgPos[i].y := DINT_TO_REAL(hw.blob.in.results[i].positionY) / 100.0;
+			
+			// Hardcoded check for point location in each quater of the image 
 			IF this.imgPos[i].x > this.imgWidth/2 THEN
 				this.realPos[i].x := 37.5; //mm
 			ELSE
@@ -200,6 +226,30 @@ PROGRAM _CYCLIC
 		
 		hmi.out.overlay := '';
 		brdkViGeom_drawCalibration(hmi.in.par.P,75,this.realPos[0],4,ADR(hmi.out.overlay),ADR('style="fill:blue;stroke:blue;stroke-width:5;fill-opacity:0.3;stroke-opacity:1"'),ADR('style="fill:red;stroke:red;stroke-width:5;fill-opacity:1;stroke-opacity:1"'));
+		
+	END_IF
+	
+	
+	IF hmi.out.calWarn THEN
+		hmi.out.calWarn := FALSE;
+		this.tmp2D.x := 50;
+		this.tmp2D.y := 50;
+		hmi.out.overlay := '';
+		brdkViGeom_drawSvgText(ADR('Warning: The four point BLOBs was not found!!$N check MappVision for model details.'),this.tmp2D,1,ADR(hmi.out.overlay),ADR('style="font: italic 40px serif; fill: red;"'));
+		
+		IF DiagCpuIsSimulated() THEN
+			hw.blob.in.common.numResults := 3;
+		END_IF
+		
+		
+		IF hw.blob.in.common.numResults > 0 THEN
+			FOR i:=0 TO hw.blob.in.common.numResults-1 BY 1 DO
+				// Draw circle
+				this.tmp2D.x := DINT_TO_REAL(hw.blob.in.results[i].positionX) / 100.0;
+				this.tmp2D.y := DINT_TO_REAL(hw.blob.in.results[i].positionY) / 100.0;
+				brdkViGeom_drawSvgCircle(this.tmp2D,50.0,ADR(hmi.out.overlay),ADR('style="fill:blue;stroke:blue;stroke-width:5;fill-opacity:0.3;stroke-opacity:1"'));
+			END_FOR
+		END_IF
 		
 	END_IF
 	

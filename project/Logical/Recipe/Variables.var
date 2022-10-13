@@ -1,4 +1,5 @@
 VAR
+	this : local_typ;
 	save : BOOL;
 	load : BOOL;
 	recipe : recipe_typ;
@@ -6,8 +7,9 @@ VAR
 	error : STRING[200];
 	mpRecipeUIStruct : MpRecipeUIConnectType;
 	mpRecipeUI : MpRecipeUI;
-	viBaseLoadVa : ViBaseLoadApplication;
 	mpRecipeRegPar : MpRecipeRegParSync;
 	oldLoadedRecipe : STRING[255];
 	viLoadVA : USINT;
+	TEST : BOOL;
+	loadVA : ViBaseLoadApplication;
 END_VAR
