@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<OpcUaSource FileVersion="9" ArVersion="C4.90">
+  <Aliases>
+    <ACLAliases />
+    <EURangeViolationAliases />
+    <EURangesAliases />
+    <EngineeringUnitAliases />
+  </Aliases>
+  <DefaultView>
+    <Module Name="&lt;Default&gt;">
+      <GlobalVariables Name="Global Variables">
+        <Variable AuditEvents="True" Name="gBlobCamera">
+          <Variable AuditEvents="True" Name="CameraType" />
+          <Variable Name="MappLinkInternal" />
+        </Variable>
+      </GlobalVariables>
+      <Task Name="Recipe">
+        <Variable Name="mpRecipeUIStruct" RecursiveEnable="1" />
+      </Task>
+      <Task Name="Demo">
+        <Variable Name="hmi" RecursiveEnable="2" />
+      </Task>
+    </Module>
+  </DefaultView>
+</OpcUaSource>

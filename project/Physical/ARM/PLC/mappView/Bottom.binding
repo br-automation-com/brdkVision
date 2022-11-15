@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BindingsSet id="Bottom_binding" xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Bindings>
+			
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::Demo:hmi.in.par.imgQuality" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Bottom" widgetRefId="NumericInput1" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::Demo:hmi.in.par.imgFormat" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Bottom" widgetRefId="DropDownBox1" attribute="selectedIndex" />
+		</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Demo:hmi.in.cmd.mode" attribute="value" />
+<Target xsi:type="brease" contentRefId="Bottom" widgetRefId="DropDownBoxMode" attribute="selectedIndex" />
+</Binding>
+</Bindings>
+</BindingsSet>

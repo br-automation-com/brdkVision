@@ -1,0 +1,1131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Configuration>
+  <Element ID="BLOBCam" Type="visionapplication">
+    <Group ID="ImgProcessingInputs">
+      <Group ID="Input[0]">
+        <Property ID="ChannelID" Value="Enable_1" />
+      </Group>
+      <Group ID="Input[1]">
+        <Property ID="ChannelID" Value="NumSearchMax_1" />
+      </Group>
+      <Group ID="Input[2]">
+        <Property ID="ChannelID" Value="RegionFeatures_1" />
+      </Group>
+      <Group ID="Input[3]">
+        <Property ID="ChannelID" Value="EnhancedBlobInformation_1" />
+      </Group>
+      <Group ID="Input[4]">
+        <Property ID="ChannelID" Value="Alignment_1" />
+      </Group>
+      <Group ID="Input[5]">
+        <Property ID="ChannelID" Value="OffsetROIX_1" />
+      </Group>
+      <Group ID="Input[6]">
+        <Property ID="ChannelID" Value="OffsetROIY_1" />
+      </Group>
+      <Group ID="Input[7]">
+        <Property ID="ChannelID" Value="OffsetROIOrientation_1" />
+      </Group>
+      <Group ID="Input[8]">
+        <Property ID="ChannelID" Value="OffsetROIRotCenterX_1" />
+      </Group>
+      <Group ID="Input[9]">
+        <Property ID="ChannelID" Value="OffsetROIRotCenterY_1" />
+      </Group>
+    </Group>
+    <Group ID="ImageAcquisition">
+      <Group ID="AcquisitionConfiguration">
+        <Selector ID="TriggerSource">
+          <Property ID="TriggerDelay" Value="1" />
+        </Selector>
+      </Group>
+      <Group ID="BaseSettings">
+        <Property ID="FocusScale" Value="1" />
+      </Group>
+      <Group ID="ImageSettings">
+        <Property ID="PixelConfiguration" Value="20" />
+      </Group>
+    </Group>
+    <Group ID="VisionFunctionSet">
+      <Group ID="VisionProgramSettings">
+        <Property ID="CompilerOption" Value="0" />
+      </Group>
+      <Group ID="VfInstance[1]">
+        <Property ID="VfName" Value="vfBLOB" />
+        <Property ID="VfExecutionNr" Value="1" />
+        <Selector ID="VfType" Value="vf-blob">
+          <Group ID="VfDataSet">
+            <Property ID="WidgetModels" Value="AQEAAAAAAAAAAAAAAAAAAB0EAABoVVhoWH0TIgAAAAAAAAQNSERJQ1RJT05BUlkAAQEAAAAAAAAABAQAAAAMTW9kZWxOYW1lcwB1AAAAAAEAAAAAAAAAAQAAAAAAAAABBAAAAAxNb2RlbFR5cGVzAHUAAAAABAAAAAAAAAABAAAADGJsb2IgbW9kZWwAdQQAAAAOTW9kZWxIYW5kbGVzAHUAAAAAEAAAAAAAAAABAAAAAUhESUNUSU9OQVJZAAEAAAAAAAAAABAEAAAADlRocmVzaG9sZE1pbgB1AAAAAAIAAAAAAAAAAUBmgAAAAAAABAAAAA5UaHJlc2hvbGRNYXgAdQAAAAACAAAAAAAAAAFAb+AAAAAAAAQAAAAJQXJlYU1pbgB1AAAAAAIAAAAAAAAAAUC/QAAAAAAABAAAAAlBcmVhTWF4AHUAAAAAAgAAAAAAAAABQMtYAAAAAAAEAAAAEE1vcnBob2xvZ3lUeXBlAHUAAAAABAAAAAAAAAABAAAABm5vbmUAdQQAAAASQ2lyY2xlTWFza1JhZGl1cwB1AAAAAAIAAAAAAAAAAT/4AAAAAAAABAAAABBDaXJjdWxhcml0eU1pbgB1AAAAAAIAAAAAAAAAAT/sFvXMoJzZBAAAABBDaXJjdWxhcml0eU1heAB1AAAAAAIAAAAAAAAAAT/wAAAAAAAABAAAABNSZWN0YW5ndWxhcml0eU1pbgB1AAAAAAIAAAAAAAAAAT/nUjvnTpNmBAAAABNSZWN0YW5ndWxhcml0eU1heAB1AAAAAAIAAAAAAAAAAT/sgPPh0dCYBAAAAA9Bbmlzb21ldHJ5TWluAHUAAAAAAgAAAAAAAAABP/AAAAAAAAAEAAAAD0FuaXNvbWV0cnlNYXgAdQAAAAACAAAAAAAAAAE/8hnYwbmUHgQAAAAVQWxpZ25tZW50RGF0YVZhbHVlcwB1AAAAAAIAAAAAAAAABQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAFEFsaWdubWVudERhdGFOYW1lcwB1AAAAAAQAAAAAAAAABQAAAAxPZmZzZXRST0lYAHUAAAAMT2Zmc2V0Uk9JWQB1AAAAFk9mZnNldFJPSU9yaWVudGF0aW9uAHUAAAAVT2Zmc2V0Uk9JUm90Q2VudGVyWAB1AAAAFU9mZnNldFJPSVJvdENlbnRlclkAdQQAAAAWQWxpZ25tZW50T3JpZW50YXRpb24AdQAAAAACAAAAAAAAAAEAAAAAAAAAAAQAAAATTW9kZWxGb3JBbGlnbm1lbnQAdQAAAAABAAAAAAAAAAEAAAAAAAAAAFlSQU5PSVRDSURIBAAAAA1EYXRhVmVyc2lvbgB1AAAAAAIAAAAAAAAAAT/wAAAAAAAAWVJBTk9JVENJREg=" />
+            <Property ID="ROI" Value="SE9CSgADAAAAAAAAAAABAAAAAv////8AAAQAAAAEAAAAAAAAAAAAAAAAAAAE/wABAAAE/wACAAAE/wADAAAE/wAEAAAE/wAFAAAE/wAGAAAE/wAHAAAE/wAIAAAE/wAJAAAE/wAKAAAE/wALAAAE/wAMAAAE/wANAAAE/wAOAAAE/wAPAAAE/wAQAAAE/wARAAAE/wASAAAE/wATAAAE/wAUAAAE/wAVAAAE/wAWAAAE/wAXAAAE/wAYAAAE/wAZAAAE/wAaAAAE/wAbAAAE/wAcAAAE/wAdAAAE/wAeAAAE/wAfAAAE/wAgAAAE/wAhAAAE/wAiAAAE/wAjAAAE/wAkAAAE/wAlAAAE/wAmAAAE/wAnAAAE/wAoAAAE/wApAAAE/wAqAAAE/wArAAAE/wAsAAAE/wAtAAAE/wAuAAAE/wAvAAAE/wAwAAAE/wAxAAAE/wAyAAAE/wAzAAAE/wA0AAAE/wA1AAAE/wA2AAAE/wA3AAAE/wA4AAAE/wA5AAAE/wA6AAAE/wA7AAAE/wA8AAAE/wA9AAAE/wA+AAAE/wA/AAAE/wBAAAAE/wBBAAAE/wBCAAAE/wBDAAAE/wBEAAAE/wBFAAAE/wBGAAAE/wBHAAAE/wBIAAAE/wBJAAAE/wBKAAAE/wBLAAAE/wBMAAAE/wBNAAAE/wBOAAAE/wBPAAAE/wBQAAAE/wBRAAAE/wBSAAAE/wBTAAAE/wBUAAAE/wBVAAAE/wBWAAAE/wBXAAAE/wBYAAAE/wBZAAAE/wBaAAAE/wBbAAAE/wBcAAAE/wBdAAAE/wBeAAAE/wBfAAAE/wBgAAAE/wBhAAAE/wBiAAAE/wBjAAAE/wBkAAAE/wBlAAAE/wBmAAAE/wBnAAAE/wBoAAAE/wBpAAAE/wBqAAAE/wBrAAAE/wBsAAAE/wBtAAAE/wBuAAAE/wBvAAAE/wBwAAAE/wBxAAAE/wByAAAE/wBzAAAE/wB0AAAE/wB1AAAE/wB2AAAE/wB3AAAE/wB4AAAE/wB5AAAE/wB6AAAE/wB7AAAE/wB8AAAE/wB9AAAE/wB+AAAE/wB/AAAE/wCAAAAE/wCBAAAE/wCCAAAE/wCDAAAE/wCEAAAE/wCFAAAE/wCGAAAE/wCHAAAE/wCIAAAE/wCJAAAE/wCKAAAE/wCLAAAE/wCMAAAE/wCNAAAE/wCOAAAE/wCPAAAE/wCQAAAE/wCRAAAE/wCSAAAE/wCTAAAE/wCUAAAE/wCVAAAE/wCWAAAE/wCXAAAE/wCYAAAE/wCZAAAE/wCaAAAE/wCbAAAE/wCcAAAE/wCdAAAE/wCeAAAE/wCfAAAE/wCgAAAE/wChAAAE/wCiAAAE/wCjAAAE/wCkAAAE/wClAAAE/wCmAAAE/wCnAAAE/wCoAAAE/wCpAAAE/wCqAAAE/wCrAAAE/wCsAAAE/wCtAAAE/wCuAAAE/wCvAAAE/wCwAAAE/wCxAAAE/wCyAAAE/wCzAAAE/wC0AAAE/wC1AAAE/wC2AAAE/wC3AAAE/wC4AAAE/wC5AAAE/wC6AAAE/wC7AAAE/wC8AAAE/wC9AAAE/wC+AAAE/wC/AAAE/wDAAAAE/wDBAAAE/wDCAAAE/wDDAAAE/wDEAAAE/wDFAAAE/wDGAAAE/wDHAAAE/wDIAAAE/wDJAAAE/wDKAAAE/wDLAAAE/wDMAAAE/wDNAAAE/wDOAAAE/wDPAAAE/wDQAAAE/wDRAAAE/wDSAAAE/wDTAAAE/wDUAAAE/wDVAAAE/wDWAAAE/wDXAAAE/wDYAAAE/wDZAAAE/wDaAAAE/wDbAAAE/wDcAAAE/wDdAAAE/wDeAAAE/wDfAAAE/wDgAAAE/wDhAAAE/wDiAAAE/wDjAAAE/wDkAAAE/wDlAAAE/wDmAAAE/wDnAAAE/wDoAAAE/wDpAAAE/wDqAAAE/wDrAAAE/wDsAAAE/wDtAAAE/wDuAAAE/wDvAAAE/wDwAAAE/wDxAAAE/wDyAAAE/wDzAAAE/wD0AAAE/wD1AAAE/wD2AAAE/wD3AAAE/wD4AAAE/wD5AAAE/wD6AAAE/wD7AAAE/wD8AAAE/wD9AAAE/wD+AAAE/wD/AAAE/wEAAAAE/wEBAAAE/wECAAAE/wEDAAAE/wEEAAAE/wEFAAAE/wEGAAAE/wEHAAAE/wEIAAAE/wEJAAAE/wEKAAAE/wELAAAE/wEMAAAE/wENAAAE/wEOAAAE/wEPAAAE/wEQAAAE/wERAAAE/wESAAAE/wETAAAE/wEUAAAE/wEVAAAE/wEWAAAE/wEXAAAE/wEYAAAE/wEZAAAE/wEaAAAE/wEbAAAE/wEcAAAE/wEdAAAE/wEeAAAE/wEfAAAE/wEgAAAE/wEhAAAE/wEiAAAE/wEjAAAE/wEkAAAE/wElAAAE/wEmAAAE/wEnAAAE/wEoAAAE/wEpAAAE/wEqAAAE/wErAAAE/wEsAAAE/wEtAAAE/wEuAAAE/wEvAAAE/wEwAAAE/wExAAAE/wEyAAAE/wEzAAAE/wE0AAAE/wE1AAAE/wE2AAAE/wE3AAAE/wE4AAAE/wE5AAAE/wE6AAAE/wE7AAAE/wE8AAAE/wE9AAAE/wE+AAAE/wE/AAAE/wFAAAAE/wFBAAAE/wFCAAAE/wFDAAAE/wFEAAAE/wFFAAAE/wFGAAAE/wFHAAAE/wFIAAAE/wFJAAAE/wFKAAAE/wFLAAAE/wFMAAAE/wFNAAAE/wFOAAAE/wFPAAAE/wFQAAAE/wFRAAAE/wFSAAAE/wFTAAAE/wFUAAAE/wFVAAAE/wFWAAAE/wFXAAAE/wFYAAAE/wFZAAAE/wFaAAAE/wFbAAAE/wFcAAAE/wFdAAAE/wFeAAAE/wFfAAAE/wFgAAAE/wFhAAAE/wFiAAAE/wFjAAAE/wFkAAAE/wFlAAAE/wFmAAAE/wFnAAAE/wFoAAAE/wFpAAAE/wFqAAAE/wFrAAAE/wFsAAAE/wFtAAAE/wFuAAAE/wFvAAAE/wFwAAAE/wFxAAAE/wFyAAAE/wFzAAAE/wF0AAAE/wF1AAAE/wF2AAAE/wF3AAAE/wF4AAAE/wF5AAAE/wF6AAAE/wF7AAAE/wF8AAAE/wF9AAAE/wF+AAAE/wF/AAAE/wGAAAAE/wGBAAAE/wGCAAAE/wGDAAAE/wGEAAAE/wGFAAAE/wGGAAAE/wGHAAAE/wGIAAAE/wGJAAAE/wGKAAAE/wGLAAAE/wGMAAAE/wGNAAAE/wGOAAAE/wGPAAAE/wGQAAAE/wGRAAAE/wGSAAAE/wGTAAAE/wGUAAAE/wGVAAAE/wGWAAAE/wGXAAAE/wGYAAAE/wGZAAAE/wGaAAAE/wGbAAAE/wGcAAAE/wGdAAAE/wGeAAAE/wGfAAAE/wGgAAAE/wGhAAAE/wGiAAAE/wGjAAAE/wGkAAAE/wGlAAAE/wGmAAAE/wGnAAAE/wGoAAAE/wGpAAAE/wGqAAAE/wGrAAAE/wGsAAAE/wGtAAAE/wGuAAAE/wGvAAAE/wGwAAAE/wGxAAAE/wGyAAAE/wGzAAAE/wG0AAAE/wG1AAAE/wG2AAAE/wG3AAAE/wG4AAAE/wG5AAAE/wG6AAAE/wG7AAAE/wG8AAAE/wG9AAAE/wG+AAAE/wG/AAAE/wHAAAAE/wHBAAAE/wHCAAAE/wHDAAAE/wHEAAAE/wHFAAAE/wHGAAAE/wHHAAAE/wHIAAAE/wHJAAAE/wHKAAAE/wHLAAAE/wHMAAAE/wHNAAAE/wHOAAAE/wHPAAAE/wHQAAAE/wHRAAAE/wHSAAAE/wHTAAAE/wHUAAAE/wHVAAAE/wHWAAAE/wHXAAAE/wHYAAAE/wHZAAAE/wHaAAAE/wHbAAAE/wHcAAAE/wHdAAAE/wHeAAAE/wHfAAAE/wHgAAAE/wHhAAAE/wHiAAAE/wHjAAAE/wHkAAAE/wHlAAAE/wHmAAAE/wHnAAAE/wHoAAAE/wHpAAAE/wHqAAAE/wHrAAAE/wHsAAAE/wHtAAAE/wHuAAAE/wHvAAAE/wHwAAAE/wHxAAAE/wHyAAAE/wHzAAAE/wH0AAAE/wH1AAAE/wH2AAAE/wH3AAAE/wH4AAAE/wH5AAAE/wH6AAAE/wH7AAAE/wH8AAAE/wH9AAAE/wH+AAAE/wH/AAAE/wIAAAAE/wIBAAAE/wICAAAE/wIDAAAE/wIEAAAE/wIFAAAE/wIGAAAE/wIHAAAE/wIIAAAE/wIJAAAE/wIKAAAE/wILAAAE/wIMAAAE/wINAAAE/wIOAAAE/wIPAAAE/wIQAAAE/wIRAAAE/wISAAAE/wITAAAE/wIUAAAE/wIVAAAE/wIWAAAE/wIXAAAE/wIYAAAE/wIZAAAE/wIaAAAE/wIbAAAE/wIcAAAE/wIdAAAE/wIeAAAE/wIfAAAE/wIgAAAE/wIhAAAE/wIiAAAE/wIjAAAE/wIkAAAE/wIlAAAE/wImAAAE/wInAAAE/wIoAAAE/wIpAAAE/wIqAAAE/wIrAAAE/wIsAAAE/wItAAAE/wIuAAAE/wIvAAAE/wIwAAAE/wIxAAAE/wIyAAAE/wIzAAAE/wI0AAAE/wI1AAAE/wI2AAAE/wI3AAAE/wI4AAAE/wI5AAAE/wI6AAAE/wI7AAAE/wI8AAAE/wI9AAAE/wI+AAAE/wI/AAAE/wJAAAAE/wJBAAAE/wJCAAAE/wJDAAAE/wJEAAAE/wJFAAAE/wJGAAAE/wJHAAAE/wJIAAAE/wJJAAAE/wJKAAAE/wJLAAAE/wJMAAAE/wJNAAAE/wJOAAAE/wJPAAAE/wJQAAAE/wJRAAAE/wJSAAAE/wJTAAAE/wJUAAAE/wJVAAAE/wJWAAAE/wJXAAAE/wJYAAAE/wJZAAAE/wJaAAAE/wJbAAAE/wJcAAAE/wJdAAAE/wJeAAAE/wJfAAAE/wJgAAAE/wJhAAAE/wJiAAAE/wJjAAAE/wJkAAAE/wJlAAAE/wJmAAAE/wJnAAAE/wJoAAAE/wJpAAAE/wJqAAAE/wJrAAAE/wJsAAAE/wJtAAAE/wJuAAAE/wJvAAAE/wJwAAAE/wJxAAAE/wJyAAAE/wJzAAAE/wJ0AAAE/wJ1AAAE/wJ2AAAE/wJ3AAAE/wJ4AAAE/wJ5AAAE/wJ6AAAE/wJ7AAAE/wJ8AAAE/wJ9AAAE/wJ+AAAE/wJ/AAAE/wKAAAAE/wKBAAAE/wKCAAAE/wKDAAAE/wKEAAAE/wKFAAAE/wKGAAAE/wKHAAAE/wKIAAAE/wKJAAAE/wKKAAAE/wKLAAAE/wKMAAAE/wKNAAAE/wKOAAAE/wKPAAAE/wKQAAAE/wKRAAAE/wKSAAAE/wKTAAAE/wKUAAAE/wKVAAAE/wKWAAAE/wKXAAAE/wKYAAAE/wKZAAAE/wKaAAAE/wKbAAAE/wKcAAAE/wKdAAAE/wKeAAAE/wKfAAAE/wKgAAAE/wKhAAAE/wKiAAAE/wKjAAAE/wKkAAAE/wKlAAAE/wKmAAAE/wKnAAAE/wKoAAAE/wKpAAAE/wKqAAAE/wKrAAAE/wKsAAAE/wKtAAAE/wKuAAAE/wKvAAAE/wKwAAAE/wKxAAAE/wKyAAAE/wKzAAAE/wK0AAAE/wK1AAAE/wK2AAAE/wK3AAAE/wK4AAAE/wK5AAAE/wK6AAAE/wK7AAAE/wK8AAAE/wK9AAAE/wK+AAAE/wK/AAAE/wLAAAAE/wLBAAAE/wLCAAAE/wLDAAAE/wLEAAAE/wLFAAAE/wLGAAAE/wLHAAAE/wLIAAAE/wLJAAAE/wLKAAAE/wLLAAAE/wLMAAAE/wLNAAAE/wLOAAAE/wLPAAAE/wLQAAAE/wLRAAAE/wLSAAAE/wLTAAAE/wLUAAAE/wLVAAAE/wLWAAAE/wLXAAAE/wLYAAAE/wLZAAAE/wLaAAAE/wLbAAAE/wLcAAAE/wLdAAAE/wLeAAAE/wLfAAAE/wLgAAAE/wLhAAAE/wLiAAAE/wLjAAAE/wLkAAAE/wLlAAAE/wLmAAAE/wLnAAAE/wLoAAAE/wLpAAAE/wLqAAAE/wLrAAAE/wLsAAAE/wLtAAAE/wLuAAAE/wLvAAAE/wLwAAAE/wLxAAAE/wLyAAAE/wLzAAAE/wL0AAAE/wL1AAAE/wL2AAAE/wL3AAAE/wL4AAAE/wL5AAAE/wL6AAAE/wL7AAAE/wL8AAAE/wL9AAAE/wL+AAAE/wL/AAAE/wMAAAAE/wMBAAAE/wMCAAAE/wMDAAAE/wMEAAAE/wMFAAAE/wMGAAAE/wMHAAAE/wMIAAAE/wMJAAAE/wMKAAAE/wMLAAAE/wMMAAAE/wMNAAAE/wMOAAAE/wMPAAAE/wMQAAAE/wMRAAAE/wMSAAAE/wMTAAAE/wMUAAAE/wMVAAAE/wMWAAAE/wMXAAAE/wMYAAAE/wMZAAAE/wMaAAAE/wMbAAAE/wMcAAAE/wMdAAAE/wMeAAAE/wMfAAAE/wMgAAAE/wMhAAAE/wMiAAAE/wMjAAAE/wMkAAAE/wMlAAAE/wMmAAAE/wMnAAAE/wMoAAAE/wMpAAAE/wMqAAAE/wMrAAAE/wMsAAAE/wMtAAAE/wMuAAAE/wMvAAAE/wMwAAAE/wMxAAAE/wMyAAAE/wMzAAAE/wM0AAAE/wM1AAAE/wM2AAAE/wM3AAAE/wM4AAAE/wM5AAAE/wM6AAAE/wM7AAAE/wM8AAAE/wM9AAAE/wM+AAAE/wM/AAAE/wNAAAAE/wNBAAAE/wNCAAAE/wNDAAAE/wNEAAAE/wNFAAAE/wNGAAAE/wNHAAAE/wNIAAAE/wNJAAAE/wNKAAAE/wNLAAAE/wNMAAAE/wNNAAAE/wNOAAAE/wNPAAAE/wNQAAAE/wNRAAAE/wNSAAAE/wNTAAAE/wNUAAAE/wNVAAAE/wNWAAAE/wNXAAAE/wNYAAAE/wNZAAAE/wNaAAAE/wNbAAAE/wNcAAAE/wNdAAAE/wNeAAAE/wNfAAAE/wNgAAAE/wNhAAAE/wNiAAAE/wNjAAAE/wNkAAAE/wNlAAAE/wNmAAAE/wNnAAAE/wNoAAAE/wNpAAAE/wNqAAAE/wNrAAAE/wNsAAAE/wNtAAAE/wNuAAAE/wNvAAAE/wNwAAAE/wNxAAAE/wNyAAAE/wNzAAAE/wN0AAAE/wN1AAAE/wN2AAAE/wN3AAAE/wN4AAAE/wN5AAAE/wN6AAAE/wN7AAAE/wN8AAAE/wN9AAAE/wN+AAAE/wN/AAAE/wOAAAAE/wOBAAAE/wOCAAAE/wODAAAE/wOEAAAE/wOFAAAE/wOGAAAE/wOHAAAE/wOIAAAE/wOJAAAE/wOKAAAE/wOLAAAE/wOMAAAE/wONAAAE/wOOAAAE/wOPAAAE/wOQAAAE/wORAAAE/wOSAAAE/wOTAAAE/wOUAAAE/wOVAAAE/wOWAAAE/wOXAAAE/wOYAAAE/wOZAAAE/wOaAAAE/wObAAAE/wOcAAAE/wOdAAAE/wOeAAAE/wOfAAAE/wOgAAAE/wOhAAAE/wOiAAAE/wOjAAAE/wOkAAAE/wOlAAAE/wOmAAAE/wOnAAAE/wOoAAAE/wOpAAAE/wOqAAAE/wOrAAAE/wOsAAAE/wOtAAAE/wOuAAAE/wOvAAAE/wOwAAAE/wOxAAAE/wOyAAAE/wOzAAAE/wO0AAAE/wO1AAAE/wO2AAAE/wO3AAAE/wO4AAAE/wO5AAAE/wO6AAAE/wO7AAAE/wO8AAAE/wO9AAAE/wO+AAAE/wO/AAAE/wPAAAAE/wPBAAAE/wPCAAAE/wPDAAAE/wPEAAAE/wPFAAAE/wPGAAAE/wPHAAAE/wPIAAAE/wPJAAAE/wPKAAAE/wPLAAAE/wPMAAAE/wPNAAAE/wPOAAAE/wPPAAAE/wPQAAAE/wPRAAAE/wPSAAAE/wPTAAAE/wPUAAAE/wPVAAAE/wPWAAAE/wPXAAAE/wPYAAAE/wPZAAAE/wPaAAAE/wPbAAAE/wPcAAAE/wPdAAAE/wPeAAAE/wPfAAAE/wPgAAAE/wPhAAAE/wPiAAAE/wPjAAAE/wPkAAAE/wPlAAAE/wPmAAAE/wPnAAAE/wPoAAAE/wPpAAAE/wPqAAAE/wPrAAAE/wPsAAAE/wPtAAAE/wPuAAAE/wPvAAAE/wPwAAAE/wPxAAAE/wPyAAAE/wPzAAAE/wP0AAAE/wP1AAAE/wP2AAAE/wP3AAAE/wP4AAAE/wP5AAAE/wP6AAAE/wP7AAAE/wP8AAAE/wP9AAAE/wP+AAAE/wP/AAAE/0hPQko=" />
+          </Group>
+          <Group ID="VfConstants">
+            <Property ID="NumResultsMax" Value="4" />
+          </Group>
+          <Group ID="VfWirings">
+            <Group ID="Image">
+              <Selector ID="SourceType" Value="ImageAcquisition">
+                <Property ID="IaParameter" Value="Image01" />
+              </Selector>
+            </Group>
+            <Group ID="Enable">
+              <Selector ID="SourceType" Value="Input">
+                <Property ID="IoParameter" Value="Enable_1" />
+              </Selector>
+            </Group>
+            <Group ID="NumSearchMax">
+              <Selector ID="SourceType" Value="Input">
+                <Property ID="IoParameter" Value="NumSearchMax_1" />
+              </Selector>
+            </Group>
+            <Group ID="RegionFeatures">
+              <Selector ID="SourceType" Value="Input">
+                <Property ID="IoParameter" Value="RegionFeatures_1" />
+              </Selector>
+            </Group>
+            <Group ID="EnhancedBlobInformation">
+              <Selector ID="SourceType" Value="Input">
+                <Property ID="IoParameter" Value="EnhancedBlobInformation_1" />
+              </Selector>
+            </Group>
+            <Group ID="Alignment">
+              <Selector ID="SourceType" Value="Input">
+                <Property ID="IoParameter" Value="Alignment_1" />
+              </Selector>
+            </Group>
+            <Group ID="OffsetROIX">
+              <Selector ID="SourceType" Value="Input">
+                <Property ID="IoParameter" Value="OffsetROIX_1" />
+              </Selector>
+            </Group>
+            <Group ID="OffsetROIY">
+              <Selector ID="SourceType" Value="Input">
+                <Property ID="IoParameter" Value="OffsetROIY_1" />
+              </Selector>
+            </Group>
+            <Group ID="OffsetROIOrientation">
+              <Selector ID="SourceType" Value="Input">
+                <Property ID="IoParameter" Value="OffsetROIOrientation_1" />
+              </Selector>
+            </Group>
+            <Group ID="OffsetROIRotCenterX">
+              <Selector ID="SourceType" Value="Input">
+                <Property ID="IoParameter" Value="OffsetROIRotCenterX_1" />
+              </Selector>
+            </Group>
+            <Group ID="OffsetROIRotCenterY">
+              <Selector ID="SourceType" Value="Input">
+                <Property ID="IoParameter" Value="OffsetROIRotCenterY_1" />
+              </Selector>
+            </Group>
+          </Group>
+        </Selector>
+      </Group>
+    </Group>
+    <Group ID="ImgProcessingOutputs">
+      <Group ID="Output[0]">
+        <Property ID="ChannelID" Value="NumResults_1" />
+        <Group ID="VpOutputWire">
+          <Property ID="SourceVfName" Value="vfBLOB" />
+          <Property ID="VfOutputParameter" Value="NumResults" />
+        </Group>
+      </Group>
+      <Group ID="Output[1]">
+        <Property ID="ChannelID" Value="FunctionProcessingTime_1" />
+        <Group ID="VpOutputWire">
+          <Property ID="SourceVfName" Value="vfBLOB" />
+          <Property ID="VfOutputParameter" Value="FunctionProcessingTime" />
+        </Group>
+      </Group>
+      <Group ID="Output[2]">
+        <Property ID="ChannelID" Value="ModelNumber_1" />
+        <Group ID="VpOutputWire">
+          <Property ID="SourceVfName" Value="vfBLOB" />
+          <Property ID="VfOutputParameter" Value="ModelNumber" />
+        </Group>
+      </Group>
+      <Group ID="Output[3]">
+        <Property ID="ChannelID" Value="MeanGrayValue_1" />
+        <Group ID="VpOutputWire">
+          <Property ID="SourceVfName" Value="vfBLOB" />
+          <Property ID="VfOutputParameter" Value="MeanGrayValue" />
+        </Group>
+      </Group>
+      <Group ID="Output[4]">
+        <Property ID="ChannelID" Value="Clipped_1" />
+        <Group ID="VpOutputWire">
+          <Property ID="SourceVfName" Value="vfBLOB" />
+          <Property ID="VfOutputParameter" Value="Clipped" />
+        </Group>
+      </Group>
+      <Group ID="Output[5]">
+        <Property ID="ChannelID" Value="Area_1" />
+        <Group ID="VpOutputWire">
+          <Property ID="SourceVfName" Value="vfBLOB" />
+          <Property ID="VfOutputParameter" Value="Area" />
+        </Group>
+      </Group>
+      <Group ID="Output[6]">
+        <Property ID="ChannelID" Value="Length_1" />
+        <Group ID="VpOutputWire">
+          <Property ID="SourceVfName" Value="vfBLOB" />
+          <Property ID="VfOutputParameter" Value="Length" />
+        </Group>
+      </Group>
+      <Group ID="Output[7]">
+        <Property ID="ChannelID" Value="Width_1" />
+        <Group ID="VpOutputWire">
+          <Property ID="SourceVfName" Value="vfBLOB" />
+          <Property ID="VfOutputParameter" Value="Width" />
+        </Group>
+      </Group>
+      <Group ID="Output[8]">
+        <Property ID="ChannelID" Value="Xmin_1" />
+        <Group ID="VpOutputWire">
+          <Property ID="SourceVfName" Value="vfBLOB" />
+          <Property ID="VfOutputParameter" Value="Xmin" />
+        </Group>
+      </Group>
+      <Group ID="Output[9]">
+        <Property ID="ChannelID" Value="Xmax_1" />
+        <Group ID="VpOutputWire">
+          <Property ID="SourceVfName" Value="vfBLOB" />
+          <Property ID="VfOutputParameter" Value="Xmax" />
+        </Group>
+      </Group>
+      <Group ID="Output[10]">
+        <Property ID="ChannelID" Value="Ymin_1" />
+        <Group ID="VpOutputWire">
+          <Property ID="SourceVfName" Value="vfBLOB" />
+          <Property ID="VfOutputParameter" Value="Ymin" />
+        </Group>
+      </Group>
+      <Group ID="Output[11]">
+        <Property ID="ChannelID" Value="Ymax_1" />
+        <Group ID="VpOutputWire">
+          <Property ID="SourceVfName" Value="vfBLOB" />
+          <Property ID="VfOutputParameter" Value="Ymax" />
+        </Group>
+      </Group>
+      <Group ID="Output[12]">
+        <Property ID="ChannelID" Value="Circularity_1" />
+        <Group ID="VpOutputWire">
+          <Property ID="SourceVfName" Value="vfBLOB" />
+          <Property ID="VfOutputParameter" Value="Circularity" />
+        </Group>
+      </Group>
+      <Group ID="Output[13]">
+        <Property ID="ChannelID" Value="Rectangularity_1" />
+        <Group ID="VpOutputWire">
+          <Property ID="SourceVfName" Value="vfBLOB" />
+          <Property ID="VfOutputParameter" Value="Rectangularity" />
+        </Group>
+      </Group>
+      <Group ID="Output[14]">
+        <Property ID="ChannelID" Value="Anisometry_1" />
+        <Group ID="VpOutputWire">
+          <Property ID="SourceVfName" Value="vfBLOB" />
+          <Property ID="VfOutputParameter" Value="Anisometry" />
+        </Group>
+      </Group>
+      <Group ID="Output[15]">
+        <Property ID="ChannelID" Value="InnerCirclePositionX_1" />
+        <Group ID="VpOutputWire">
+          <Property ID="SourceVfName" Value="vfBLOB" />
+          <Property ID="VfOutputParameter" Value="InnerCirclePositionX" />
+        </Group>
+      </Group>
+      <Group ID="Output[16]">
+        <Property ID="ChannelID" Value="InnerCirclePositionY_1" />
+        <Group ID="VpOutputWire">
+          <Property ID="SourceVfName" Value="vfBLOB" />
+          <Property ID="VfOutputParameter" Value="InnerCirclePositionY" />
+        </Group>
+      </Group>
+      <Group ID="Output[17]">
+        <Property ID="ChannelID" Value="InnerCircleRadius_1" />
+        <Group ID="VpOutputWire">
+          <Property ID="SourceVfName" Value="vfBLOB" />
+          <Property ID="VfOutputParameter" Value="InnerCircleRadius" />
+        </Group>
+      </Group>
+      <Group ID="Output[18]">
+        <Property ID="ChannelID" Value="PositionX_1" />
+        <Group ID="VpOutputWire">
+          <Property ID="SourceVfName" Value="vfBLOB" />
+          <Property ID="VfOutputParameter" Value="PositionX" />
+        </Group>
+      </Group>
+      <Group ID="Output[19]">
+        <Property ID="ChannelID" Value="PositionY_1" />
+        <Group ID="VpOutputWire">
+          <Property ID="SourceVfName" Value="vfBLOB" />
+          <Property ID="VfOutputParameter" Value="PositionY" />
+        </Group>
+      </Group>
+      <Group ID="Output[20]">
+        <Property ID="ChannelID" Value="Orientation_1" />
+        <Group ID="VpOutputWire">
+          <Property ID="SourceVfName" Value="vfBLOB" />
+          <Property ID="VfOutputParameter" Value="Orientation" />
+        </Group>
+      </Group>
+      <Group ID="Output[21]">
+        <Property ID="ChannelID" Value="RotCenterX_1" />
+        <Group ID="VpOutputWire">
+          <Property ID="SourceVfName" Value="vfBLOB" />
+          <Property ID="VfOutputParameter" Value="RotCenterX" />
+        </Group>
+      </Group>
+      <Group ID="Output[22]">
+        <Property ID="ChannelID" Value="RotCenterY_1" />
+        <Group ID="VpOutputWire">
+          <Property ID="SourceVfName" Value="vfBLOB" />
+          <Property ID="VfOutputParameter" Value="RotCenterY" />
+        </Group>
+      </Group>
+    </Group>
+    <Group ID="ViewModelDataSet">
+      <Group ID="ViewModelData[1]">
+        <Property ID="ObjectID" Value="ImageAcquisition" />
+        <Property ID="ClassId" Value="FUB" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="269" />
+            <Property ID="Y" Value="92" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[2]">
+        <Property ID="ObjectID" Value="Enable_1" />
+        <Property ID="ClassId" Value="Channel" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="182" />
+            <Property ID="Y" Value="209" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[3]">
+        <Property ID="ObjectID" Value="NumSearchMax_1" />
+        <Property ID="ClassId" Value="Channel" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="182" />
+            <Property ID="Y" Value="224" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[4]">
+        <Property ID="ObjectID" Value="RegionFeatures_1" />
+        <Property ID="ClassId" Value="Channel" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="182" />
+            <Property ID="Y" Value="243" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[5]">
+        <Property ID="ObjectID" Value="EnhancedBlobInformation_1" />
+        <Property ID="ClassId" Value="Channel" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="182" />
+            <Property ID="Y" Value="262" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[6]">
+        <Property ID="ObjectID" Value="Alignment_1" />
+        <Property ID="ClassId" Value="Channel" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="182" />
+            <Property ID="Y" Value="281" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[7]">
+        <Property ID="ObjectID" Value="OffsetROIX_1" />
+        <Property ID="ClassId" Value="Channel" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="182" />
+            <Property ID="Y" Value="300" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[8]">
+        <Property ID="ObjectID" Value="OffsetROIY_1" />
+        <Property ID="ClassId" Value="Channel" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="182" />
+            <Property ID="Y" Value="319" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[9]">
+        <Property ID="ObjectID" Value="OffsetROIOrientation_1" />
+        <Property ID="ClassId" Value="Channel" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="182" />
+            <Property ID="Y" Value="338" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[10]">
+        <Property ID="ObjectID" Value="OffsetROIRotCenterX_1" />
+        <Property ID="ClassId" Value="Channel" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="182" />
+            <Property ID="Y" Value="357" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[11]">
+        <Property ID="ObjectID" Value="OffsetROIRotCenterY_1" />
+        <Property ID="ClassId" Value="Channel" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="182" />
+            <Property ID="Y" Value="376" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[12]">
+        <Property ID="ObjectID" Value="vfBLOB" />
+        <Property ID="ClassId" Value="FUB" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="550" />
+            <Property ID="Y" Value="390" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[13]">
+        <Property ID="ObjectID" Value="NumResults_1" />
+        <Property ID="ClassId" Value="Channel" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="851" />
+            <Property ID="Y" Value="220" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[14]">
+        <Property ID="ObjectID" Value="FunctionProcessingTime_1" />
+        <Property ID="ClassId" Value="Channel" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="851" />
+            <Property ID="Y" Value="239" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[15]">
+        <Property ID="ObjectID" Value="ModelNumber_1" />
+        <Property ID="ClassId" Value="Channel" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="851" />
+            <Property ID="Y" Value="269" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[16]">
+        <Property ID="ObjectID" Value="MeanGrayValue_1" />
+        <Property ID="ClassId" Value="Channel" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="847" />
+            <Property ID="Y" Value="285" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[17]">
+        <Property ID="ObjectID" Value="Clipped_1" />
+        <Property ID="ClassId" Value="Channel" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="843" />
+            <Property ID="Y" Value="300" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[18]">
+        <Property ID="ObjectID" Value="Area_1" />
+        <Property ID="ClassId" Value="Channel" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="843" />
+            <Property ID="Y" Value="315" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[19]">
+        <Property ID="ObjectID" Value="Length_1" />
+        <Property ID="ClassId" Value="Channel" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="843" />
+            <Property ID="Y" Value="330" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[20]">
+        <Property ID="ObjectID" Value="Width_1" />
+        <Property ID="ClassId" Value="Channel" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="843" />
+            <Property ID="Y" Value="345" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[21]">
+        <Property ID="ObjectID" Value="Xmin_1" />
+        <Property ID="ClassId" Value="Channel" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="843" />
+            <Property ID="Y" Value="361" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[22]">
+        <Property ID="ObjectID" Value="Xmax_1" />
+        <Property ID="ClassId" Value="Channel" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="843" />
+            <Property ID="Y" Value="376" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[23]">
+        <Property ID="ObjectID" Value="Ymin_1" />
+        <Property ID="ClassId" Value="Channel" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="843" />
+            <Property ID="Y" Value="391" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[24]">
+        <Property ID="ObjectID" Value="Ymax_1" />
+        <Property ID="ClassId" Value="Channel" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="839" />
+            <Property ID="Y" Value="406" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[25]">
+        <Property ID="ObjectID" Value="Circularity_1" />
+        <Property ID="ClassId" Value="Channel" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="839" />
+            <Property ID="Y" Value="421" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[26]">
+        <Property ID="ObjectID" Value="Rectangularity_1" />
+        <Property ID="ClassId" Value="Channel" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="839" />
+            <Property ID="Y" Value="437" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[27]">
+        <Property ID="ObjectID" Value="Anisometry_1" />
+        <Property ID="ClassId" Value="Channel" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="839" />
+            <Property ID="Y" Value="452" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[28]">
+        <Property ID="ObjectID" Value="InnerCirclePositionX_1" />
+        <Property ID="ClassId" Value="Channel" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="839" />
+            <Property ID="Y" Value="467" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[29]">
+        <Property ID="ObjectID" Value="InnerCirclePositionY_1" />
+        <Property ID="ClassId" Value="Channel" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="839" />
+            <Property ID="Y" Value="482" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[30]">
+        <Property ID="ObjectID" Value="InnerCircleRadius_1" />
+        <Property ID="ClassId" Value="Channel" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="839" />
+            <Property ID="Y" Value="501" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[31]">
+        <Property ID="ObjectID" Value="PositionX_1" />
+        <Property ID="ClassId" Value="Channel" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="836" />
+            <Property ID="Y" Value="516" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[32]">
+        <Property ID="ObjectID" Value="PositionY_1" />
+        <Property ID="ClassId" Value="Channel" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="836" />
+            <Property ID="Y" Value="532" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[33]">
+        <Property ID="ObjectID" Value="Orientation_1" />
+        <Property ID="ClassId" Value="Channel" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="836" />
+            <Property ID="Y" Value="551" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[34]">
+        <Property ID="ObjectID" Value="RotCenterX_1" />
+        <Property ID="ClassId" Value="Channel" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="836" />
+            <Property ID="Y" Value="566" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[35]">
+        <Property ID="ObjectID" Value="RotCenterY_1" />
+        <Property ID="ClassId" Value="Channel" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="836" />
+            <Property ID="Y" Value="581" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[36]">
+        <Property ID="ObjectID" Value="VP.VP.Enable_1.VF.vfBLOB.Enable" />
+        <Property ID="ClassId" Value="Wire" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+          <Group ID="Point[2]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[37]">
+        <Property ID="ObjectID" Value="VP.VP.NumSearchMax_1.VF.vfBLOB.NumSearchMax" />
+        <Property ID="ClassId" Value="Wire" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+          <Group ID="Point[2]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[38]">
+        <Property ID="ObjectID" Value="VP.VP.RegionFeatures_1.VF.vfBLOB.RegionFeatures" />
+        <Property ID="ClassId" Value="Wire" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+          <Group ID="Point[2]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[39]">
+        <Property ID="ObjectID" Value="VP.VP.EnhancedBlobInformation_1.VF.vfBLOB.EnhancedBlobInformation" />
+        <Property ID="ClassId" Value="Wire" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+          <Group ID="Point[2]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[40]">
+        <Property ID="ObjectID" Value="VP.VP.Alignment_1.VF.vfBLOB.Alignment" />
+        <Property ID="ClassId" Value="Wire" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+          <Group ID="Point[2]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[41]">
+        <Property ID="ObjectID" Value="VP.VP.OffsetROIX_1.VF.vfBLOB.OffsetROIX" />
+        <Property ID="ClassId" Value="Wire" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+          <Group ID="Point[2]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[42]">
+        <Property ID="ObjectID" Value="VP.VP.OffsetROIY_1.VF.vfBLOB.OffsetROIY" />
+        <Property ID="ClassId" Value="Wire" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+          <Group ID="Point[2]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[43]">
+        <Property ID="ObjectID" Value="VP.VP.OffsetROIOrientation_1.VF.vfBLOB.OffsetROIOrientation" />
+        <Property ID="ClassId" Value="Wire" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+          <Group ID="Point[2]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[44]">
+        <Property ID="ObjectID" Value="VP.VP.OffsetROIRotCenterX_1.VF.vfBLOB.OffsetROIRotCenterX" />
+        <Property ID="ClassId" Value="Wire" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+          <Group ID="Point[2]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[45]">
+        <Property ID="ObjectID" Value="VP.VP.OffsetROIRotCenterY_1.VF.vfBLOB.OffsetROIRotCenterY" />
+        <Property ID="ClassId" Value="Wire" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+          <Group ID="Point[2]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[46]">
+        <Property ID="ObjectID" Value="VF.vfBLOB.NumResults.VP.VP.NumResults_1" />
+        <Property ID="ClassId" Value="Wire" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+          <Group ID="Point[2]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[47]">
+        <Property ID="ObjectID" Value="VF.vfBLOB.FunctionProcessingTime.VP.VP.FunctionProcessingTime_1" />
+        <Property ID="ClassId" Value="Wire" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+          <Group ID="Point[2]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[48]">
+        <Property ID="ObjectID" Value="VF.vfBLOB.ModelNumber.VP.VP.ModelNumber_1" />
+        <Property ID="ClassId" Value="Wire" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+          <Group ID="Point[2]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[49]">
+        <Property ID="ObjectID" Value="VF.vfBLOB.MeanGrayValue.VP.VP.MeanGrayValue_1" />
+        <Property ID="ClassId" Value="Wire" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+          <Group ID="Point[2]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[50]">
+        <Property ID="ObjectID" Value="VF.vfBLOB.Clipped.VP.VP.Clipped_1" />
+        <Property ID="ClassId" Value="Wire" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+          <Group ID="Point[2]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[51]">
+        <Property ID="ObjectID" Value="VF.vfBLOB.Area.VP.VP.Area_1" />
+        <Property ID="ClassId" Value="Wire" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+          <Group ID="Point[2]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[52]">
+        <Property ID="ObjectID" Value="VF.vfBLOB.Length.VP.VP.Length_1" />
+        <Property ID="ClassId" Value="Wire" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+          <Group ID="Point[2]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[53]">
+        <Property ID="ObjectID" Value="VF.vfBLOB.Width.VP.VP.Width_1" />
+        <Property ID="ClassId" Value="Wire" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+          <Group ID="Point[2]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[54]">
+        <Property ID="ObjectID" Value="VF.vfBLOB.Xmin.VP.VP.Xmin_1" />
+        <Property ID="ClassId" Value="Wire" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+          <Group ID="Point[2]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[55]">
+        <Property ID="ObjectID" Value="VF.vfBLOB.Xmax.VP.VP.Xmax_1" />
+        <Property ID="ClassId" Value="Wire" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+          <Group ID="Point[2]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[56]">
+        <Property ID="ObjectID" Value="50104596-VF.vfBLOB.Ymin..." />
+        <Property ID="ClassId" Value="Wire" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+          <Group ID="Point[2]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[57]">
+        <Property ID="ObjectID" Value="VF.vfBLOB.Ymin.VP.VP.Ymin_1" />
+        <Property ID="ClassId" Value="Wire" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+          <Group ID="Point[2]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[58]">
+        <Property ID="ObjectID" Value="VF.vfBLOB.Ymax.VP.VP.Ymax_1" />
+        <Property ID="ClassId" Value="Wire" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+          <Group ID="Point[2]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[59]">
+        <Property ID="ObjectID" Value="VF.vfBLOB.Circularity.VP.VP.Circularity_1" />
+        <Property ID="ClassId" Value="Wire" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+          <Group ID="Point[2]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[60]">
+        <Property ID="ObjectID" Value="VF.vfBLOB.Rectangularity.VP.VP.Rectangularity_1" />
+        <Property ID="ClassId" Value="Wire" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+          <Group ID="Point[2]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[61]">
+        <Property ID="ObjectID" Value="VF.vfBLOB.Anisometry.VP.VP.Anisometry_1" />
+        <Property ID="ClassId" Value="Wire" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+          <Group ID="Point[2]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[62]">
+        <Property ID="ObjectID" Value="VF.vfBLOB.InnerCirclePositionX.VP.VP.InnerCirclePositionX_1" />
+        <Property ID="ClassId" Value="Wire" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+          <Group ID="Point[2]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[63]">
+        <Property ID="ObjectID" Value="VF.vfBLOB.InnerCirclePositionY.VP.VP.InnerCirclePositionY_1" />
+        <Property ID="ClassId" Value="Wire" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+          <Group ID="Point[2]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[64]">
+        <Property ID="ObjectID" Value="VF.vfBLOB.InnerCircleRadius.VP.VP.InnerCircleRadius_1" />
+        <Property ID="ClassId" Value="Wire" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+          <Group ID="Point[2]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[65]">
+        <Property ID="ObjectID" Value="VF.vfBLOB.PositionX.VP.VP.PositionX_1" />
+        <Property ID="ClassId" Value="Wire" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+          <Group ID="Point[2]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[66]">
+        <Property ID="ObjectID" Value="46373309-VF.vfBLOB.PositionY..." />
+        <Property ID="ClassId" Value="Wire" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+          <Group ID="Point[2]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[67]">
+        <Property ID="ObjectID" Value="VF.vfBLOB.PositionY.VP.VP.PositionY_1" />
+        <Property ID="ClassId" Value="Wire" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+          <Group ID="Point[2]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[68]">
+        <Property ID="ObjectID" Value="VF.vfBLOB.Orientation.VP.VP.Orientation_1" />
+        <Property ID="ClassId" Value="Wire" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+          <Group ID="Point[2]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[69]">
+        <Property ID="ObjectID" Value="VF.vfBLOB.RotCenterX.VP.VP.RotCenterX_1" />
+        <Property ID="ClassId" Value="Wire" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+          <Group ID="Point[2]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[70]">
+        <Property ID="ObjectID" Value="VF.vfBLOB.RotCenterY.VP.VP.RotCenterY_1" />
+        <Property ID="ClassId" Value="Wire" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+          <Group ID="Point[2]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+        </Group>
+      </Group>
+    </Group>
+  </Element>
+</Configuration>
