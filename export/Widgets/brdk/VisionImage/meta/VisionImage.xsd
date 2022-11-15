@@ -11,6 +11,7 @@
 <xs:complexType name="widgets.brdk.VisionImage">
 	<xs:complexContent>
 		<xs:extension base="iat:widgets.brdk.VisionImageRestrict">
+			<xs:attribute name="PLCWebsocketPort" use="optional" type="types:UNumber" default="0" />
 			<xs:attribute name="colorList" use="optional" type="types:ColorList" default="#FFCC66,#FF8800,#FFCC99,#993333" />
 			<xs:attribute name="flipHorisontal" use="optional" type="types:Boolean" default="false" />
 			<xs:attribute name="flipVertical" use="optional" type="types:Boolean" default="false" />

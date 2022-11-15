@@ -2,6 +2,7 @@ define([
     'brease/core/BaseWidget',
     'brease/events/BreaseEvent',
     'widgets/brdk/VisionImage/libs/Renderer',
+	// 'widgets/brdk/VisionImage/libs/opencv.js',	
     'brease/core/Utils',
     'widgets/brease/common/libs/redux/utils/UtilsSvg',
     'brease/decorators/DragAndDropCapability',
@@ -51,6 +52,14 @@ define([
     * @bindable
     * @iatCategory Data
     * Additional svg string content to display on the widget.
+    */
+	
+	    /**
+    * @cfg {UNumber} PLCWebsocketPort=0
+    * @iatStudioExposed
+    * @bindable
+    * @iatCategory Data
+    * Additional PLC websocket port to connect to (0=Not used).
     */
 	
 	/**
@@ -119,6 +128,7 @@ define([
             transitionTime: 500,
             minZoomLevel: 20,
             maxZoomLevel: 1000,
+			PLCWebsocketPort: 0,
 			viewRotateAngle: 0,
 			flipX: 1,
 			flipY: 1,
@@ -147,6 +157,8 @@ define([
         this.settings.colorList = this._parseColorList(this.settings.colorList);
         this.$svgContainer = this.el.children('svg.brdkVisionImageSVGContainer');
         this.renderer = new Renderer(this, this.settings);
+		this.socket = null;
+		this.wsConnectRetry = false;
         if (brease.config.editMode) {
             _addPlaceholderImage(this);
         } else {
@@ -212,6 +224,7 @@ define([
     */
     p.setSvgImage = function (svgImage) {
       
+		//console.log('image update');
         this.settings.svgImage = svgImage;
         return this._updateView();
         
@@ -219,10 +232,9 @@ define([
 
 
     };
-
-
-
-
+	
+	
+	
     p._updateView = function ( ) {
 
 
@@ -242,6 +254,7 @@ define([
 
         return deferred;
     };
+	
     /**
     * @method getSvgImage
     * Get the additionally added svg content.
@@ -251,6 +264,114 @@ define([
         return this.settings.svgImage;
     };
 
+
+	/**
+    * @method setWsPort
+    * set th Websocket port number that is used on the PLC.
+    * @param {Number} PLC websocket port
+    */
+    p.setPLCWebsocketPort = function (port) {
+        this.settings.PLCWebsocketPort = port;
+		console.log('port update '+port);
+		if(this.socket != null){
+			if (this.socket.readyState === WebSocket.OPEN) {
+				this.socket.onclose = function(event){
+					console.log("WS Closed");
+					this.socket = null;
+				}
+			  console.log("WS closing");
+			  this.socket.close(1000,"Deliberate close");
+			}
+		}
+			
+		if(port != 0){
+			this._wsConnect();
+		}
+		
+    };
+
+
+/**
+    * @method getWsPort
+    * Get the Websocket port number that is used on the PLC.
+    * @param {Number} PLC websocket port
+    */
+    p.getWsPort = function () {
+        return this.settings.PLCWebsocketPort;
+    };
+
+	
+	p._wsConnect = function(){
+	console.log("VisionImage: Trying to connect to "+this.settings.PLCWebsocketPort+"...");
+	this.wsConnectRetry = false;
+	this.socket = new WebSocket('ws://'+window.location.hostname+':'+this.settings.PLCWebsocketPort);
+	this.socket.binaryType = "arraybuffer";
+	this.socket.onopen = function(event){console.log("VisionImage: Connection established");};
+	this.socket.onmessage = this._onWsMessage.bind(this);
+	this.socket.onerror = this._onWsError.bind(this);
+	this.socket.onclose = function(event) {
+	  if (event.wasClean) {
+		//console.log("[close] Connection closed cleanly, code="+event.code+" reason="+event.reason);
+	  } else {
+		//console.log("[close] Connection died");
+		if(!this.wsConnectRetry){
+			this.wsConnectRetry = true;
+			setTimeout(this.wsConnect, 2000);
+		}
+
+	  }
+	};
+	}
+	
+	
+	p._onWsError = function(error){
+		//console.log("WS error");
+		this.socket.close();
+		if(!this.wsConnectRetry){
+			this.wsConnectRetry = true;
+			setTimeout(this.wsConnect, 2000);
+		}
+	}
+ 
+	p._onWsMessage =  function (event) {
+	  var base64string ="";
+	  
+	  if(event.data instanceof ArrayBuffer){
+		// base64string = btoa(String.fromCharCode.apply(null, new Uint8Array(event.data)));
+		// currentElement.src = "data:image/jpeg;base64,"+base64string;
+	  }else{
+		  if(event.data.startsWith("<foreignObject x=") && event.data.endsWith("</foreignObject>")){
+			this.setSvgImage(event.data);
+		  }else{
+			  console.warn("WS data was not correct SVG for Vision Image widget");
+		  }
+		  
+		// switch(event.data){
+			// case "RED":
+			// last = false;
+			// currentElement = imgRedElement;
+			// console.log("Red");
+			// break;
+			// case "BLUE":
+			// currentElement = imgBlueElement;
+			// console.log("BLUE");
+			// break;
+			// case "Green":
+			// currentElement = imgGreenElement;
+			// console.log("Green");
+			// break;
+			// case "Done":
+			// //	createColorImage();
+				// console.log("Done");
+			// break;
+			
+		// }
+	  }
+	  //console.log("[message] Data received from server:");
+	}
+	
+	
+
     /**
     * @method setSvgOverlay
     * Set additional svg content to be displayed.
@@ -258,9 +379,6 @@ define([
     */
     p.setSvgOverlay = function (svgOverlay) {
        
-
-
-
         this.settings.svgOverlay = svgOverlay;
         return this._updateView();
     };
@@ -284,21 +402,8 @@ define([
         this.settings.viewRotateAngle = viewRotateAngle;
 		this._calcViewbox();
 
-
-
         this._setViewBox(this.settings.viewBox);
-
-
-
-
         this.renderer.executeActionRotate();
-
-
-
-
-		
-
-
 
     };
 

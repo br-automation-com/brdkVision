@@ -249,6 +249,9 @@
 			</Event>
 		</Events>
 		<Properties>
+			<Property name="PLCWebsocketPort" type="UNumber" initOnly="false" localizable="false" editableBinding="false" readOnly="false" required="false" projectable="true" category="Data" defaultValue="0">
+				<Description>Additional PLC websocket port to connect to (0=Not used).</Description>
+			</Property>
 			<Property name="colorList" type="ColorList" initOnly="true" localizable="false" editableBinding="false" readOnly="false" required="false" projectable="true" category="Appearance" defaultValue="#FFCC66,#FF8800,#FFCC99,#993333">
 				<Description>List of possible colors to apply to svg elements.</Description>
 			</Property>
