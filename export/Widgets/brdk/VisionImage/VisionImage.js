@@ -848,9 +848,27 @@ define([
                 this.setSvgFilePath(this.settings.svgFilePath);
             }
         }
+		if(this.settings.PLCWebsocketPort != 0){
+			this._wsConnect();
+		}
     };
 
-    p.dispose = function () {
+	p.suspend = function () {
+		if(this.socket != null){
+			if (this.socket.readyState === WebSocket.OPEN) {
+				this.socket.onclose = function(event){
+					console.log("WS Closed");
+					this.socket = null;
+				}
+			  console.log("WS closing");
+			  this.socket.close(1000,"Deliberate close");
+			}
+		}
+        SuperClass.prototype.suspend.apply(this, arguments);
+    
+	}
+    
+	p.dispose = function () {
         this.elem.removeEventListener(BreaseEvent.WIDGET_READY, this._bind('_widgetReadyHandler'));
 		if(this.socket != null){
 			if (this.socket.readyState === WebSocket.OPEN) {
