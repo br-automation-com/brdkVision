@@ -4,6 +4,5 @@
   <Objects>
     <Object Type="Package" Description="AreaContents">AreaContents</Object>
     <Object Type="Package">Image</Object>
-    <Object Type="Package">Recipe</Object>
   </Objects>
 </Package>

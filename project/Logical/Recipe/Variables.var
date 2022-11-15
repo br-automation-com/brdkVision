@@ -1,7 +1,5 @@
 VAR
 	this : local_typ;
-	save : BOOL;
-	load : BOOL;
 	recipe : recipe_typ;
 	mpRecipe : MpRecipeCsv;
 	error : STRING[200];

@@ -3,17 +3,17 @@
   <Widgets>
     <Widget xsi:type="widgets.brease.PushButton" id="TriggerImage" top="270" left="45" width="200" height="80" zIndex="0" text="Trigger Image" fontSize="24px" bold="true" />
     <Widget xsi:type="widgets.brease.PushButton" id="TriggerCalibrate" top="360" left="45" width="200" height="80" zIndex="1" text="Calibrate" fontSize="24px" bold="true" />
-    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputImgPosY" top="115" left="275" width="135" zIndex="2" />
-    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputImgPosX" top="115" left="115" width="125" zIndex="3" />
-    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput1" top="50" left="120" zIndex="4" />
-    <Widget xsi:type="widgets.brease.Label" id="Label2" top="80" left="300" zIndex="5" text="Y" />
-    <Widget xsi:type="widgets.brease.Label" id="Label3" top="80" left="150" zIndex="6" text="X" />
-    <Widget xsi:type="widgets.brease.Label" id="Label4" top="55" left="-5" width="115" height="25" zIndex="7" text="Element Id:" textAlign="right" />
-    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputRealPosY" top="160" left="275" width="135" zIndex="8" unit="{'metric':'MMT','imperial':'MMT','imperial-us':'MMT'}" />
-    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputRealPosX" top="160" left="115" width="125" zIndex="9" unit="{'metric':'MMT','imperial':'MMT','imperial-us':'MMT'}" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputImgPosY" top="160" left="280" width="135" zIndex="2" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputImgPosX" top="160" left="120" width="125" zIndex="3" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput1" top="53" left="140" zIndex="4" />
+    <Widget xsi:type="widgets.brease.Label" id="Label2" top="125" left="305" zIndex="5" text="Y" />
+    <Widget xsi:type="widgets.brease.Label" id="Label3" top="125" left="155" zIndex="6" text="X" />
+    <Widget xsi:type="widgets.brease.Label" id="Label4" top="55" left="15" width="115" height="25" zIndex="7" text="Element Id:" textAlign="right" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputRealPosY" top="205" left="280" width="135" zIndex="8" unit="{'metric':'MMT','imperial':'MMT','imperial-us':'MMT'}" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputRealPosX" top="205" left="120" width="125" zIndex="9" unit="{'metric':'MMT','imperial':'MMT','imperial-us':'MMT'}" />
     <Widget xsi:type="widgets.brease.Label" id="Label7" top="10" left="5" width="140" height="25" zIndex="10" text="Image click" fontSize="20px" />
-    <Widget xsi:type="widgets.brease.Label" id="Label8" top="160" left="5" width="110" height="25" zIndex="11" text="Real position" textAlign="right" />
-    <Widget xsi:type="widgets.brease.Label" id="Label9" top="120" left="0" width="110" height="25" zIndex="12" text="Image position" textAlign="right" />
+    <Widget xsi:type="widgets.brease.Label" id="Label8" top="205" left="10" width="110" height="25" zIndex="11" text="Real position" textAlign="right" />
+    <Widget xsi:type="widgets.brease.Label" id="Label9" top="165" left="5" width="110" height="25" zIndex="12" text="Image position" textAlign="right" />
     <Widget xsi:type="widgets.brease.Label" id="Label5" top="270" left="255" width="115" height="25" zIndex="13" text="Focus" textAlign="right" />
     <Widget xsi:type="widgets.brease.Label" id="Label6" top="315" left="260" width="115" height="25" zIndex="14" text="LED segment" textAlign="right" />
     <Widget xsi:type="widgets.brease.Label" id="Label10" top="360" left="260" width="115" height="25" zIndex="15" text="LED color" textAlign="right" />
@@ -22,5 +22,7 @@
     <Widget xsi:type="widgets.brease.NumericInput" id="NumericLEDSegment" top="315" left="375" zIndex="18" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':0,'minimumIntegerDigits':1}}" maxValue="15" />
     <Widget xsi:type="widgets.brease.NumericInput" id="NumericInputLEDColor" top="360" left="375" zIndex="19" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':0,'minimumIntegerDigits':1}}" />
     <Widget xsi:type="widgets.brease.NumericInput" id="NumericInputExpTime" top="400" left="375" zIndex="20" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':0,'minimumIntegerDigits':1}}" maxValue="100000" unit="{'metric':'B98','imperial':'B98','imperial-us':'B98'}" />
+    <Widget xsi:type="widgets.brease.Label" id="Label12" top="83" left="0" width="130" height="25" zIndex="21" text="click pixel color:" textAlign="right" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputClickPxColor" top="80" left="120" zIndex="22" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" />
   </Widgets>
 </Content>

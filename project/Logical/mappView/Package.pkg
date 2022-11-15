@@ -5,6 +5,7 @@
     <Object Type="Package" Description="Layouts">Layouts</Object>
     <Object Type="Package" Description="Widgets">Widgets</Object>
     <Object Type="Package" Description="Resources">Resources</Object>
+	
     <Object Type="Package">Visualization</Object>
   </Objects>
 </Package>

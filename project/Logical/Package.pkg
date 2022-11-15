@@ -6,9 +6,10 @@
     <Object Type="Package" Description="Global libraries">Libraries</Object>
     <Object Type="File" Description="Global variables">Global.var</Object>
     <Object Type="Package">mappView</Object>
+	
     <Object Type="Package">brdkServies</Object>
     <Object Type="Program" Language="IEC">Recipe</Object>
-    <Object Type="Program" Language="IEC">Calibration</Object>
+    <Object Type="Program" Language="IEC">Demo</Object>
     <Object Type="File">UnitTexts.tmx</Object>
     <Object Type="File">Project.language</Object>
   </Objects>

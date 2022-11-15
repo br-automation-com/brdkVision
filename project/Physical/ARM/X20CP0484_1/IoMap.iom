@@ -1,3 +1,0 @@
-VAR_CONFIG
-	::Calibratio:hw.io.input.nettime AT %ID."X20CP0484_1".IF3.NettimeSoC;
-END_VAR

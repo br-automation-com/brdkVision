@@ -1,27 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<?AutomationStudio Version=4.9.4.92 FileVersion="4.9"?>
+<?AutomationStudio Version=4.12.2.93 FileVersion="4.9"?>
 <Hardware xmlns="http://br-automation.co.at/AS/Hardware">
-  <Module Name="VSC122R35.062P-000" Type="VSC122R35.062P-000" Version="0.0.1.535">
-    <Connection Connector="PLK1" TargetModule="X20CP1586" TargetConnector="IF3" NodeNumber="1">
+  <Module Name="DemoVSC" Type="VSC122R35.062P-000" Version="1.7.0.606">
+    <Connection Connector="PLK1" TargetModule="PLC" TargetConnector="IF3" NodeNumber="1">
       <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
     </Connection>
-    <Connection Connector="PLK2" TargetModule="VSLB11R00.54DP-000" TargetConnector="PLK1" NodeNumber="1">
+    <Connection Connector="PLK2" TargetModule="DemoVSLB" TargetConnector="PLK1" NodeNumber="1">
       <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
     </Connection>
     <Parameter ID="Supervision" Value="off" />
     <Parameter ID="VisionConfig" Value="gBlobCamera" />
   </Module>
-  <Module Name="VSLB11R00.54DP-000" Type="VSLB11R00.54DP-000" Version="1.1.0.323">
-    <Connection Connector="PLK1" TargetModule="VSC122R35.062P-000" TargetConnector="PLK2" NodeNumber="2">
+  <Module Name="DemoVSLB" Type="VSLB11R00.54DP-000" Version="1.1.0.323">
+    <Connection Connector="PLK1" TargetModule="DemoVSC" TargetConnector="PLK2" NodeNumber="2">
       <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
     </Connection>
     <Parameter ID="VisionConfig" Value="gBlobCamera" />
   </Module>
-  <Module Name="X20CP1586" Type="X20CP1586" Version="1.8.1.0">
+  <Module Name="PLC" Type="X20CP1586" Version="1.10.0.0">
     <Connector Name="IF2">
       <Parameter ID="ActivateDevice" Value="1" />
       <Parameter ID="Mode" Value="Manual" />
-      <Parameter ID="InternetAddress" Value="192.168.87.212" />
+      <Parameter ID="InternetAddress" Value="192.168.87.210" />
       <Parameter ID="SubnetMask" Value="255.255.255.0" />
     </Connector>
     <Connector Name="IF3">
@@ -42,8 +42,8 @@
     <Parameter ID="FileDevicePath2" Value="C:\simPlc\brdkVision" />
     <Group ID="FtpUser1" />
     <Parameter ID="FtpUsername1" Value="admin" />
-    <Parameter ID="FtpUserPassword1" Value="+uX37b/Iy9gDw18lRrZX7EcbwYFwQWpAJkuUgOjAEQo=" Description="admin" />
-    <Parameter ID="FtpUserSalt1" Value="ij+K1uf1" />
+    <Parameter ID="FtpUserPassword1" Value="kkxYlUuXWXXzaX5cRO/ws3Ezqdmn+IWTu5OooqAOayc=" Description="admin" />
+    <Parameter ID="FtpUserSalt1" Value="GU2dk3Ow" />
     <Parameter ID="FTPAccessRight1" Value="0" />
     <Parameter ID="FTPdevice1" Value="ALL" />
     <Parameter ID="ActivateOpcUa" Value="1" />

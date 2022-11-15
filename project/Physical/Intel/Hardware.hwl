@@ -2,33 +2,33 @@
 <?AutomationStudio FileVersion="4.9"?>
 <BR.AS.HardwareTopology>
   <TimeStamps>
-    <TimeStamp LogicalPath="Intel.Hardware.hw" LastWriteTime="10/12/2022 17:58:28" />
+    <TimeStamp LogicalPath="IntelTest.Hardware.hw" LastWriteTime="11/02/2022 19:11:17" />
   </TimeStamps>
   <Modules>
-    <Module Name="X20CP1586" Type="X20CP1586" X="85" Y="85" />
-    <Module Name="VSC122R35.062P-000" Type="VSC122R35.062P-000" X="300" Y="100" />
-    <Module Name="VSLB11R00.54DP-000" Type="VSLB11R00.54DP-000" X="448" Y="111" />
+    <Module Name="DemoVSC" Type="VSC122R35.062P-000" X="250" Y="249" />
+    <Module Name="DemoVSLB" Type="VSLB11R00.54DP-000" X="380" Y="249" />
+    <Module Name="PLC" Type="X20CP1586" X="100" Y="100" />
   </Modules>
   <Links>
-    <Link From="VSC122R35.062P-000" To="X20CP1586" FromPort="PLK1" ToPort="IF3" IsRoutedByUser="False">
-      <Point X="318" Y="218" />
-      <Point X="318" Y="218" />
-      <Point X="318" Y="223" />
-      <Point X="318" Y="235" />
-      <Point X="141" Y="235" />
-      <Point X="141" Y="185" />
-      <Point X="141" Y="172" />
-      <Point X="141" Y="172" />
+    <Link From="DemoVSLB" To="DemoVSC" FromPort="PLK1" ToPort="PLK2" IsRoutedByUser="False">
+      <Point X="313" Y="367" />
+      <Point X="313" Y="367" />
+      <Point X="313" Y="372" />
+      <Point X="313" Y="385" />
+      <Point X="398" Y="385" />
+      <Point X="398" Y="372" />
+      <Point X="398" Y="367" />
+      <Point X="398" Y="367" />
     </Link>
-    <Link From="VSLB11R00.54DP-000" To="VSC122R35.062P-000" FromPort="PLK1" ToPort="PLK2" IsRoutedByUser="False">
-      <Point X="466" Y="229" />
-      <Point X="466" Y="229" />
-      <Point X="466" Y="234" />
-      <Point X="466" Y="245" />
-      <Point X="363" Y="245" />
-      <Point X="363" Y="223" />
-      <Point X="363" Y="218" />
-      <Point X="363" Y="218" />
+    <Link From="DemoVSC" To="PLC" FromPort="PLK1" ToPort="IF3" IsRoutedByUser="False">
+      <Point X="268" Y="367" />
+      <Point X="268" Y="367" />
+      <Point X="268" Y="372" />
+      <Point X="268" Y="385" />
+      <Point X="156" Y="385" />
+      <Point X="156" Y="200" />
+      <Point X="156" Y="187" />
+      <Point X="156" Y="187" />
     </Link>
   </Links>
   <InfoElements />

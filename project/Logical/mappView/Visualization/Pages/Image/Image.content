@@ -9,11 +9,13 @@
     <Widget xsi:type="widgets.brease.Button" id="ButtonPanUp" top="230" left="5" width="40" height="40" zIndex="6" image="Media/SymbolLib/Arrow/ArrowUp.svg" />
     <Widget xsi:type="widgets.brease.Button" id="ButtonReset" top="5" left="5" width="40" height="40" zIndex="7" image="Media/SymbolLib/Edit/Maximize.svg" />
     <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton1" top="405" left="5" width="40" height="45" zIndex="8" image="Media/SymbolLib/Symbols/Hide.svg" mouseDownImage="Media/SymbolLib/Symbols/UnHide.svg" />
-    <Widget xsi:type="widgets.brease.BasicSlider" id="BasicSlider1" top="410" left="120" width="500" height="10" zIndex="10" maxValue="360" scaleOffset="10px" showValueDisplay="true" />
-    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput1" top="410" left="640" zIndex="11" unit="{'metric':'CEL','imperial':'CEL','imperial-us':'CEL'}" />
+    <Widget xsi:type="widgets.brease.BasicSlider" id="BasicSlider1" top="410" left="135" width="320" height="10" zIndex="10" maxValue="360" scaleOffset="10px" showValueDisplay="true" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput1" top="410" left="470" zIndex="11" unit="{'metric':'CEL','imperial':'CEL','imperial-us':'CEL'}" />
     <Widget xsi:type="widgets.brease.Label" id="Label1" top="410" left="55" zIndex="0" text="Rotation" />
     <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButtonFlipVertical" top="320" left="5" width="40" height="40" zIndex="12" image="Media/flipVertical.svg" mouseDownImage="Media/flipVertical.svg" imageHeight="20" />
     <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButtonFlipHorisontal" top="363" left="7" width="35" height="39" zIndex="13" image="Media/flipVertical.svg" mouseDownImage="Media/flipVertical.svg" imageHeight="20" rotation="270deg" />
 	<Widget xsi:type="widgets.brdk.VisionImage" id="VisionImage1" top="5" left="55" width="685" height="395" zIndex="9" />
-	</Widgets>
+		<Widget xsi:type="widgets.brease.NumericInput" id="NumericInput2" top="410" left="650" zIndex="14" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':0,'minimumIntegerDigits':1}}" maxValue="65000" />
+		<Widget xsi:type="widgets.brease.Label" id="Label2" top="410" left="570" zIndex="15" text="WS port:" />
+  </Widgets>
 </Content>

@@ -1,30 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<?AutomationStudio Version=4.9.4.92 FileVersion="4.9"?>
+<?AutomationStudio Version=4.12.2.93 FileVersion="4.9"?>
 <Hardware xmlns="http://br-automation.co.at/AS/Hardware">
-  <Module Name="VSC122R35.062P-000" Type="VSC122R35.062P-000" Version="0.0.1.535">
-    <Connection Connector="PLK1" TargetModule="VSLB11R00.54DP-000" TargetConnector="PLK2" NodeNumber="1">
+  <Module Name="DemoVSC" Type="VSS122Q25.071P-000" Version="1.7.0.606">
+    <Connection Connector="PLK1" TargetModule="DemoVSLB" TargetConnector="PLK2" NodeNumber="6">
       <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
     </Connection>
     <Parameter ID="Supervision" Value="off" />
     <Parameter ID="VisionConfig" Value="gBlobCamera" />
   </Module>
-  <Module Name="VSLB11R00.54DP-000" Type="VSLB11R00.54DP-000" Version="1.1.0.323">
-    <Connection Connector="PLK1" TargetModule="X20CP0484_1" TargetConnector="IF3" NodeNumber="2">
+  <Module Name="DemoVSLB" Type="VSLB11R00.54DP-000" Version="1.1.0.323">
+    <Connection Connector="PLK1" TargetModule="PLC" TargetConnector="IF3" NodeNumber="2">
       <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
     </Connection>
-    <Connection Connector="PLK2" TargetModule="VSC122R35.062P-000" TargetConnector="PLK1" NodeNumber="2">
+    <Connection Connector="PLK2" TargetModule="DemoVSC" TargetConnector="PLK1" NodeNumber="2">
       <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
     </Connection>
     <Parameter ID="Supervision" Value="off" />
     <Parameter ID="VisionConfig" Value="gBlobCamera" />
   </Module>
-  <Module Name="X20BB52" Type="X20BB52" Version="1.2.0.0">
-    <Connector Name="IF6">
-      <Parameter ID="CycleTime" Value="2000" />
-    </Connector>
-  </Module>
-  <Module Name="X20CP0484_1" Type="X20CP0484-1" Version="1.2.2.0">
-    <Connection Connector="SL" TargetModule="X20BB52" TargetConnector="SL1" />
+  <Module Name="PLC" Type="X20CP0484-1" Version="1.7.0.0">
+    <Connection Connector="SL" TargetModule="X20BB67" TargetConnector="SL1" />
     <Connector Name="IF2">
       <Parameter ID="ActivateDevice" Value="1" />
       <Parameter ID="Mode" Value="Manual" />
@@ -33,16 +28,20 @@
     </Connector>
     <Connector Name="IF3">
       <Parameter ID="MtuSize" Value="1500" />
+      <Parameter ID="DNAConfiguration" Value="manual" />
+      <Parameter ID="CycleTime" Value="1000" />
+      <Parameter ID="AsyncTimeout" Value="20" />
+      <Parameter ID="AsyncSlotsPerCycle" Value="7" />
       <Parameter ID="InternetAddress" Value="192.168.200.240" />
       <Parameter ID="SubnetMask" Value="255.255.255.0" />
     </Connector>
     <Parameter ID="ConfigurationID" Value="brdkVision" />
     <Parameter ID="UserPartitionSize" Value="100" />
     <Parameter ID="TimerDeviceType" Value="EPLX2X" />
-    <Parameter ID="TimerDevice" Value="X20CP0484_1.IF3" />
+    <Parameter ID="TimerDevice" Value="PLC.IF3" />
     <Parameter ID="IdleTaskClass" Value="4" />
     <Parameter ID="TaskClassIdleTime" Value="2000" />
-    <Parameter ID="Cyclic1Duration" Value="2000" />
+    <Parameter ID="Cyclic1Duration" Value="1000" />
     <Parameter ID="Cyclic1Tolerance" Value="10000" />
     <Parameter ID="Cyclic1Stack" Value="1000000" />
     <Parameter ID="Cyclic2Duration" Value="20000" />
@@ -74,8 +73,9 @@
     <Parameter ID="ActivateOpcUa" Value="1" />
     <Parameter ID="OpcUaInformationModels_PV_Version" Value="1" />
   </Module>
+  <Module Name="X20BB67" Type="X20BB67" Version="1.2.0.0" />
   <Module Name="X20PS9600" Type="X20PS9600" Version="1.6.0.0">
-    <Connection Connector="PS" TargetModule="X20BB52" TargetConnector="PS1" />
+    <Connection Connector="PS" TargetModule="X20BB67" TargetConnector="PS1" />
     <Connection Connector="SS1" TargetModule="X20TB12" TargetConnector="SS" />
   </Module>
   <Module Name="X20TB12" Type="X20TB12" Version="1.0.0.0" />

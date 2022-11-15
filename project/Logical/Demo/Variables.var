@@ -1,0 +1,10 @@
+VAR
+	correcColor : ARRAY[0..2] OF REAL := [3(1)];
+	j : USINT;
+	clientIds : REFERENCE TO ARRAY[0..9] OF UDINT;
+	hw : hw_typ;
+	state : USINT;
+	hmi : hmi_typ;
+	i : USINT;
+	this : local_typ;
+END_VAR

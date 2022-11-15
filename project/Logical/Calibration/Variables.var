@@ -1,8 +1,0 @@
-VAR
-	j : USINT;
-	hw : hw_typ;
-	state : USINT;
-	hmi : hmi_typ;
-	i : USINT;
-	this : local_typ;
-END_VAR

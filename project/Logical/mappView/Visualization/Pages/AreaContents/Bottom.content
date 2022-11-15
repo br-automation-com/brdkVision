@@ -5,7 +5,9 @@
     <Widget xsi:type="widgets.brease.PushButton" id="PushButtonLoad" top="15" left="860" height="55" zIndex="1" text="load recipe" />
     <Widget xsi:type="widgets.brease.DropDownBox" id="DropDownBox1" top="30" left="25" width="150" height="45" zIndex="2" dataProvider="[{'value':'0','text':'BMP'},{'value':'1','text':'JPEG'}]" selectedValue="0" />
     <Widget xsi:type="widgets.brease.Label" id="Label1" top="0" left="25" width="140" zIndex="3" text="Image format:" />
-    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput1" top="30" left="210" height="40" zIndex="4" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput1" top="33" left="210" height="40" zIndex="4" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" />
     <Widget xsi:type="widgets.brease.Label" id="Label2" top="0" left="205" width="140" zIndex="5" text="Image qualtiy:" />
+    <Widget xsi:type="widgets.brease.DropDownBox" id="DropDownBoxMode" top="30" left="360" width="150" height="45" zIndex="6" dataProvider="[{'value':'0','text':'Simple'},{'value':'1','text':'Calibration'},{'value':'2','text':'Color Image'}]" selectedValue="0" />
+    <Widget xsi:type="widgets.brease.Label" id="Label3" top="0" left="360" width="140" zIndex="7" text="Program mode:" />
   </Widgets>
 </Content>
