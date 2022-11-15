@@ -168,10 +168,15 @@ define([
             if (brease.config.preLoadingState === true) {
                 this.widgetPreLoaded = true;
             } 
+			if(this.settings.PLCWebsocketPort != 0){
+				this._wsConnect();
+			}
+		
 			// else {
                 // this.setSvgFilePath(this.settings.svgFilePath);
             // }
         }
+		
         SuperClass.prototype.init.apply(this, arguments);
     };
 
@@ -847,6 +852,16 @@ define([
 
     p.dispose = function () {
         this.elem.removeEventListener(BreaseEvent.WIDGET_READY, this._bind('_widgetReadyHandler'));
+		if(this.socket != null){
+			if (this.socket.readyState === WebSocket.OPEN) {
+				this.socket.onclose = function(event){
+					console.log("WS Closed");
+					this.socket = null;
+				}
+			  console.log("WS closing");
+			  this.socket.close(1000,"Deliberate close");
+			}
+		}
         clearTimeout(this.renderer.timeout);
         SuperClass.prototype.dispose.apply(this, arguments);
     };
