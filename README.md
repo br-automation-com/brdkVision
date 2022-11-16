@@ -6,9 +6,10 @@ This repository contains many different vision libraies for the PLC.
 It also contains a solution to show images with overlay on mappView. 
 
 ## Use widget
-To use the widget you need to copy the "brdk" folder from the mapp View widget folder into the same folder of you AS project and then restart AS.
+To use the widget you need to copy the "brdk" folder export/Widgets folder into the widget folder of the technology package MappView for the right AS and Mapp version.
 
-![image](https://user-images.githubusercontent.com/36692577/176134242-2c4f525f-f2f1-4be3-b9a0-d789f5d263d8.png)
+C:\BrAutomation\AS412\AS\TechnologyPackages\mappView\5.20.0\Widgets
+
 
 ## Use Libraires
 Each of the brdkVi libraries have a have a help file with some documentation for the functions and function blocks
