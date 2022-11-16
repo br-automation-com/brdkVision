@@ -1,0 +1,3 @@
+VAR_CONFIG
+	::Demo:hw.io.input.nettime AT %ID."X20CP1586".IF3.NettimeSoC;
+END_VAR

@@ -19,6 +19,10 @@
     <BinaryObject Name="FWRules" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="TCLang" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="visionUnit" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="arflatprv" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="arcoal" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="arsvcreg" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="mCoWebSc" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="ashwac" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="Settings" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="User" Source="" Memory="UserROM" Language="Binary" />
@@ -33,10 +37,6 @@
     <BinaryObject Name="Config" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="px" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="TC" Source="" Memory="UserROM" Language="Binary" />
-    <BinaryObject Name="arflatprv" Source="" Memory="UserROM" Language="Binary" />
-    <BinaryObject Name="arcoal" Source="" Memory="UserROM" Language="Binary" />
-    <BinaryObject Name="arsvcreg" Source="" Memory="UserROM" Language="Binary" />
-    <BinaryObject Name="mCoWebSc" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="Settings_1" Source="" Memory="UserROM" Language="Binary" />
   </Binaries>
   <Libraries>
@@ -64,8 +64,8 @@
     <LibraryObject Name="brsystem" Source="Libraries.brsystem.lby" Memory="UserROM" Language="binary" Debugging="true" />
     <LibraryObject Name="AsHttp" Source="Libraries.AsHttp.lby" Memory="UserROM" Language="binary" Debugging="true" />
     <LibraryObject Name="AsIecCon" Source="Libraries.AsIecCon.lby" Memory="UserROM" Language="binary" Debugging="true" />
+    <LibraryObject Name="arssl" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="asbrstr" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="asiodiag" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
-    <LibraryObject Name="arssl" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
   </Libraries>
 </SwConfiguration>

@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package xmlns="http://br-automation.co.at/AS/Package" SubType="mappVision" PackageType="mappVision">
+  <Objects>
+    <Object Type="File" Reference="true">\Physical\ARM\PLC\mappVision\viApp.visionapplication</Object>
+    <Object Type="File" Reference="true">\Physical\ARM\PLC\mappVision\viComp.visioncomponent</Object>
+    <Object Type="File" Reference="true">\Physical\ARM\PLC\mappVision\Settings.vicfg</Object>
+  </Objects>
+</Package>

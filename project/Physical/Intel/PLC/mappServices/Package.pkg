@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package xmlns="http://br-automation.co.at/AS/Package" SubType="mappServices" PackageType="mappServices">
+  <Objects>
+    <Object Type="File" Reference="true">\Physical\ARM\PLC\mappServices\Config.mprecipecsv</Object>
+  </Objects>
+</Package>
