@@ -8,5 +8,6 @@
     <Object Type="Library" Language="Binary">brdkViCal</Object>
     <Object Type="Library" Language="Binary">brdkViImg</Object>
     <Object Type="Library" Language="Binary">brdkViGeom</Object>
+    <Object Type="Library" Language="Binary">brdkWS</Object>
   </Objects>
 </Package>

@@ -80,7 +80,7 @@ TYPE
 		oldTime : DINT;
 		getImage : brdkViImg_getImage;
 		mappView : brdkViImg_mappView;
-		imgArr : brdkVIImg_imageArray_typ;
+		imgArr : brdkViImg_imageArray_typ;
 		svgOverlay : STRING[5000];
 		timeoutTrigger : TON;
 		matchRes : ARRAY[0..19]OF pnp_vision_result_typ;
@@ -100,8 +100,8 @@ TYPE
 		sendBuf : ARRAY[0..5000000]OF USINT;
 		recvBuf : ARRAY[0..9999]OF USINT;
 		wsRecData : ARRAY[0..BRDKVIIMG_WS_MAX_NUM_CLIENTS,0..199]OF USINT;
-		wsChannels : ARRAY[0..BRDKVIIMG_WS_MAX_NUM_CLIENTS]OF brdkViImg_WsChannel;
-		wsServer : brdkViImg_WsServer;
+		wsChannels : ARRAY[0..BRDKVIIMG_WS_MAX_NUM_CLIENTS]OF brdkWS_Channel;
+		wsServer : brdkWS_Server;
 		wsSvg : STRING[6000000];
 	END_STRUCT;
 	pnp_vision_results_shapeP_typ : 	STRUCT 

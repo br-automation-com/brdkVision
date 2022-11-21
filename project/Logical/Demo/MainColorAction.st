@@ -49,8 +49,8 @@ ACTION mainColorAction:
 		20:
 			IF this.getImage.status = ERR_OK THEN // Image download from camera has finished
 				this.sendBufLen := 0; // Clear frame for new
-				brdkViImg_WsMakeFrame(ADR('RED'),3,ADR(this.sendBuf),ADR(this.sendBufLen),TRUE);
-				brdkViImg_WsMakeFrame(this.getImage.pDest,this.getImage.destLen ,ADR(this.sendBuf),ADR(this.sendBufLen),FALSE);	
+				brdkWS_MakeFrame(ADR('RED'),3,ADR(this.sendBuf),ADR(this.sendBufLen),TRUE);
+				brdkWS_MakeFrame(this.getImage.pDest,this.getImage.destLen ,ADR(this.sendBuf),ADR(this.sendBufLen),FALSE);	
 				state := 100;
 			ELSIF this.getImage.status = ERR_NO_IMAGE THEN
 				this.imgTrig.trigger 		:= TRUE;
@@ -80,8 +80,8 @@ ACTION mainColorAction:
 			IF this.getImage.status = ERR_OK THEN
 			
 				
-				brdkViImg_WsMakeFrame(ADR('Green'),5,ADR(this.sendBuf),ADR(this.sendBufLen),TRUE);
-				brdkViImg_WsMakeFrame(this.getImage.pDest,this.getImage.destLen ,ADR(this.sendBuf),ADR(this.sendBufLen),FALSE);
+				brdkWS_MakeFrame(ADR('Green'),5,ADR(this.sendBuf),ADR(this.sendBufLen),TRUE);
+				brdkWS_MakeFrame(this.getImage.pDest,this.getImage.destLen ,ADR(this.sendBuf),ADR(this.sendBufLen),FALSE);
 			
 				state := 120;
 //				IF this.getImage.getImage THEN
@@ -119,9 +119,9 @@ ACTION mainColorAction:
 			IF this.getImage.status = ERR_OK AND NOT this.tcpServer.tcpSend.enable THEN
 					state := 0;
 				
-					brdkViImg_WsMakeFrame(ADR('BLUE'),4,ADR(this.sendBuf),ADR(this.sendBufLen),TRUE);
-					brdkViImg_WsMakeFrame(this.getImage.pDest,this.getImage.destLen ,ADR(this.sendBuf),ADR(this.sendBufLen),FALSE);
-					brdkViImg_WsMakeFrame(ADR('Done'),4,ADR(this.sendBuf),ADR(this.sendBufLen),TRUE);
+					brdkWS_MakeFrame(ADR('BLUE'),4,ADR(this.sendBuf),ADR(this.sendBufLen),TRUE);
+					brdkWS_MakeFrame(this.getImage.pDest,this.getImage.destLen ,ADR(this.sendBuf),ADR(this.sendBufLen),FALSE);
+					brdkWS_MakeFrame(ADR('Done'),4,ADR(this.sendBuf),ADR(this.sendBufLen),TRUE);
 					
 					FOR i :=0 TO UDINT_TO_USINT(BRDKVIIMG_WS_MAX_NUM_CLIENTS) BY 1 DO
 						IF this.wsChannels[i].enable THEN
@@ -183,7 +183,7 @@ ACTION mainColorAction:
 	this.getImage.simulateConfig.pFile := ADR(this.simFilename); // pointer to filename string (with out file extension, which come from seleted image type Jpeg or BMP) where number is appended to
 	this.getImage();
 	
-	this.mappView(enable := FALSE); // Do not use as we get the images with getImage and send them as binary with wsServer and brdkViImg_WsMakeFrame
+	this.mappView(enable := FALSE); // Do not use as we get the images with getImage and send them as binary with wsServer and brdkWS_MakeFrame
 	
 	// recipe
 	this.mpRecipeRegPar.ConfirmSave := this.mpRecipeRegPar.SaveNotification;

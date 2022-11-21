@@ -12,7 +12,7 @@ ACTION mainSimpleAction:
 	hw.cam.out.par.exposureTime	:= hmi.in.par.expTime;
 	hw.cam.out.par.focus 		:= hmi.in.par.focus;
 	hw.cam.out.par.IRFilter 	:= hw.cam.out.par.flashColor = BRDKVIBASE_CAM_LED_IR;
-
+	
 	// handles triggering af images
 	this.imgTrig.pCameraHw := ADR(hw.cam); // Pointer to camera hw structure
 	this.imgTrig.pLightHw := ADR(hw.backLight); // pointer to light structure or light structure array if more than one
@@ -73,9 +73,9 @@ ACTION mainSimpleAction:
 	this.mappView.timeout 		:= 3000; // time out when retriving the image from the camera
 	this.mappView.wsPort 		:= hmi.in.par.wsPort; // Web socket port number (use the same on brdk vision Image widget) (0 = web socket is not used)
 	this.mappView.imageFormat 	:= hmi.in.par.imgFormat; // Image format to download JPEG or BMP
-	this.mappView.jpegQuality 	:= hmi.in.par.imgQuality; // Quality for the JPEG image
+	this.mappView.jpegQuality 	:= hmi.in.par.imgQuality; // Quality for th	e JPEG image
 	this.mappView.pImageArray 	:= ADR(this.imgArr); // Pointer to image array data structure (Decoded image information and 2d byte array)
-	this.mappView.pSvgImage     := 0; // Not needed for the web socket, but can be used to contain the SVG image if OPC UA is used
+	this.mappView.pSvgImage     := ADR(this.wsSvg); // Optional for web socket usage, but can be used to contain the SVG image if OPC UA is used
 	// Simulation Configuration (Get images from file device instead of camera)
 	this.mappView.simulateConfig.activate := DiagCpuIsSimulated(); // true if PLC is simulated
 	this.mappView.simulateConfig.appendNumber := TRUE; // If true number is appended to file name
@@ -93,6 +93,6 @@ ACTION mainSimpleAction:
 	// recipe
 	this.mpRecipeRegPar.ConfirmSave := this.mpRecipeRegPar.SaveNotification;
 	this.mpRecipeRegPar(Enable := TRUE);
-	
+		
 END_ACTION
 

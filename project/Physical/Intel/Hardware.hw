@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <?AutomationStudio Version=4.12.2.93 FileVersion="4.9"?>
 <Hardware xmlns="http://br-automation.co.at/AS/Hardware">
-  <Module Name="DemoVSC" Type="VSC122R35.062P-000" Version="1.7.0.606">
+  <Module Name="DemoVSC" Type="VSC122R14.033P-000" Version="1.7.0.606">
     <Connection Connector="PLK1" TargetModule="PLC" TargetConnector="IF3" NodeNumber="1">
       <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
     </Connection>
@@ -15,6 +15,7 @@
     <Connection Connector="PLK1" TargetModule="DemoVSC" TargetConnector="PLK2" NodeNumber="2">
       <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
     </Connection>
+    <Parameter ID="Supervision" Value="off" />
     <Parameter ID="VisionConfig" Value="gBlobCamera" />
   </Module>
   <Module Name="PLC" Type="X20CP1586" Version="1.10.0.0">
