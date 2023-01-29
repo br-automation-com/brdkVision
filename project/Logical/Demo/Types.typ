@@ -103,6 +103,7 @@ TYPE
 		wsChannels : ARRAY[0..BRDKVIIMG_WS_MAX_NUM_CLIENTS]OF brdkWS_Channel;
 		wsServer : brdkWS_Server;
 		wsSvg : STRING[6000000];
+		viBaseSave : ViBaseSaveApplication;
 	END_STRUCT;
 	pnp_vision_results_shapeP_typ : 	STRUCT 
 		reference : ARRAY[0..MAX_SHAPE_POINTS]OF brdkViBase_2d_typ;

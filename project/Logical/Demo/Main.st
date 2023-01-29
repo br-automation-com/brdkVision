@@ -9,8 +9,6 @@ PROGRAM _INIT
 	
 	this.mpRecipeRegPar.MpLink := ADR(gRecipeCsv);
 	this.mpRecipeRegPar.PVName := ADR('::Demo:hmi.in.par');
-
-	
 	
 END_PROGRAM
 
@@ -27,7 +25,7 @@ PROGRAM _CYCLIC
 			mainColorAction;
 	END_CASE
 	
-	
+	this.viBaseSave(MpLink := ADR(gBlobCamera));
 END_PROGRAM
 
 PROGRAM _EXIT

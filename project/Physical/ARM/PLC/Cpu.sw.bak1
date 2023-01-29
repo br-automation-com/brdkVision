@@ -57,7 +57,7 @@
     <LibraryObject Name="brdkViMapp" Source="Libraries.brdkViLibs.brdkViMapp.lby" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="brdkViImg" Source="Libraries.brdkViLibs.brdkViImg.lby" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="brdkViGeom" Source="Libraries.brdkViLibs.brdkViGeom.lby" Memory="UserROM" Language="Binary" Debugging="true" />
-    <LibraryObject Name="brdkViBase" Source="Libraries.brdkViLibs.brdkViBase.lby" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="brdkViBase" Source="Libraries.brdkViLibs.brdkViBase.lby" Memory="UserROM" Language="C" Debugging="true" />
     <LibraryObject Name="brdkViVF" Source="Libraries.brdkViLibs.brdkViVF.lby" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="brdkViCal" Source="Libraries.brdkViLibs.brdkViCal.lby" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="AsTCP" Source="Libraries.AsTCP.lby" Memory="UserROM" Language="binary" Debugging="true" />

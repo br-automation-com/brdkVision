@@ -4,7 +4,8 @@ ACTION mainSimpleAction:
 	this.imgTrig.pLightHw := ADR(hw.backLight);
 	this.imgTrig.simulate.enable := DiagCpuIsSimulated();
 	this.imgTrig.simulate.imgProcessingDelay := T#50ms;
-	
+	this.imgTrig.simulate.alwaysSimulateNonePresentLights := TRUE;
+	this.imgTrig.simulate.alwaysSimulateNonePresentCamera := TRUE;
 	
 	// trigger image
 	hw.cam.out.par.flashColor 	:= hmi.in.par.LED;

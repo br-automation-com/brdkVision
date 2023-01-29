@@ -19,10 +19,6 @@
     <BinaryObject Name="FWRules" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="TCLang" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="visionUnit" Source="" Memory="UserROM" Language="Binary" />
-    <BinaryObject Name="arflatprv" Source="" Memory="UserROM" Language="Binary" />
-    <BinaryObject Name="arcoal" Source="" Memory="UserROM" Language="Binary" />
-    <BinaryObject Name="arsvcreg" Source="" Memory="UserROM" Language="Binary" />
-    <BinaryObject Name="mCoWebSc" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="ashwac" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="Settings" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="User" Source="" Memory="UserROM" Language="Binary" />
@@ -37,7 +33,11 @@
     <BinaryObject Name="Config" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="px" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="TC" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="mCoWebSc" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="Settings_1" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="arflatprv" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="arcoal" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="arsvcreg" Source="" Memory="UserROM" Language="Binary" />
   </Binaries>
   <Libraries>
     <LibraryObject Name="ViBase" Source="Libraries.ViBase.lby" Memory="UserROM" Language="binary" Debugging="true" />
@@ -57,15 +57,17 @@
     <LibraryObject Name="brdkViMapp" Source="Libraries.brdkViLibs.brdkViMapp.lby" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="brdkViImg" Source="Libraries.brdkViLibs.brdkViImg.lby" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="brdkViGeom" Source="Libraries.brdkViLibs.brdkViGeom.lby" Memory="UserROM" Language="Binary" Debugging="true" />
-    <LibraryObject Name="brdkViBase" Source="Libraries.brdkViLibs.brdkViBase.lby" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="brdkViVF" Source="Libraries.brdkViLibs.brdkViVF.lby" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="brdkViBase" Source="Libraries.brdkViLibs.brdkViBase.lby" Memory="UserROM" Language="ANSIC" Debugging="true" />
+    <LibraryObject Name="brdkWS" Source="Libraries.brdkViLibs.brdkWS.lby" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="brdkViCal" Source="Libraries.brdkViLibs.brdkViCal.lby" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="AsTCP" Source="Libraries.AsTCP.lby" Memory="UserROM" Language="binary" Debugging="true" />
     <LibraryObject Name="brsystem" Source="Libraries.brsystem.lby" Memory="UserROM" Language="binary" Debugging="true" />
     <LibraryObject Name="AsHttp" Source="Libraries.AsHttp.lby" Memory="UserROM" Language="binary" Debugging="true" />
     <LibraryObject Name="AsIecCon" Source="Libraries.AsIecCon.lby" Memory="UserROM" Language="binary" Debugging="true" />
-    <LibraryObject Name="arssl" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="asbrstr" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="asiodiag" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="asstring" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="arssl" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
   </Libraries>
 </SwConfiguration>
