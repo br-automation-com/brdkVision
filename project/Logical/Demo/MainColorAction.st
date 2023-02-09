@@ -52,7 +52,7 @@ ACTION mainColorAction:
 				brdkWS_MakeFrame(ADR('RED'),3,ADR(this.sendBuf),ADR(this.sendBufLen),TRUE);
 				brdkWS_MakeFrame(this.getImage.pDest,this.getImage.destLen ,ADR(this.sendBuf),ADR(this.sendBufLen),FALSE);	
 				state := 100;
-			ELSIF this.getImage.status = ERR_NO_IMAGE THEN
+			ELSIF this.getImage.status = ERR_BRDKVIIMG_NO_IMAGE THEN
 				this.imgTrig.trigger 		:= TRUE;
 				hw.cam.out.par.flashColor 	:= BRDKVIBASE_CAM_LED_RED;
 				hw.cam.out.par.exposureTime	:= REAL_TO_UDINT(UDINT_TO_REAL(brdkViBase_LEDIntensity(2, hmi.in.par.focus, hmi.in.par.expTime,BRDKVIBASE_CAM_LED_RED,BRDKVIBASE_CAM_LED_RED))*correcColor[0]); //;
@@ -89,7 +89,7 @@ ACTION mainColorAction:
 //				ELSE
 //					state := 200;			
 //				END_IF
-			ELSIF this.getImage.status = ERR_NO_IMAGE THEN
+			ELSIF this.getImage.status = ERR_BRDKVIIMG_NO_IMAGE THEN
 				this.imgTrig.trigger 		:= TRUE;
 				hw.cam.out.par.exposureTime	:= REAL_TO_UDINT(UDINT_TO_REAL(brdkViBase_LEDIntensity(2, hmi.in.par.focus, hmi.in.par.expTime,BRDKVIBASE_CAM_LED_RED,BRDKVIBASE_CAM_LED_GREEN))*correcColor[1]); 
 				hw.cam.out.par.flashColor 	:= BRDKVIBASE_CAM_LED_GREEN;
@@ -135,7 +135,7 @@ ACTION mainColorAction:
 			
 				
 			
-			ELSIF this.getImage.status = ERR_NO_IMAGE THEN
+			ELSIF this.getImage.status = ERR_BRDKVIIMG_NO_IMAGE THEN
 				
 				this.imgTrig.trigger 		:= TRUE;
 				hw.cam.out.par.exposureTime	:= REAL_TO_UDINT(UDINT_TO_REAL(brdkViBase_LEDIntensity(2, hmi.in.par.focus, hmi.in.par.expTime,BRDKVIBASE_CAM_LED_RED,BRDKVIBASE_CAM_LED_BLUE))*correcColor[2]);
