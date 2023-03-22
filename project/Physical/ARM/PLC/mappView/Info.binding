@@ -49,6 +49,10 @@
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::Demo:hmi.out.pxColor" attribute="value" />
 <Target xsi:type="brease" contentRefId="Info" widgetRefId="NumericOutputClickPxColor" attribute="value" />
-</Binding>
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::Demo:hmi.in.cmd.continusTrigger" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Info" widgetRefId="ToggleButton1" attribute="value" />
+		</Binding>
 </Bindings>
 </BindingsSet>

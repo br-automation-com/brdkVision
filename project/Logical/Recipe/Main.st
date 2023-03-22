@@ -1,8 +1,12 @@
 PROGRAM _INIT
 	(* Insert code here *)
 	mpRecipe.Enable := TRUE;
-	mpRecipe.DeviceName := ADR('RECIPE');
-	mpRecipe.FileName := ADR('reicpe');
+	IF DiagCpuIsSimulated() THEN
+		mpRecipe.DeviceName := ADR('SIM');
+	ELSE
+		mpRecipe.DeviceName := ADR('RECIPE');
+	END_IF
+	mpRecipe.FileName := ADR('recipe');
 	mpRecipe.MpLink := ADR(gRecipeCsv);
 	mpRecipe();
 	
@@ -13,7 +17,7 @@ PROGRAM _INIT
 	
 	mpRecipeRegPar.Enable := TRUE;
 	mpRecipeRegPar.MpLink := ADR(gRecipeCsv);
-	mpRecipeRegPar.PVName := ADR('Recipe::recipe');
+	mpRecipeRegPar.PVName := ADR('::Recipe:recipe');
 	mpRecipeRegPar();
 	
 END_PROGRAM
@@ -28,7 +32,7 @@ PROGRAM _CYCLIC
 	// wait for Mapp Recipe save notification
 	IF mpRecipeRegPar.SaveNotification THEN
 		// Get VF information from AR config system
-		brdkViMapp_getVfDataSet('BLOBCam',1,ADR(recipe.VF.params),ADR(recipe.VF.ROI),ADR(recipe.VF.widgetModels),SIZEOF(recipe.VF.ROI),0,ADR(error));
+		brdkViMapp_getVfDataSet('BLOBCam',1,ADR(recipe.VF.params),ADR(recipe.VF.ROI),ADR(recipe.VF.widgetModels),ADR(recipe.VF.models),SIZEOF(recipe.VF.ROI),ADR(error));
 		// Allow MpRecipe to save recipe to file
 		mpRecipeRegPar.ConfirmSave := TRUE;
 	END_IF
