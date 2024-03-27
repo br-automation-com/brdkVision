@@ -34,7 +34,6 @@
     <Parameter ID="ConfigurationID" Value="brdkVision" />
     <Parameter ID="UserPartitionSize" Value="50" />
     <Parameter ID="ApplicationStorageType" Value="NORMAL" />
-    <Parameter ID="Simulation" Value="1" />
     <Parameter ID="Cyclic1Duration" Value="1000" />
     <Group ID="FileDevice1" />
     <Parameter ID="FileDeviceName1" Value="RECIPE" />

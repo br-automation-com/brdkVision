@@ -142,7 +142,7 @@ VAR_CONFIG
 	::Demo:hw.backLight[0].in.status.completedFlashCnt AT %IB."DemoVSLB".CompletedFlashCnt;
 	::Demo:hw.backLight[0].in.status.failedFlashCnt AT %IB."DemoVSLB".FailedFlashCnt;
 	::Demo:hw.backLight[0].in.status.LightWarningCnt AT %IB."DemoVSLB".LightWarningCnt;
-	::Demo:hw.backLight[0].in.status.sensorTemperature AT %IB."DemoVSLB".SensorTemperature;
+	::Demo:hw.backLight[0].in.status.sensorTemperatureControllerBoard AT %IB."DemoVSLB".SensorTemperature;
 	::Demo:hw.backLight[0].out.cmd.flashTrigger AT %QX."DemoVSLB".FlashTrigger;
 	::Demo:hw.backLight[0].out.cmd.resetFlashTrigger AT %QX."DemoVSLB".ResetFlashTrigger;
 	::Demo:hw.backLight[0].out.par.nettime AT %QD."DemoVSLB".Nettime01;

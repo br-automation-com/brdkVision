@@ -134,7 +134,7 @@ ACTION	mainCalibrationAction:
 
 				hmi.out.overlay := ''; // Clear overlay
 				// Draw the calibration result based on the 3D data (the four points and x and y axis )
-				brdkViGeom_drawCalibration(hmi.in.par.P,75,this.realPos[0],4,ADR(hmi.out.overlay),ADR('style="fill:blue;stroke:blue;stroke-width:5;fill-opacity:0.3;stroke-opacity:1"'),ADR('style="fill:red;stroke:red;stroke-width:5;fill-opacity:1;stroke-opacity:1"'));
+				brdkViGeom_drawCalibration(hmi.in.par.P,75,this.realPos[0],4,10,ADR(hmi.out.overlay),ADR('style="fill:blue;stroke:blue;stroke-width:5;fill-opacity:0.3;stroke-opacity:1"'),ADR('style="fill:red;stroke:red;stroke-width:5;fill-opacity:1;stroke-opacity:1"'));
 		
 			ELSE // if numresults <> 4
 				hmi.out.overlay := ''; // Clear overlay

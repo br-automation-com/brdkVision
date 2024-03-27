@@ -138,4 +138,12 @@ TYPE
 		numRes : USINT;
 		res : ARRAY[0..19]OF blob_res_typ;
 	END_STRUCT;
+	brdkViBase_hw_blob_50_in_typ : 	STRUCT  (*BLOB hardware input structure for 10 BLOB result*)
+		common : brdkViBase_hw_vf_in_common_typ;
+		results : ARRAY[0..49]OF brdkViBase_hw_blob_in_typ;
+	END_STRUCT;
+	brdkViBase_hw_blob_50_typ : 	STRUCT  (*BLOB hardware structure for 10 BLOB result*)
+		in : brdkViBase_hw_blob_50_in_typ;
+		out : brdkViBase_hw_blob_out_typ;
+	END_STRUCT;
 END_TYPE
